@@ -1,0 +1,44 @@
+courseId: courseID 
+lang: en
+title: Petljadoc Course
+description:
+  willLearn: 
+    - Preview of Petljadoc course
+  requirements:
+    - Petljadoc
+    - Runestone
+    - Sphinx
+  toc:
+    - Intro to Petljadoc INDEX.yaml
+  externalLinks:  
+    - text: Sphinx Docs
+      href: https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html
+    - text: Petljadoc
+      href: https://github.com/Petlja/PetljaDoc/blob/master/README.md
+    - text: Runestone Interactive
+      href: https://github.com/RunestoneInteractive/overview
+  longDescription: |
+    This is an example of a long description...
+  shortDescription: Вештачка интелигенција (спец. ИТ)
+
+
+lessons:
+  - title: Lesson 1
+    guid: 3e5ae4a7-97db-40dc-9708-1871d340c826
+    description: Your first lesson. Description is not required attribute
+    folder: 1_Lesson
+    activities:
+      - type: reading
+        title: Intro
+        file: intro.rst 
+        description: #Optional
+        guid: 83a23e76-7d20-4e01-84eb-28cc00cc6d37
+      - type: video
+        title: Video activity for your lesson
+        decription: Nice video
+        url: https://www.youtube.com/watch?v=2KYuzJKemXw
+        guid: b434514d-767d-426c-9460-bbfda2372025
+      - type: quiz
+        title: Test your students
+        file: quiz.rst
+        guid: 9a95b144-6d29-4215-b175-967730c5edb2
