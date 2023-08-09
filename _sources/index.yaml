@@ -109,7 +109,6 @@ lessons:
         file: 044_Javni skupovi podataka.rst
         description: 
         guid: cdf65212-5955-4a65-8ef5-b5ab2844e5f9
-
   - title: EDA
     guid: 6967fb08-a479-4ca0-88a9-cbd9eb8a1d59
     folder: 05_EDA
@@ -129,3 +128,151 @@ lessons:
         file: 053_Skupovi za treniranje validaciju i testiranje.rst
         description: 
         guid: 5309b680-7be5-4a8f-bc9c-31211dd6bbee
+  - title: Линеарна регресија
+    guid: 11911fc4-d114-46a2-988e-6520743eb363
+    folder: 06_Linearna regresija
+    activities:
+      - type: reading
+        title: Линеарна регресија
+        file: 061_Linearna regresija.rst
+        description: 
+        guid: 4e41f942-88ca-47ac-8b65-1d66788bc261
+      - type: reading
+        title: Градијентни спуст
+        file: 062_Gradijentni spust.rst
+        description: 
+        guid: 639c2fae-88ad-4ee6-a086-15aaa95e2377
+      - type: reading
+        title: Оцењивање модела линеарне регресије
+        file: 063_Ocenjivanje modela linearne regresije.rst
+        description: 
+        guid: d286994e-d707-455d-bdbb-e7dbb10e3ac2
+      - type: reading
+        title: Вишеструка линеарна регресија - ТоДо
+        file: 064_Visestruka linearna regresija ToDo.rst
+        description: 
+        guid: 24e99d10-18ae-4f52-8c74-8a8a8e3a7c2f
+  - title: Класификација
+    guid: 970f545b-223a-4a68-b807-6f28f9cb8578
+    folder: 07_Klasifikacija
+    activities:
+      - type: reading
+        title: Класификација
+        file: 071_Klasifikacija.rst
+        description: 
+        guid: 47e1cf23-c154-49ab-a4a6-17d1790a54b4
+      - type: reading
+        title: Како оцењујемо модел класификације
+        file: 072_Kako ocenjujemo model klasifikacije.rst
+        description: 
+        guid: d343c498-1c42-4eb2-b662-825457747c92
+      - type: reading
+        title: Логистичка регресија
+        file: 073_Logisticka regresija.rst
+        description: 
+        guid: bb5037db-63ce-41bb-a1d2-520714df6236
+      - type: reading
+        title: Алгоритам k најближих суседа
+        file: 074_Algoritam k najblizih suseda.rst
+        description: 
+        guid: a03b58e7-4efb-4176-b466-7b13504b6e54
+      - type: reading
+        title: Хиперпараметри
+        file: 075_Hiperparametri.rst
+        description: 
+        guid: 8442b7c0-debd-4790-af4d-4b07da6d5ac9
+  - title: Прилагођавање
+    guid: 21eed1d8-c70e-4993-ac46-da60687e1aef
+    folder: 08_Prilagodjavanje
+    activities:
+      - type: reading
+        title: Генерализација, потприлагођавање и преприлагођавање
+        file: 081_Generalizacija potprilagodjavanje i preprilagodjavanje.rst
+        description: 
+        guid: 20ea4a55-e672-4dd0-bfeb-d1daf4ab04c7
+      - type: reading
+        title: Унакрсна валидација
+        file: 082_Unakrsna validacija.rst
+        description: 
+        guid: 72095168-4cc1-4b46-a922-17e337f29ddd
+      - type: reading
+        title: Регуларизација
+        file: 083_Regularizacija.rst
+        description: 
+        guid: f1b52a47-bda6-45ce-b1b7-918ebd7836dc
+  - title: Неуронске мреже - увод
+    guid: 6e59ff94-018d-455a-8a1c-5e5fcdca263e
+    folder: 09_Neuronske mreze uvod
+    activities:
+      - type: reading
+        title: Неуронске мреже
+        file: 091_Neuronske mreze.rst
+        description: 
+        guid: 812d4b54-946a-4866-8174-43c28d44cc65
+      - type: reading
+        title: Обучавање неуронских мрежа
+        file: 092_Obucavanje neuronskih mreza.rst
+        description: 
+        guid: 03851c22-25f5-4d9b-8854-994ff55a368e
+      - type: reading
+        title: TensorFlow Playground
+        file: 093_TensorFlow Playground.rst
+        description: 
+        guid: 1a377816-abd8-4a8a-8a87-90d20b5a1c5a
+  - title: Неуронске мреже - врсте и примена
+    guid: e2f03d84-90cb-4ae8-97cd-fbd3f0640cf9
+    folder: 10_Neuronske mreze vrste i primena
+    activities:
+      - type: reading
+        title: Различите врсте неуронских мрежа
+        file: 101_Razlicite vrste neuronskih mreza.rst
+        description: 
+        guid: c9ffce49-a50a-4105-9d49-d224f0fe0178
+      - type: reading
+        title: Конволутивне неуронске мреже
+        file: 102_Konvolutivne neuronske mreze.rst
+        description: 
+        guid: 84abd1cc-2f58-457a-82da-86003a080027
+      - type: reading
+        title: Рекурентне неуронске мреже
+        file: 103_Rekurentne neuronske mreze.rst
+        description: 
+        guid: fabd40de-ac21-4545-93e8-289afdead955
+  - title: Кластеровање
+    guid: cd1c523e-4c40-4d70-88e3-37765e2ae232
+    folder: 12_Klasterovanje
+    activities:
+      - type: reading
+        title: Кластеровање
+        file: 121_Klasterovanje.rst
+        description: 
+        guid: 9b1875a4-e108-4be7-aff4-4b6e5cf75444
+      - type: reading
+        title: Алгоритам k средина
+        file: 122_Algoritam k sredina.rst
+        description: 
+        guid: 4e20d190-b195-40f2-a457-1f0282e6fafd
+      - type: reading
+        title: Одређивање броја кластера
+        file: 123_Odredjivanje broja klastera.rst
+        description: 
+        guid: 06d45309-1274-4a5c-8c38-3872f19f5aec
+  - title: Учење поткрепљивањем
+    guid: 07703b0c-45fc-4b59-9cec-d0c6f55f5fa2
+    folder: 13_Ucenje potkrepljivanjem
+    activities:
+      - type: reading
+        title: Учење поткрепљивањем
+        file: 131_Ucenje potkrepljivanjem.rst
+        description: 
+        guid: fcbebdb7-9709-4656-9e22-c30ad94a9e21
+  - title: Друштвено битни аспекти
+    guid: c0039611-a809-4319-9ec7-70d505418b99
+    folder: 14_Drustveno bitni aspekti
+    activities:
+      - type: reading
+        title: Drustveno bitni aspekti
+        file: 141_Drustveno bitni aspekti.rst
+        description: 
+        guid: 0955b9bc-a8bd-4e83-a9fa-d177bd7ec570
+
