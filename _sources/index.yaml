@@ -1,6 +1,6 @@
-courseId: courseID 
+courseId: specit4_ai
 lang: en
-title: Petljadoc Course
+title: Савремена вештачка интелигенција
 description:
   willLearn: 
     - Preview of Petljadoc course
@@ -19,26 +19,113 @@ description:
       href: https://github.com/RunestoneInteractive/overview
   longDescription: |
     This is an example of a long description...
-  shortDescription: Вештачка интелигенција (спец. ИТ)
+  shortDescription: Савремена вештачка интелигенција
 
 
 lessons:
-  - title: Lesson 1
-    guid: 3e5ae4a7-97db-40dc-9708-1871d340c826
-    description: Your first lesson. Description is not required attribute
-    folder: 1_Lesson
+  - title: Увод
+    guid: f6342ecd-e38b-477d-92ed-d9c102cd7d3c
+    folder: 01_Uvod
     activities:
       - type: reading
-        title: Intro
-        file: intro.rst 
-        description: #Optional
-        guid: 83a23e76-7d20-4e01-84eb-28cc00cc6d37
-      - type: video
-        title: Video activity for your lesson
-        decription: Nice video
-        url: https://www.youtube.com/watch?v=2KYuzJKemXw
-        guid: b434514d-767d-426c-9460-bbfda2372025
-      - type: quiz
-        title: Test your students
-        file: quiz.rst
-        guid: 9a95b144-6d29-4215-b175-967730c5edb2
+        title: Савремена вештачка интелигенција
+        file: 011_Savremena vestacka inteligencija.rst 
+        description: 
+        guid: ea163cb2-cae4-41f6-8d0e-58d7df54479b
+      - type: reading
+        title: Да ли машина може да мисли?
+        file: 012_Da li masina moze da misli.rst
+        description: 
+        guid: 8ad6348a-c68e-45f5-9f2c-2f9c5d55afb8
+      - type: reading
+        title: Области вештачке интелигенције
+        file: 013_Oblasti vestacke inteligencije.rst
+        description: 
+        guid: 1fa5ee73-e204-4aaf-a558-a8d52e31f90c
+      - type: reading
+        title: Уска, општа и супер интелигенција
+        file: 014_Uska opsta i super inteligencija.rst
+        description: 
+        guid: ddf25f40-0bd3-4bf8-bc0a-e6301b731325
+  - title: Програмирање вођено подацима
+    guid: 588b04e2-911a-4fa0-94f7-53eb81206430
+    folder: 02_Programiranje vodjeno podacima
+    activities:
+      - type: reading
+        title: Програмирање вођено подацима
+        file: 021_Programiranje vodjeno podacima.rst
+        description: 
+        guid: 029e119d-dcae-4bc3-97a5-840d85f58d22
+      - type: reading
+        title: Зашто нам је потребно програмирање вођено подацима?
+        file: 022_Zasto nam je potrebno programiranje vodjeno podacima.rst 
+        description: 
+        guid: 3699ded9-09e8-42b5-96ac-565a05f45d0f
+      - type: reading
+        title: Основни појмови машинског учења
+        file: 023_Osnovni pojmovi masinskog ucenja.rst 
+        description: 
+        guid: 0fc53818-2ae8-4d77-9b71-c23038e27c54
+      - type: reading
+        title: Врсте машинског учења
+        file: 024_Vrste masinskog ucenja.rst 
+        description: 
+        guid: 4b0950fa-9392-4dd2-98dd-a005fae236ff
+  - title: Python
+    guid: 8dbe8fd8-d99d-4efd-9575-9090e48fff62
+    folder: 03_Python
+    activities:
+      - type: reading
+        title: Платформа Google Colab
+        file: 031_Platforma Google Colab.rst
+        description: 
+        guid: 6c6e735d-bad1-4a9f-901c-06935fabc23a
+      - type: reading
+        title: Библиотеке NumPy, Matplotlib i Pandas
+        file: 032_ Biblioteke NumPy, Matplotlib i Pandas.rst
+        description: 
+        guid: dd587de5-64f9-4824-8ec1-b3fc6d45cc26
+  - title: Улога података
+    guid: 404ae6ad-c9c4-4201-a82e-9996f3a5c541
+    folder: 04_Uloga podataka
+    activities:
+      - type: reading
+        title: Улога података
+        file: 041_Uloga podataka.rst
+        description: 
+        guid: 183c6fdd-fcae-4f74-9d1e-75bc90093071
+      - type: reading
+        title: Како настају скупови података?
+        file: 042_Kako nastaju skupovi podataka.rst
+        description: 
+        guid: 1ce03411-7e12-4c47-9b9e-3f65ccf43a62
+      - type: reading
+        title: Популарни скупови података
+        file: 043_Popularni skupovi podataka.rst
+        description: 
+        guid: 17182e47-e8c6-463d-aafc-09272d16c7e4
+      - type: reading
+        title: Јавни скупови података
+        file: 044_Javni skupovi podataka.rst
+        description: 
+        guid: cdf65212-5955-4a65-8ef5-b5ab2844e5f9
+
+  - title: EDA
+    guid: 6967fb08-a479-4ca0-88a9-cbd9eb8a1d59
+    folder: 05_EDA
+    activities:
+      - type: reading
+        title: Експлоративна анализа скупа података
+        file: 051_Eksplorativna analiza skupa podataka.rst
+        description: 
+        guid: 6250a2da-ff1d-4185-942a-03daeaae57d3
+      - type: reading
+        title: Креирање репрезентације скупа података
+        file: 052_Kreiranje reprezentacije skupa podataka.rst
+        description: 
+        guid: d6b1f573-2eac-4644-86c3-6798b89ad20e
+      - type: reading
+        title: Скупови за тренирање, валидацију и тестирање
+        file: 053_Skupovi za treniranje validaciju i testiranje.rst
+        description: 
+        guid: 5309b680-7be5-4a8f-bc9c-31211dd6bbee
