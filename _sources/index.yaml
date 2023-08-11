@@ -248,7 +248,7 @@ lessons:
         description: 
         guid: 9b1875a4-e108-4be7-aff4-4b6e5cf75444
       - type: reading
-        title: Алгоритам k средина
+        title: Алгоритам к-средина
         file: 122_Algoritam k sredina.rst
         description: 
         guid: 4e20d190-b195-40f2-a457-1f0282e6fafd
@@ -271,7 +271,7 @@ lessons:
     folder: 14_Drustveno bitni aspekti
     activities:
       - type: reading
-        title: Drustveno bitni aspekti
+        title: Друштвено битни аспекти
         file: 141_Drustveno bitni aspekti.rst
         description: 
         guid: 0955b9bc-a8bd-4e83-a9fa-d177bd7ec570
