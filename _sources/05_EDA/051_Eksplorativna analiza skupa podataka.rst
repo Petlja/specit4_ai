@@ -72,7 +72,7 @@
 
 *Пример скупа са недостајућим вредностима*
 
-*(слика је преузета са* `ове <https://gallery.azure.ai/Experiment/Methods-for-handling-missing-values-1>`_ *адресе)*
+(слика је преузета са https://gallery.azure.ai/Experiment/Methods-for-handling-missing-values-1)
 
 |
 

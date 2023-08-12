@@ -49,7 +49,7 @@
     :width: 780
     :align: center
 
-(слика је преузета са `ове <https://ourworldindata.org/brief-history-of-ai>`_ адресе)
+(слика је преузета са https://ourworldindata.org/brief-history-of-ai)
 
 |
 

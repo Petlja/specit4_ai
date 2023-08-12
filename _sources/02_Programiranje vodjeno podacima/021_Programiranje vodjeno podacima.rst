@@ -35,7 +35,7 @@
 
 **(ТОДО: превод)**
 
-*(слика је преузета са* `ове <https://www.katesmathlessons.com/intro-to-slope-intercept-form.html>`_ *адресе)*
+(слика је преузета са https://www.katesmathlessons.com/intro-to-slope-intercept-form.html)
 
 
 |

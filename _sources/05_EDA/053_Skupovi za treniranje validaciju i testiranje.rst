@@ -22,7 +22,7 @@
 
 *Подела скупа података на скуп за тренирање, скуп за валидацију и скуп за тестирање*
 
-(*слика је преузета са* `ове <https://towardsdatascience.com/how-to-split-data-into-three-sets-train-validation-and-test-and-why-e50d22d3e54c>`_  *адресе*)
+(слика је преузета са https://towardsdatascience.com/how-to-split-data-into-three-sets-train-validation-and-test-and-why-e50d22d3e54c)
 
 |
 
@@ -87,7 +87,7 @@
 
 *Стратификовани скупови за тренирање и тестирање*
 
-(*слика је преузета са* `oве <https://www.baeldung.com/cs/ml-stratified-sampling>`_ *адресе*)
+(слика је преузета са https://www.baeldung.com/cs/ml-stratified-sampling)
 
 |
 
