@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Скупови за тренирање, валидацију и тестирање</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/qchoice.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/associations.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/editor.css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja-course.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/nbstyle.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/runestonebase.js"></script>
+    <script src="../_static/skulpt.min.js"></script>
+    <script src="../_static/skulpt-stdlib.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/jquery.highlight.js"></script>
+    <script src="../_static/bookfuncs.js"></script>
+    <script src="../_static/codemirror.js"></script>
+    <script src="../_static/xml.js"></script>
+    <script src="../_static/css.js"></script>
+    <script src="../_static/python.js"></script>
+    <script src="../_static/htmlmixed.js"></script>
+    <script src="../_static/javascript.js"></script>
+    <script src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script src="../_static/activecode-i18n.en.js"></script>
+    <script src="../_static/activecode.js"></script>
+    <script src="../_static/clike.js"></script>
+    <script src="../_static/timed_activecode.js"></script>
+    <script src="../_static/animationbase.js"></script>
+    <script src="../_static/mchoice.js"></script>
+    <script src="../_static/timedmc.js"></script>
+    <script src="../_static/timed.js"></script>
+    <script src="../_static/mchoice-i18n.en.js"></script>
+    <script src="../_static/clickable.js"></script>
+    <script src="../_static/timedclickable.js"></script>
+    <script src="../_static/d3.v2.min.js"></script>
+    <script src="../_static/jquery.ba-bbq.min.js"></script>
+    <script src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script src="../_static/pytutor.js"></script>
+    <script src="../_static/codelens.js"></script>
+    <script src="../_static/skulpt.min.js"></script>
+    <script src="../_static/skulpt-stdlib.js"></script>
+    <script src="../_static/datafile.js"></script>
+    <script src="../_static/dragndrop.js"></script>
+    <script src="../_static/timeddnd.js"></script>
+    <script src="../_static/dragndrop-i18n.en.js"></script>
+    <script src="../_static/fitb.js"></script>
+    <script src="../_static/timedfitb.js"></script>
+    <script src="../_static/fitb-i18n.en.js"></script>
+    <script src="../_static/matrixeq.js"></script>
+    <script src="../_static/lib/prettify.js"></script>
+    <script src="../_static/lib/hammer.min.js"></script>
+    <script src="../_static/parsons.js"></script>
+    <script src="../_static/parsons-i18n.en.js"></script>
+    <script src="../_static/timedparsons.js"></script>
+    <script src="../_static/poll.js"></script>
+    <script src="../_static/reveal.js"></script>
+    <script src="../_static/shortanswer.js"></script>
+    <script src="../_static/timed_shortanswer.js"></script>
+    <script src="../_static/showEval.js"></script>
+    <script src="../_static/tabbedstuff.js"></script>
+    <script src="../_static/runestonevideo.js"></script>
+    <script src="../_static/webglinteractive.js"></script>
+    <script src="../_static/FileSaver.min.js"></script>
+    <script src="../_static/Blob.js"></script>
+    <script src="../_static/karelCorner.js"></script>
+    <script src="../_static/karelRobot.js"></script>
+    <script src="../_static/karelWorld.js"></script>
+    <script src="../_static/karelChat.js"></script>
+    <script src="../_static/karelRobotDrawer.js"></script>
+    <script src="../_static/karelUI.js"></script>
+    <script src="../_static/karel.js"></script>
+    <script src="../_static/karel-i18n.en.js"></script>
+    <script src="../_static/notes.js"></script>
+    <script src="../_static/pygamelib-init.js"></script>
+    <script src="../_static/gallery.js"></script>
+    <script src="../_static/associations.js"></script>
+    <script src="../_static/associations-i18n.en.js"></script>
+    <script src="../_static/editor.js"></script>
+    <script src="../_static/jszip.js"></script>
+    <script src="../_static/editor-i18n.en.js"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="../_static/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/waypoints.min.js"></script>
+    <script src="../_static/rangy-core.js"></script>
+    <script src="../_static/rangy-textrange.js"></script>
+    <script src="../_static/rangy-cssclassapplier.js"></script>
+    <script src="../_static/user-highlights.js"></script>
+    <script src="../_static/jquery.idle-timer.js"></script>
+    <script src="../_static/processing-1.4.1.min.js"></script>
+    <script src="../_static/jquery.hotkey.js"></script>
+    <script src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script src="../_static/course-errors.js"></script>
+    <script src="../_static/petlja.js"></script>
+    <script src="../_static/require.js"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+    <script type="text/javascript">
+      eBookConfig = {};
+      eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+      eBookConfig.app = eBookConfig.host + '/runestone';
+      eBookConfig.ajaxURL = eBookConfig.app + '/ajax/';
+      eBookConfig.course = 'os4_dig';
+      eBookConfig.logLevel = '0';
+      eBookConfig.loginRequired = 'false';
+      eBookConfig.build_info = "";
+      eBookConfig.isLoggedIn = false;
+      eBookConfig.useRunestoneServices = false;
+      eBookConfig.python3 = true;
+      eBookConfig.basecourse = 'os4_dig';
+      eBookConfig.runestone_version = '';
+      eBookConfig.imagesDir = '../_images/';
+      eBookConfig.staticDir = '../_static/';
+      if (typeof (Sk) != "undefined")
+        Sk.imgPath = eBookConfig.imagesDir;
+    </script>
+
+  </head>
+
+  <body>
+
+
+
+<div id="navbar" class="content-header">
+  <div class="right-side-nav">
+    
+    <div id="usefulLinksToggle" class="useful-links-toggle">
+        <a class="dropdown-toggle dropdown-toggle-burger" role="button" href="#" id="usefulLinksDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-bars fa-2x"></i>
+        </a>
+        <div class="dropdown-menu dropdown-nav-links shadow-lg" aria-labelledby="usefulLinksDropdown" x-placement="bottom-start" style="position: absolute; transform: translate3d(-55px, 32px, 0px); top: 0px; left: 0px; will-change: transform;">
+          <div class="links-title"> Useful links</div>
+          <div class="useful-link">
+            <a href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html" target="_blank">Sphinx Docs</a></div>
+          <div class="useful-link">
+            <a href="https://github.com/Petlja/PetljaDoc/blob/master/README.md" target="_blank">Petljadoc</a></div>
+          <div class="useful-link">
+            <a href="https://github.com/RunestoneInteractive/overview" target="_blank">Runestone Interactive</a></div>
+          
+        </div>
+    </div>
+
+    
+</div>
+
+<div class="left-side-nav">
+  <div class="course-logo-nav">
+      <a target="_blank" href="https://petlja.org">
+          <img src="../_static/img/petlja-logo-wt.svg" alt="petlja.org" id="lightPetljaLogo">
+      </a>
+  </div>
+  <div class="course-logo-nav-kabinet">
+      <a target="_blank" href="https://petlja.org/net.kabinet">
+          <img src="../_static/img/netkabinet-logo-strelica-wt.svg" alt="petlja.org" id="lightNetKabinetLogo">
+      </a>
+  </div>
+</div>
+
+
+<div class="content-header-label" id = "content-header-label" href="../">Савремена вештачка интелигенција</div>
+
+</div>
+
+
+
+
+<div class="petljaCourseContainer">
+
+<div class="petljaCourseContent">
+  
+           <div class="tableOfContent">
+            <h5> Table of content </h5>
+            </div>
+           <div>
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-01_Uvod>
+                    <h5>Увод</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../01_Uvod/011_Savremena%20vestacka%20inteligencija.html><div class="studioLecture" id=activity-01_Uvod-011_Savremena%20vestacka%20inteligencija><i class="fas fa-file-alt activity-icon"></i>Савремена вештачка интелигенција</div></a>
+                <a href=../01_Uvod/012_Da%20li%20masina%20moze%20da%20misli.html><div class="studioLecture" id=activity-01_Uvod-012_Da%20li%20masina%20moze%20da%20misli><i class="fas fa-file-alt activity-icon"></i>Да ли машина може да мисли?</div></a>
+                <a href=../01_Uvod/013_Oblasti%20vestacke%20inteligencije.html><div class="studioLecture" id=activity-01_Uvod-013_Oblasti%20vestacke%20inteligencije><i class="fas fa-file-alt activity-icon"></i>Области вештачке интелигенције</div></a>
+                <a href=../01_Uvod/014_Uska%20opsta%20i%20super%20inteligencija.html><div class="studioLecture" id=activity-01_Uvod-014_Uska%20opsta%20i%20super%20inteligencija><i class="fas fa-file-alt activity-icon"></i>Уска, општа и супер интелигенција</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02_Programiranje%20vodjeno%20podacima>
+                    <h5>Програмирање вођено подацима</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02_Programiranje%20vodjeno%20podacima/021_Programiranje%20vodjeno%20podacima.html><div class="studioLecture" id=activity-02_Programiranje%20vodjeno%20podacima-021_Programiranje%20vodjeno%20podacima><i class="fas fa-file-alt activity-icon"></i>Програмирање вођено подацима</div></a>
+                <a href=../02_Programiranje%20vodjeno%20podacima/022_Zasto%20nam%20je%20potrebno%20programiranje%20vodjeno%20podacima.html><div class="studioLecture" id=activity-02_Programiranje%20vodjeno%20podacima-022_Zasto%20nam%20je%20potrebno%20programiranje%20vodjeno%20podacima><i class="fas fa-file-alt activity-icon"></i>Зашто нам је потребно програмирање вођено подацима?</div></a>
+                <a href=../02_Programiranje%20vodjeno%20podacima/023_Osnovni%20pojmovi%20masinskog%20ucenja.html><div class="studioLecture" id=activity-02_Programiranje%20vodjeno%20podacima-023_Osnovni%20pojmovi%20masinskog%20ucenja><i class="fas fa-file-alt activity-icon"></i>Основни појмови машинског учења</div></a>
+                <a href=../02_Programiranje%20vodjeno%20podacima/024_Vrste%20masinskog%20ucenja.html><div class="studioLecture" id=activity-02_Programiranje%20vodjeno%20podacima-024_Vrste%20masinskog%20ucenja><i class="fas fa-file-alt activity-icon"></i>Врсте машинског учења</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-03_Python>
+                    <h5>Python</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../03_Python/031_Platforma%20Google%20Colab.html><div class="studioLecture" id=activity-03_Python-031_Platforma%20Google%20Colab><i class="fas fa-file-alt activity-icon"></i>Платформа Google Colab</div></a>
+                <a href=../03_Python/032_%20Biblioteke%20NumPy,%20Matplotlib%20i%20Pandas.html><div class="studioLecture" id=activity-03_Python-032_%20Biblioteke%20NumPy,%20Matplotlib%20i%20Pandas><i class="fas fa-file-alt activity-icon"></i>Библиотеке NumPy, Matplotlib i Pandas</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-04_Uloga%20podataka>
+                    <h5>Улога података</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../04_Uloga%20podataka/041_Uloga%20podataka.html><div class="studioLecture" id=activity-04_Uloga%20podataka-041_Uloga%20podataka><i class="fas fa-file-alt activity-icon"></i>Улога података</div></a>
+                <a href=../04_Uloga%20podataka/042_Kako%20nastaju%20skupovi%20podataka.html><div class="studioLecture" id=activity-04_Uloga%20podataka-042_Kako%20nastaju%20skupovi%20podataka><i class="fas fa-file-alt activity-icon"></i>Како настају скупови података?</div></a>
+                <a href=../04_Uloga%20podataka/043_Popularni%20skupovi%20podataka.html><div class="studioLecture" id=activity-04_Uloga%20podataka-043_Popularni%20skupovi%20podataka><i class="fas fa-file-alt activity-icon"></i>Популарни скупови података</div></a>
+                <a href=../04_Uloga%20podataka/044_Javni%20skupovi%20podataka.html><div class="studioLecture" id=activity-04_Uloga%20podataka-044_Javni%20skupovi%20podataka><i class="fas fa-file-alt activity-icon"></i>Јавно доступни скупови података</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-05_EDA>
+                    <h5>EDA</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../05_EDA/051_Eksplorativna%20analiza%20skupa%20podataka.html><div class="studioLecture" id=activity-05_EDA-051_Eksplorativna%20analiza%20skupa%20podataka><i class="fas fa-file-alt activity-icon"></i>Експлоративна анализа скупа података</div></a>
+                <a href=../05_EDA/052_Kreiranje%20reprezentacije%20skupa%20podataka.html><div class="studioLecture" id=activity-05_EDA-052_Kreiranje%20reprezentacije%20skupa%20podataka><i class="fas fa-file-alt activity-icon"></i>Креирање репрезентације скупа података</div></a>
+                <a href=../05_EDA/053_Skupovi%20za%20treniranje%20validaciju%20i%20testiranje.html><div class="studioLecture" id=activity-05_EDA-053_Skupovi%20za%20treniranje%20validaciju%20i%20testiranje><i class="fas fa-file-alt activity-icon"></i>Скупови за тренирање, валидацију и тестирање</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-06_Linearna%20regresija>
+                    <h5>Линеарна регресија</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../06_Linearna%20regresija/061_Linearna%20regresija.html><div class="studioLecture" id=activity-06_Linearna%20regresija-061_Linearna%20regresija><i class="fas fa-file-alt activity-icon"></i>Линеарна регресија</div></a>
+                <a href=../06_Linearna%20regresija/062_Gradijentni%20spust.html><div class="studioLecture" id=activity-06_Linearna%20regresija-062_Gradijentni%20spust><i class="fas fa-file-alt activity-icon"></i>Градијентни спуст</div></a>
+                <a href=../06_Linearna%20regresija/063_Ocenjivanje%20modela%20linearne%20regresije.html><div class="studioLecture" id=activity-06_Linearna%20regresija-063_Ocenjivanje%20modela%20linearne%20regresije><i class="fas fa-file-alt activity-icon"></i>Оцењивање модела линеарне регресије</div></a>
+                <a href=../06_Linearna%20regresija/064_Visestruka%20linearna%20regresija%20ToDo.html><div class="studioLecture" id=activity-06_Linearna%20regresija-064_Visestruka%20linearna%20regresija%20ToDo><i class="fas fa-file-alt activity-icon"></i>Вишеструка линеарна регресија - ТоДо</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-07_Klasifikacija>
+                    <h5>Класификација</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../07_Klasifikacija/071_Klasifikacija.html><div class="studioLecture" id=activity-07_Klasifikacija-071_Klasifikacija><i class="fas fa-file-alt activity-icon"></i>Класификација</div></a>
+                <a href=../07_Klasifikacija/072_Kako%20ocenjujemo%20model%20klasifikacije.html><div class="studioLecture" id=activity-07_Klasifikacija-072_Kako%20ocenjujemo%20model%20klasifikacije><i class="fas fa-file-alt activity-icon"></i>Како оцењујемо модел класификације</div></a>
+                <a href=../07_Klasifikacija/073_Logisticka%20regresija.html><div class="studioLecture" id=activity-07_Klasifikacija-073_Logisticka%20regresija><i class="fas fa-file-alt activity-icon"></i>Логистичка регресија</div></a>
+                <a href=../07_Klasifikacija/074_Algoritam%20k%20najblizih%20suseda.html><div class="studioLecture" id=activity-07_Klasifikacija-074_Algoritam%20k%20najblizih%20suseda><i class="fas fa-file-alt activity-icon"></i>Алгоритам к-најближих суседа</div></a>
+                <a href=../07_Klasifikacija/075_Hiperparametri.html><div class="studioLecture" id=activity-07_Klasifikacija-075_Hiperparametri><i class="fas fa-file-alt activity-icon"></i>Хиперпараметри</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-08_Prilagodjavanje>
+                    <h5>Прилагођавање</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../08_Prilagodjavanje/081_Generalizacija%20potprilagodjavanje%20i%20preprilagodjavanje.html><div class="studioLecture" id=activity-08_Prilagodjavanje-081_Generalizacija%20potprilagodjavanje%20i%20preprilagodjavanje><i class="fas fa-file-alt activity-icon"></i>Генерализација, потприлагођавање и преприлагођавање</div></a>
+                <a href=../08_Prilagodjavanje/082_Unakrsna%20validacija.html><div class="studioLecture" id=activity-08_Prilagodjavanje-082_Unakrsna%20validacija><i class="fas fa-file-alt activity-icon"></i>Унакрсна валидација</div></a>
+                <a href=../08_Prilagodjavanje/083_Regularizacija.html><div class="studioLecture" id=activity-08_Prilagodjavanje-083_Regularizacija><i class="fas fa-file-alt activity-icon"></i>Регуларизација</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-09_Neuronske%20mreze%20uvod>
+                    <h5>Неуронске мреже - увод</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../09_Neuronske%20mreze%20uvod/091_Neuronske%20mreze.html><div class="studioLecture" id=activity-09_Neuronske%20mreze%20uvod-091_Neuronske%20mreze><i class="fas fa-file-alt activity-icon"></i>Неуронске мреже</div></a>
+                <a href=../09_Neuronske%20mreze%20uvod/092_Obucavanje%20neuronskih%20mreza.html><div class="studioLecture" id=activity-09_Neuronske%20mreze%20uvod-092_Obucavanje%20neuronskih%20mreza><i class="fas fa-file-alt activity-icon"></i>Обучавање неуронских мрежа</div></a>
+                <a href=../09_Neuronske%20mreze%20uvod/093_TensorFlow%20Playground.html><div class="studioLecture" id=activity-09_Neuronske%20mreze%20uvod-093_TensorFlow%20Playground><i class="fas fa-file-alt activity-icon"></i>TensorFlow Playground</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-10_Neuronske%20mreze%20vrste%20i%20primena>
+                    <h5>Неуронске мреже - врсте и примена</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../10_Neuronske%20mreze%20vrste%20i%20primena/101_Razlicite%20vrste%20neuronskih%20mreza.html><div class="studioLecture" id=activity-10_Neuronske%20mreze%20vrste%20i%20primena-101_Razlicite%20vrste%20neuronskih%20mreza><i class="fas fa-file-alt activity-icon"></i>Различите врсте неуронских мрежа</div></a>
+                <a href=../10_Neuronske%20mreze%20vrste%20i%20primena/102_Konvolutivne%20neuronske%20mreze.html><div class="studioLecture" id=activity-10_Neuronske%20mreze%20vrste%20i%20primena-102_Konvolutivne%20neuronske%20mreze><i class="fas fa-file-alt activity-icon"></i>Конволутивне неуронске мреже</div></a>
+                <a href=../10_Neuronske%20mreze%20vrste%20i%20primena/103_Rekurentne%20neuronske%20mreze.html><div class="studioLecture" id=activity-10_Neuronske%20mreze%20vrste%20i%20primena-103_Rekurentne%20neuronske%20mreze><i class="fas fa-file-alt activity-icon"></i>Рекурентне неуронске мреже</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-12_Klasterovanje>
+                    <h5>Кластеровање</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../12_Klasterovanje/121_Klasterovanje.html><div class="studioLecture" id=activity-12_Klasterovanje-121_Klasterovanje><i class="fas fa-file-alt activity-icon"></i>Кластеровање</div></a>
+                <a href=../12_Klasterovanje/122_Algoritam%20k%20sredina.html><div class="studioLecture" id=activity-12_Klasterovanje-122_Algoritam%20k%20sredina><i class="fas fa-file-alt activity-icon"></i>Алгоритам к-средина</div></a>
+                <a href=../12_Klasterovanje/123_Odredjivanje%20broja%20klastera.html><div class="studioLecture" id=activity-12_Klasterovanje-123_Odredjivanje%20broja%20klastera><i class="fas fa-file-alt activity-icon"></i>Одређивање броја кластера</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-13_Ucenje%20potkrepljivanjem>
+                    <h5>Учење поткрепљивањем</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../13_Ucenje%20potkrepljivanjem/131_Ucenje%20potkrepljivanjem.html><div class="studioLecture" id=activity-13_Ucenje%20potkrepljivanjem-131_Ucenje%20potkrepljivanjem><i class="fas fa-file-alt activity-icon"></i>Учење поткрепљивањем</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-14_Drustveno%20bitni%20aspekti>
+                    <h5>Друштвено битни аспекти</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../14_Drustveno%20bitni%20aspekti/141_Drustveno%20bitni%20aspekti.html><div class="studioLecture" id=activity-14_Drustveno%20bitni%20aspekti-141_Drustveno%20bitni%20aspekti><i class="fas fa-file-alt activity-icon"></i>Друштвено битни аспекти</div></a>
+                </div>
+            </div>
+                </div>
+</div>
+
+
+
+<div class="lectureContent">
+
+  <div id="errors">
+  </div>
+  
+  <div class="lectureContentMaterial">
+  
+    <div id="main-content">
+    
+  <div class="section" id="id1">
+<h1>Скупови за тренирање, валидацију и тестирање<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
+        <div class="course-content">
+            
+<p>У овој лекцији ћеш упознати скупове за тренирање, валидацију и тестирање. О скупу за тренирање можеш да размишљаш као о литератури из које модел
+машинског учења учи, док скуп за тестирање можеш да замислиш као контролни задатак који проверава колико добро је модел научио и разумео потребно
+градиво. Скуп за валидацију се користи у процесу учења модела и можеш да га замислиш као скуп мањих тестова којима се проверава колико је модел
+заправо спреман за контролни и на основу чијих резултата модел може да поправи начин и успешност учења.</p>
+
+    </div></div>
+<p>Након што се анализирају подаци и одаберу одговарајуће инстанце и атрибути, скуп свих података се дели на <strong>скуп за тренирање</strong>
+(енгл. <em>training set</em>) и <strong>скуп за тестирање</strong> (енгл. <em>test set</em>). Као што се може наслутити из имена скупа, скуп за тренирање се користи за
+тренирање самог модела машинског учења. Над њим се примењује одабрани алгоритам и креира сам модел. Скуп за тестирање се користи за тестирање
+модела тј. израчунавање подесних мера квалитета модела. Захваљујући њему може објективно да се оцени колико добро је модел научио потребни
+задатак. Обично један део података полазног скупа користимо и за креирање <strong>скупа за валидацију</strong> (енгл. <em>validation set</em>). Скуп за валидацију се
+користи за праћење процеса тренирања модела и одређивање неких конфигурација модела које доводе до бољих мера квалитета. О овим темама ће још
+бити речи у наставку курса.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/skupovi1.png"><img alt="../_images/skupovi1.png" src="../_images/skupovi1.png" style="width: 600px;" /></a>
+</div>
+<p><em>Подела скупа података на скуп за тренирање, скуп за валидацију и скуп за тестирање</em></p>
+<p>(слика је преузета са <a class="reference external" href="https://towardsdatascience.com/how-to-split-data-into-three-sets-train-validation-and-test-and-why-e50d22d3e54c">https://towardsdatascience.com/how-to-split-data-into-three-sets-train-validation-and-test-and-why-e50d22d3e54c</a>)</p>
+<hr class="docutils" />
+<p>Скупови за тренирање, валидацију и тестирање се по правилу креирају насумичном поделом полазног скупа података. Прво дефинишемо колико велики
+треба да буду ови скупови, а потом насумично бирамо инстанце које ће се наћи у сваком од њих. Обично је скуп за тренирање највећи док су скупови
+за тестирање и валидацију мањи јер желимо да имамо довољно података да обучимо модел али и довољно података да адекватно оценимо његове
+перформансе. Пракса је да се односи величина ових скупова изражавају пропорцијом. На пример, често ће се наћи однос скупа за тренирање и однос
+скупа за тестирање изражен као 2:1 што би значило да две трећине полазног скупа чини скуп за тренирање а једна трећина скуп за тестирање. Слично,
+пропорција 2:1:1 би значила да се две четвртине (тј. једна половина) полазног скупа користе као скуп за тренирање а по једна четвртина као скуп за
+валидацију и тестирање.</p>
+<p>Иако је згодно што се скупови за тренирање, валидацију и тестирање креирају насумично, ипак би значио и неки увид у то како је ова подела
+извршена. На пример, када желимо да поновимо експеримент или омогућимо другима да га самостално изведу (ово је важно својство експеримената и
+зове се репродуцибилност), пожељно је да се користе исти скупови за тренирање, валидацију и тестирање. Слично, када решавамо задатак, нисмо баш
+одмах сигурни шта је најбоље урадити па испорбавамо већи број алгоритама и креирамо већи број модела. Због коректности упоређивања значило би да
+све моделе креирамо над истим скупом за тренирање и оцењујемо над истим скупом за тестирање. Зато је добро на нивоу библиотеке са којом се ради
+подесити параметар који утиче на случајност поделе (обично се зове random seed и има исту сврху као подешавање семена код генератора случајних
+бројева) или просто у старту извршити поделу података и надаље је конзистентно користити. Неки често коришћени скупови података имају ове
+предефинисане поделе на скуп за тренирање, валидацију и тестирање (на пример, можеш да погледаш скуп <em>MNIST</em>).</p>
+<p>Важно својство које треба да испуне скупови за тренирање, валидацију и тестирање је да буду дисјунктни. То значи да свака инстанца полазног скупа
+података приликом креирања скупова за тренирање, валидацију и тестирање мора припасти тачно једном од ових скупова, не смеју постојати пресеци и
+заједничке инстанце. Подсетимо се да се од модела машинског учења очекује да добро генерализују тј. да се добро понашају за нове инстанце које
+модел није имао прилике да сусретне у скупу за тренирање. Уколико се скупови за тренирање и скупови за тестирање преклапају, нећемо бити у
+могућности да објективно оценимо да ли модел заиста учи или меморише тј. памти информације из скупа за тренирање. Слично важи и за однос скупа за
+тренирање и скупа за валидацију: функција скупа за валидацију је да помогне у одабиру конфигурација које ће учење учинити што успешнијим. Уколико
+се ови скупови преклапају, нећемо бити у могућности да објективно и непристрасно оценимо понашање модела и одаберемо подесне конфигурације.</p>
+<p>Услов да скупови за тренирање, валидацију и тестирање треба да буду дисјунктни значи и да се информације из једног од скупова никако не смеју
+преливати на друге скупове. Ово је посебно важно приликом примене техника претпроцесирања и припреме скупова. Размотримо следећи пример. Поменули
+смо да се због осетљивости модела машинског учења на вредност атрибута често врши стандардизација нумеричких атрибута. Неко може приступити овој
+трансформацији тако што ће на основу целог скупа израчунати средњу вредност и стандардну девијацију, а затим је искористити, редом, за
+стандардизацију скупова за тренирање и тестирање. Како не би дошло до преливања информација, коректан редослед ових корака је заправо следећи:</p>
+<ol class="arabic simple">
+<li><p>подела скупа података на скуп за тренирање и тестирање,</p></li>
+<li><p>израчунавање средње вредности и стандардне девијације само на скупу за тестирање,</p></li>
+<li><p>трансформација скупа за тренирање користећи израчунате вредности,</p></li>
+<li><p>трансформација скупа за тестирање користећи овако израчунате вредности.</p></li>
+</ol>
+<p>Због жеље да не погреши, неко може размишљати и на следећи начин: након што поделим полазни скуп података на скуп за тренирање и скуп за
+тестирање, извршићу посебно стандардизацију скупа за тренирање и скупа за тестирање. И овај приступ, иако опрезнији, није коректан јер доводи до
+модификације скупа за тестирање.  На доњој левој слици црвени троуглићи представљају инстанце скупа за тренирање, а плави кругови инстанце скупа
+за тестирање.  Слика у средини представља ове инстанце након коректне стандардизације (можеш пажљиво да упредиш слике и распоред тачака - скала
+дуж x-осе се променила услед стандардизације, све друге је остало исто). На десној слици можеш да видиш инстанце након што се стандардизација
+засебно изврши над скупом за тренирање и скупом за тестирање - просторни распоред се сада прилично променио.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/skupovi2.png"><img alt="../_images/skupovi2.png" src="../_images/skupovi2.png" style="width: 780px;" /></a>
+</div>
+<p><em>Примери коректне и погрешне стандардизације</em></p>
+<hr class="docutils" />
+<p>Приликом поделе полазног скупа података било би идеално да очувамо пропорције у односу на вредности атрибута и вредност циљне променљиве.
+На пример, уколико је у скупу медицинских података однос мушких и женских пацијената 4:5, било би идеално да, након поделе, у скупу за тренирање
+и у скупу за тестирање однос пацијената буде приближно 4:5. Технике које омогућавају овакву врсту поделе називамо техникама <strong>стратификације</strong>.
+Ипак, због броја атрибута и њихових комбинација, у пракси ово често није реалистичан захтев па се најчешће инсистира на пропорционалности у
+односу на вредности циљне променљиве.  О овој теми ћемо посебно разговарати у контексту задатка класификације.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/skupovi3.png"><img alt="../_images/skupovi3.png" src="../_images/skupovi3.png" style="width: 780px;" /></a>
+</div>
+<p><em>Стратификовани скупови за тренирање и тестирање</em></p>
+<p>(слика је преузета са <a class="reference external" href="https://www.baeldung.com/cs/ml-stratified-sampling">https://www.baeldung.com/cs/ml-stratified-sampling</a>)</p>
+<hr class="docutils" />
+
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<p>Шта мислиш, да ли присуство дупликата може да утиче на коректност креирања скупова за тренирање, валидацију и тестирање?</p>
+
+    </div></div>
+
+    <div data-component="reveal" id="531"   data-showtitle="Прикажи одговор" data-hidetitle="Сакриј одговор">
+    <p>Дупликати, поготово ако су многоброни, могу да утичу на коректност протокола учења зато што се дуплиране инстанце могу појавити и у скупу за
+тренирање и у скупу за тестирање и утицати на објективност оцене.</p>
+
+    </div>
+    
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<p>Да ли имаш идеју шта би била коректна подела временских података на скупове за тренирање, валидацију и тестирање?</p>
+
+    </div></div>
+
+    <div data-component="reveal" id="532"   data-showtitle="Прикажи одговор" data-hidetitle="Сакриј одговор">
+    <p>Сви подаци у скупу за тренирање би требали да претходе свим подацима из скупа за валидацију, а сви они заједно подацима из скупа за тестирање.</p>
+
+    </div>
+    </div>
+
+
+    </div>
+    
+    <div>
+<div class="lecture-prev-next-toggle">
+  <a  href="052_Kreiranje%20reprezentacije%20skupa%20podataka.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Previous chapter </span> </a>
+  
+  <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Next chapter</span>  <i class="fas fa-arrow-right fa"></i> </a>
+</div>
+
+<script type="text/javascript">
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+</script>
+</div>
+
+    
+  </div>
+</div>
+
+<div class="petljadoc-resources">
+  <span class="pull-left">(Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>) <br> © 2022 Petlja</span>
+</div>
+
+
+<div class="lectureToolbox">
+
+  <label class="font-size-toggle" id="fontSizeToggle">
+
+      <i class="fas fa-font"></i><label>Letters</label>
+  </label>
+  <div class="font-change d-none" id="fontChangeModal">
+      <span class="dec-letter-icon" id="decLetterIcon">A-</span>
+      <label id="currentFontSize">16</label>
+      <span class="inc-letter-icon" id="incLetterIcon">A+</span>
+  </div>
+</div>
+
+</div>
+
+  </body>
+</html>

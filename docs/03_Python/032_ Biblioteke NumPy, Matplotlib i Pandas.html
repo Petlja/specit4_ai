@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Библиотеке NumPy, Matplotlib и Pandas</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/qchoice.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/associations.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/editor.css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja-course.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/nbstyle.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/runestonebase.js"></script>
+    <script src="../_static/skulpt.min.js"></script>
+    <script src="../_static/skulpt-stdlib.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/jquery.highlight.js"></script>
+    <script src="../_static/bookfuncs.js"></script>
+    <script src="../_static/codemirror.js"></script>
+    <script src="../_static/xml.js"></script>
+    <script src="../_static/css.js"></script>
+    <script src="../_static/python.js"></script>
+    <script src="../_static/htmlmixed.js"></script>
+    <script src="../_static/javascript.js"></script>
+    <script src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script src="../_static/activecode-i18n.en.js"></script>
+    <script src="../_static/activecode.js"></script>
+    <script src="../_static/clike.js"></script>
+    <script src="../_static/timed_activecode.js"></script>
+    <script src="../_static/animationbase.js"></script>
+    <script src="../_static/mchoice.js"></script>
+    <script src="../_static/timedmc.js"></script>
+    <script src="../_static/timed.js"></script>
+    <script src="../_static/mchoice-i18n.en.js"></script>
+    <script src="../_static/clickable.js"></script>
+    <script src="../_static/timedclickable.js"></script>
+    <script src="../_static/d3.v2.min.js"></script>
+    <script src="../_static/jquery.ba-bbq.min.js"></script>
+    <script src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script src="../_static/pytutor.js"></script>
+    <script src="../_static/codelens.js"></script>
+    <script src="../_static/skulpt.min.js"></script>
+    <script src="../_static/skulpt-stdlib.js"></script>
+    <script src="../_static/datafile.js"></script>
+    <script src="../_static/dragndrop.js"></script>
+    <script src="../_static/timeddnd.js"></script>
+    <script src="../_static/dragndrop-i18n.en.js"></script>
+    <script src="../_static/fitb.js"></script>
+    <script src="../_static/timedfitb.js"></script>
+    <script src="../_static/fitb-i18n.en.js"></script>
+    <script src="../_static/matrixeq.js"></script>
+    <script src="../_static/lib/prettify.js"></script>
+    <script src="../_static/lib/hammer.min.js"></script>
+    <script src="../_static/parsons.js"></script>
+    <script src="../_static/parsons-i18n.en.js"></script>
+    <script src="../_static/timedparsons.js"></script>
+    <script src="../_static/poll.js"></script>
+    <script src="../_static/reveal.js"></script>
+    <script src="../_static/shortanswer.js"></script>
+    <script src="../_static/timed_shortanswer.js"></script>
+    <script src="../_static/showEval.js"></script>
+    <script src="../_static/tabbedstuff.js"></script>
+    <script src="../_static/runestonevideo.js"></script>
+    <script src="../_static/webglinteractive.js"></script>
+    <script src="../_static/FileSaver.min.js"></script>
+    <script src="../_static/Blob.js"></script>
+    <script src="../_static/karelCorner.js"></script>
+    <script src="../_static/karelRobot.js"></script>
+    <script src="../_static/karelWorld.js"></script>
+    <script src="../_static/karelChat.js"></script>
+    <script src="../_static/karelRobotDrawer.js"></script>
+    <script src="../_static/karelUI.js"></script>
+    <script src="../_static/karel.js"></script>
+    <script src="../_static/karel-i18n.en.js"></script>
+    <script src="../_static/notes.js"></script>
+    <script src="../_static/pygamelib-init.js"></script>
+    <script src="../_static/gallery.js"></script>
+    <script src="../_static/associations.js"></script>
+    <script src="../_static/associations-i18n.en.js"></script>
+    <script src="../_static/editor.js"></script>
+    <script src="../_static/jszip.js"></script>
+    <script src="../_static/editor-i18n.en.js"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="../_static/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/waypoints.min.js"></script>
+    <script src="../_static/rangy-core.js"></script>
+    <script src="../_static/rangy-textrange.js"></script>
+    <script src="../_static/rangy-cssclassapplier.js"></script>
+    <script src="../_static/user-highlights.js"></script>
+    <script src="../_static/jquery.idle-timer.js"></script>
+    <script src="../_static/processing-1.4.1.min.js"></script>
+    <script src="../_static/jquery.hotkey.js"></script>
+    <script src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script src="../_static/course-errors.js"></script>
+    <script src="../_static/petlja.js"></script>
+    <script src="../_static/require.js"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+    <script type="text/javascript">
+      eBookConfig = {};
+      eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+      eBookConfig.app = eBookConfig.host + '/runestone';
+      eBookConfig.ajaxURL = eBookConfig.app + '/ajax/';
+      eBookConfig.course = 'os4_dig';
+      eBookConfig.logLevel = '0';
+      eBookConfig.loginRequired = 'false';
+      eBookConfig.build_info = "";
+      eBookConfig.isLoggedIn = false;
+      eBookConfig.useRunestoneServices = false;
+      eBookConfig.python3 = true;
+      eBookConfig.basecourse = 'os4_dig';
+      eBookConfig.runestone_version = '';
+      eBookConfig.imagesDir = '../_images/';
+      eBookConfig.staticDir = '../_static/';
+      if (typeof (Sk) != "undefined")
+        Sk.imgPath = eBookConfig.imagesDir;
+    </script>
+
+  </head>
+
+  <body>
+
+
+
+<div id="navbar" class="content-header">
+  <div class="right-side-nav">
+    
+    <div id="usefulLinksToggle" class="useful-links-toggle">
+        <a class="dropdown-toggle dropdown-toggle-burger" role="button" href="#" id="usefulLinksDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-bars fa-2x"></i>
+        </a>
+        <div class="dropdown-menu dropdown-nav-links shadow-lg" aria-labelledby="usefulLinksDropdown" x-placement="bottom-start" style="position: absolute; transform: translate3d(-55px, 32px, 0px); top: 0px; left: 0px; will-change: transform;">
+          <div class="links-title"> Useful links</div>
+          <div class="useful-link">
+            <a href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html" target="_blank">Sphinx Docs</a></div>
+          <div class="useful-link">
+            <a href="https://github.com/Petlja/PetljaDoc/blob/master/README.md" target="_blank">Petljadoc</a></div>
+          <div class="useful-link">
+            <a href="https://github.com/RunestoneInteractive/overview" target="_blank">Runestone Interactive</a></div>
+          
+        </div>
+    </div>
+
+    
+</div>
+
+<div class="left-side-nav">
+  <div class="course-logo-nav">
+      <a target="_blank" href="https://petlja.org">
+          <img src="../_static/img/petlja-logo-wt.svg" alt="petlja.org" id="lightPetljaLogo">
+      </a>
+  </div>
+  <div class="course-logo-nav-kabinet">
+      <a target="_blank" href="https://petlja.org/net.kabinet">
+          <img src="../_static/img/netkabinet-logo-strelica-wt.svg" alt="petlja.org" id="lightNetKabinetLogo">
+      </a>
+  </div>
+</div>
+
+
+<div class="content-header-label" id = "content-header-label" href="../">Савремена вештачка интелигенција</div>
+
+</div>
+
+
+
+
+<div class="petljaCourseContainer">
+
+<div class="petljaCourseContent">
+  
+           <div class="tableOfContent">
+            <h5> Table of content </h5>
+            </div>
+           <div>
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-01_Uvod>
+                    <h5>Увод</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../01_Uvod/011_Savremena%20vestacka%20inteligencija.html><div class="studioLecture" id=activity-01_Uvod-011_Savremena%20vestacka%20inteligencija><i class="fas fa-file-alt activity-icon"></i>Савремена вештачка интелигенција</div></a>
+                <a href=../01_Uvod/012_Da%20li%20masina%20moze%20da%20misli.html><div class="studioLecture" id=activity-01_Uvod-012_Da%20li%20masina%20moze%20da%20misli><i class="fas fa-file-alt activity-icon"></i>Да ли машина може да мисли?</div></a>
+                <a href=../01_Uvod/013_Oblasti%20vestacke%20inteligencije.html><div class="studioLecture" id=activity-01_Uvod-013_Oblasti%20vestacke%20inteligencije><i class="fas fa-file-alt activity-icon"></i>Области вештачке интелигенције</div></a>
+                <a href=../01_Uvod/014_Uska%20opsta%20i%20super%20inteligencija.html><div class="studioLecture" id=activity-01_Uvod-014_Uska%20opsta%20i%20super%20inteligencija><i class="fas fa-file-alt activity-icon"></i>Уска, општа и супер интелигенција</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02_Programiranje%20vodjeno%20podacima>
+                    <h5>Програмирање вођено подацима</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02_Programiranje%20vodjeno%20podacima/021_Programiranje%20vodjeno%20podacima.html><div class="studioLecture" id=activity-02_Programiranje%20vodjeno%20podacima-021_Programiranje%20vodjeno%20podacima><i class="fas fa-file-alt activity-icon"></i>Програмирање вођено подацима</div></a>
+                <a href=../02_Programiranje%20vodjeno%20podacima/022_Zasto%20nam%20je%20potrebno%20programiranje%20vodjeno%20podacima.html><div class="studioLecture" id=activity-02_Programiranje%20vodjeno%20podacima-022_Zasto%20nam%20je%20potrebno%20programiranje%20vodjeno%20podacima><i class="fas fa-file-alt activity-icon"></i>Зашто нам је потребно програмирање вођено подацима?</div></a>
+                <a href=../02_Programiranje%20vodjeno%20podacima/023_Osnovni%20pojmovi%20masinskog%20ucenja.html><div class="studioLecture" id=activity-02_Programiranje%20vodjeno%20podacima-023_Osnovni%20pojmovi%20masinskog%20ucenja><i class="fas fa-file-alt activity-icon"></i>Основни појмови машинског учења</div></a>
+                <a href=../02_Programiranje%20vodjeno%20podacima/024_Vrste%20masinskog%20ucenja.html><div class="studioLecture" id=activity-02_Programiranje%20vodjeno%20podacima-024_Vrste%20masinskog%20ucenja><i class="fas fa-file-alt activity-icon"></i>Врсте машинског учења</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-03_Python>
+                    <h5>Python</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../03_Python/031_Platforma%20Google%20Colab.html><div class="studioLecture" id=activity-03_Python-031_Platforma%20Google%20Colab><i class="fas fa-file-alt activity-icon"></i>Платформа Google Colab</div></a>
+                <a href=../03_Python/032_%20Biblioteke%20NumPy,%20Matplotlib%20i%20Pandas.html><div class="studioLecture" id=activity-03_Python-032_%20Biblioteke%20NumPy,%20Matplotlib%20i%20Pandas><i class="fas fa-file-alt activity-icon"></i>Библиотеке NumPy, Matplotlib i Pandas</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-04_Uloga%20podataka>
+                    <h5>Улога података</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../04_Uloga%20podataka/041_Uloga%20podataka.html><div class="studioLecture" id=activity-04_Uloga%20podataka-041_Uloga%20podataka><i class="fas fa-file-alt activity-icon"></i>Улога података</div></a>
+                <a href=../04_Uloga%20podataka/042_Kako%20nastaju%20skupovi%20podataka.html><div class="studioLecture" id=activity-04_Uloga%20podataka-042_Kako%20nastaju%20skupovi%20podataka><i class="fas fa-file-alt activity-icon"></i>Како настају скупови података?</div></a>
+                <a href=../04_Uloga%20podataka/043_Popularni%20skupovi%20podataka.html><div class="studioLecture" id=activity-04_Uloga%20podataka-043_Popularni%20skupovi%20podataka><i class="fas fa-file-alt activity-icon"></i>Популарни скупови података</div></a>
+                <a href=../04_Uloga%20podataka/044_Javni%20skupovi%20podataka.html><div class="studioLecture" id=activity-04_Uloga%20podataka-044_Javni%20skupovi%20podataka><i class="fas fa-file-alt activity-icon"></i>Јавно доступни скупови података</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-05_EDA>
+                    <h5>EDA</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../05_EDA/051_Eksplorativna%20analiza%20skupa%20podataka.html><div class="studioLecture" id=activity-05_EDA-051_Eksplorativna%20analiza%20skupa%20podataka><i class="fas fa-file-alt activity-icon"></i>Експлоративна анализа скупа података</div></a>
+                <a href=../05_EDA/052_Kreiranje%20reprezentacije%20skupa%20podataka.html><div class="studioLecture" id=activity-05_EDA-052_Kreiranje%20reprezentacije%20skupa%20podataka><i class="fas fa-file-alt activity-icon"></i>Креирање репрезентације скупа података</div></a>
+                <a href=../05_EDA/053_Skupovi%20za%20treniranje%20validaciju%20i%20testiranje.html><div class="studioLecture" id=activity-05_EDA-053_Skupovi%20za%20treniranje%20validaciju%20i%20testiranje><i class="fas fa-file-alt activity-icon"></i>Скупови за тренирање, валидацију и тестирање</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-06_Linearna%20regresija>
+                    <h5>Линеарна регресија</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../06_Linearna%20regresija/061_Linearna%20regresija.html><div class="studioLecture" id=activity-06_Linearna%20regresija-061_Linearna%20regresija><i class="fas fa-file-alt activity-icon"></i>Линеарна регресија</div></a>
+                <a href=../06_Linearna%20regresija/062_Gradijentni%20spust.html><div class="studioLecture" id=activity-06_Linearna%20regresija-062_Gradijentni%20spust><i class="fas fa-file-alt activity-icon"></i>Градијентни спуст</div></a>
+                <a href=../06_Linearna%20regresija/063_Ocenjivanje%20modela%20linearne%20regresije.html><div class="studioLecture" id=activity-06_Linearna%20regresija-063_Ocenjivanje%20modela%20linearne%20regresije><i class="fas fa-file-alt activity-icon"></i>Оцењивање модела линеарне регресије</div></a>
+                <a href=../06_Linearna%20regresija/064_Visestruka%20linearna%20regresija%20ToDo.html><div class="studioLecture" id=activity-06_Linearna%20regresija-064_Visestruka%20linearna%20regresija%20ToDo><i class="fas fa-file-alt activity-icon"></i>Вишеструка линеарна регресија - ТоДо</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-07_Klasifikacija>
+                    <h5>Класификација</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../07_Klasifikacija/071_Klasifikacija.html><div class="studioLecture" id=activity-07_Klasifikacija-071_Klasifikacija><i class="fas fa-file-alt activity-icon"></i>Класификација</div></a>
+                <a href=../07_Klasifikacija/072_Kako%20ocenjujemo%20model%20klasifikacije.html><div class="studioLecture" id=activity-07_Klasifikacija-072_Kako%20ocenjujemo%20model%20klasifikacije><i class="fas fa-file-alt activity-icon"></i>Како оцењујемо модел класификације</div></a>
+                <a href=../07_Klasifikacija/073_Logisticka%20regresija.html><div class="studioLecture" id=activity-07_Klasifikacija-073_Logisticka%20regresija><i class="fas fa-file-alt activity-icon"></i>Логистичка регресија</div></a>
+                <a href=../07_Klasifikacija/074_Algoritam%20k%20najblizih%20suseda.html><div class="studioLecture" id=activity-07_Klasifikacija-074_Algoritam%20k%20najblizih%20suseda><i class="fas fa-file-alt activity-icon"></i>Алгоритам к-најближих суседа</div></a>
+                <a href=../07_Klasifikacija/075_Hiperparametri.html><div class="studioLecture" id=activity-07_Klasifikacija-075_Hiperparametri><i class="fas fa-file-alt activity-icon"></i>Хиперпараметри</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-08_Prilagodjavanje>
+                    <h5>Прилагођавање</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../08_Prilagodjavanje/081_Generalizacija%20potprilagodjavanje%20i%20preprilagodjavanje.html><div class="studioLecture" id=activity-08_Prilagodjavanje-081_Generalizacija%20potprilagodjavanje%20i%20preprilagodjavanje><i class="fas fa-file-alt activity-icon"></i>Генерализација, потприлагођавање и преприлагођавање</div></a>
+                <a href=../08_Prilagodjavanje/082_Unakrsna%20validacija.html><div class="studioLecture" id=activity-08_Prilagodjavanje-082_Unakrsna%20validacija><i class="fas fa-file-alt activity-icon"></i>Унакрсна валидација</div></a>
+                <a href=../08_Prilagodjavanje/083_Regularizacija.html><div class="studioLecture" id=activity-08_Prilagodjavanje-083_Regularizacija><i class="fas fa-file-alt activity-icon"></i>Регуларизација</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-09_Neuronske%20mreze%20uvod>
+                    <h5>Неуронске мреже - увод</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../09_Neuronske%20mreze%20uvod/091_Neuronske%20mreze.html><div class="studioLecture" id=activity-09_Neuronske%20mreze%20uvod-091_Neuronske%20mreze><i class="fas fa-file-alt activity-icon"></i>Неуронске мреже</div></a>
+                <a href=../09_Neuronske%20mreze%20uvod/092_Obucavanje%20neuronskih%20mreza.html><div class="studioLecture" id=activity-09_Neuronske%20mreze%20uvod-092_Obucavanje%20neuronskih%20mreza><i class="fas fa-file-alt activity-icon"></i>Обучавање неуронских мрежа</div></a>
+                <a href=../09_Neuronske%20mreze%20uvod/093_TensorFlow%20Playground.html><div class="studioLecture" id=activity-09_Neuronske%20mreze%20uvod-093_TensorFlow%20Playground><i class="fas fa-file-alt activity-icon"></i>TensorFlow Playground</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-10_Neuronske%20mreze%20vrste%20i%20primena>
+                    <h5>Неуронске мреже - врсте и примена</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../10_Neuronske%20mreze%20vrste%20i%20primena/101_Razlicite%20vrste%20neuronskih%20mreza.html><div class="studioLecture" id=activity-10_Neuronske%20mreze%20vrste%20i%20primena-101_Razlicite%20vrste%20neuronskih%20mreza><i class="fas fa-file-alt activity-icon"></i>Различите врсте неуронских мрежа</div></a>
+                <a href=../10_Neuronske%20mreze%20vrste%20i%20primena/102_Konvolutivne%20neuronske%20mreze.html><div class="studioLecture" id=activity-10_Neuronske%20mreze%20vrste%20i%20primena-102_Konvolutivne%20neuronske%20mreze><i class="fas fa-file-alt activity-icon"></i>Конволутивне неуронске мреже</div></a>
+                <a href=../10_Neuronske%20mreze%20vrste%20i%20primena/103_Rekurentne%20neuronske%20mreze.html><div class="studioLecture" id=activity-10_Neuronske%20mreze%20vrste%20i%20primena-103_Rekurentne%20neuronske%20mreze><i class="fas fa-file-alt activity-icon"></i>Рекурентне неуронске мреже</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-12_Klasterovanje>
+                    <h5>Кластеровање</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../12_Klasterovanje/121_Klasterovanje.html><div class="studioLecture" id=activity-12_Klasterovanje-121_Klasterovanje><i class="fas fa-file-alt activity-icon"></i>Кластеровање</div></a>
+                <a href=../12_Klasterovanje/122_Algoritam%20k%20sredina.html><div class="studioLecture" id=activity-12_Klasterovanje-122_Algoritam%20k%20sredina><i class="fas fa-file-alt activity-icon"></i>Алгоритам к-средина</div></a>
+                <a href=../12_Klasterovanje/123_Odredjivanje%20broja%20klastera.html><div class="studioLecture" id=activity-12_Klasterovanje-123_Odredjivanje%20broja%20klastera><i class="fas fa-file-alt activity-icon"></i>Одређивање броја кластера</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-13_Ucenje%20potkrepljivanjem>
+                    <h5>Учење поткрепљивањем</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../13_Ucenje%20potkrepljivanjem/131_Ucenje%20potkrepljivanjem.html><div class="studioLecture" id=activity-13_Ucenje%20potkrepljivanjem-131_Ucenje%20potkrepljivanjem><i class="fas fa-file-alt activity-icon"></i>Учење поткрепљивањем</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-14_Drustveno%20bitni%20aspekti>
+                    <h5>Друштвено битни аспекти</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../14_Drustveno%20bitni%20aspekti/141_Drustveno%20bitni%20aspekti.html><div class="studioLecture" id=activity-14_Drustveno%20bitni%20aspekti-141_Drustveno%20bitni%20aspekti><i class="fas fa-file-alt activity-icon"></i>Друштвено битни аспекти</div></a>
+                </div>
+            </div>
+                </div>
+</div>
+
+
+
+<div class="lectureContent">
+
+  <div id="errors">
+  </div>
+  
+  <div class="lectureContentMaterial">
+  
+    <div id="main-content">
+    
+  <div class="section" id="numpy-matplotlib-pandas">
+<h1>Библиотеке NumPy, Matplotlib и Pandas<a class="headerlink" href="#numpy-matplotlib-pandas" title="Permalink to this heading">¶</a></h1>
+
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
+        <div class="course-content">
+            
+<p>Да бисмо могли да приближимо како раде алгоритми машинског учења и стекнемо бољу представу о неким важним појмовима, користићемо библиотеке
+програмског језика Python и то NumPy, Matplotlib и Пандас. Неке од њих си већ имао прилике да упознаш на другим курсевима. Овде свакако није
+циљ да их детаљно истражимо (све три библиотеке су обимне и нуде пуно могућности), већ да упознамо неке основне објекте и функције које нам
+могу помоћи.</p>
+
+    </div></div>
+<div class="section" id="numpy">
+<h2>Библиотека NumPy<a class="headerlink" href="#numpy" title="Permalink to this heading">¶</a></h2>
+<p>Све податке којима располажемо треба да представимо помоћу бројева и неких схема које их обједињују. Тако, рецимо, спољну температуру можемо да
+представимо једним реалним бројем (кажемо и <strong>скаларом</strong>), док <strong>низом</strong> бројева можемо да представимо спољну температуру у целој недељи (дужина тог низа
+је седам). Блоком бројева, такозваним <strong>матрицама</strong>, можемо да представимо пикселе једне црно-беле слике. Ако је димензија слике 200x300 пиксела,
+овај блок има 200 редова и 300 колона и у пресеку сваке врсте и колоне се налази по један број који означава вредност пиксела. Зато за овакве
+структуре кажемо да су дводимензионе. Ако је слика у боји и користи RGB систем боја (о томе ћемо још говорити у делу о конволутивним неуронским
+мрежама), имамо заправо три блока бројева димензије 200x300 (за сваку од боја по једну) што можемо записати и као 200x300x3. Да ли можеш да
+замислиш како представљамо видео? Па, видео је ништа друго него један низ фрејмова (слика) у времену. Уобичајених 24 фрејма у једној секунди
+нам омогућавају да видео доживимо као природан, без прекида и сецкања. То би даље значило да један секунд видеа можемо да опишемо димензијом
+24x200x300x3. Овакве структуре су већ четвородимензионе. Уобичајено је да структуре које имају више димензија називамо <strong>тензорима</strong>. Заправо,
+важи и да је скалар тензор димензије нула, низ тензор димензије један а матрица тензор димензије два. Отуда и име популарне библиотеке
+ТensorFlow која се користи у машинском учењу.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/bibl1.png"><img alt="../_images/bibl1.png" src="../_images/bibl1.png" style="width: 600px;" /></a>
+</div>
+<p><em>Тензори различитих димензија</em></p>
+<p>(слика је преузета са <a class="reference external" href="https://visagetechnologies.com/tensors-in-computer-vision/">https://visagetechnologies.com/tensors-in-computer-vision/</a>)</p>
+<hr class="docutils" />
+<p>Библиотека NumPy је библиотека отвореног кода која нам омогућава да брзо изведемо многе математичке операције над овако представљеним подацима.
+Иако је скуп функционалности ове библиотеке врло богат, ми ћемо научити како да:</p>
+<ul class="simple">
+<li><p>дефинишемо низове и матрице бројева,</p></li>
+<li><p>приступимо њиховим елементима, врстама и колонама,</p></li>
+<li><p>изведемо операције сабирања, одузимања и множења над њима,</p></li>
+<li><p>пронађемо и применимо неку математичку функцију, и</p></li>
+<li><p>генеришемо неке насумичне вредности.</p></li>
+</ul>
+<p>Кликом на дугме <a class="reference internal" href="../_images/algk2.png"><img alt="open" src="../_images/algk2.png" style="width: 100px;" /></a> можеш да отвориш пратећу Google Colab свеску и сам испратиш резултате рада следећих блокова. На самом почетку свеске
+дочекаће те наредба <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">numpy</span> <span class="pre">as</span> <span class="pre">np</span></code> коју морамо да извршимо како бисмо могли да користимо библиотеку NumPy.</p>
+<p>Као што си видео у уводу, за рад са реалним подацима потребни су нам вишедимензиони низови. Основна структура библиотеке NumPy је баш вишедимензиони
+низ (енгл. multidimensional array, ndarray). Њу карактеришу облик који указује на димензијe вишедимензионог низа и елементи које садржи.
+Функција којом се креира вишедимензиони низ се зове <code class="docutils literal notranslate"><span class="pre">array</span></code>.  Следећим блоком кода креира се матрица M димензија 3x2 тј. која има три врсте и
+две колоне.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/bibl3.png"><img alt="../_images/bibl3.png" src="../_images/bibl3.png" style="width: 400px;" /></a>
+</div>
+<p>Као што смо видели, такве блокове сусрећемо приликом представљања слика али и табеларних података - појединачне колоне означавају атрибуте а врсте
+инстанце скупа.</p>
+<p>Број колона и број врста вишедимензионог низа М може да се прочита својством <code class="docutils literal notranslate"><span class="pre">shape</span></code>, па тако следећа линија кода даје као резултат пар бројева (3, 2):</p>
+<p>code-block:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">M</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+<p>Вишедимензиони низови морају да садрже вредности истог типа - то могу бити цели бројеви или реални бројеви. Библиотека омогућава и коришћење бројеве
+са једноструком и двоструком прецизношћу, али нећемо залазити у те детаље. Тип елемената вишедимензионог низа можеш увек очитати користећи својство
+<code class="docutils literal notranslate"><span class="pre">dtype</span></code>. С обзиром да наша матрица садржи само целе бројеве, следећа наредба ће исписати int64:</p>
+<p>code-block:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">M</span><span class="o">.</span><span class="n">dtype</span>
+</pre></div>
+</div>
+<p>Ево још неких примера креирања вишедимензионих низова:</p>
+<ul class="simple">
+<li><p>низ једноцифрених бројева: np.array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])</p></li>
+<li><p>матрица димензија 1x3 која садржи бројеве 10, 11 и 12: np.array([[10, 11, 12]])</p></li>
+<li><p>матрица димензија 3x1 која садржи бројеве 10, 11 и 12: np.array([[10], [11], [12]])</p></li>
+</ul>
+<p>Појединачним елементима низова приступа се коришћењем одговарајућих индекса - користимо онолико индекса колико имамо димензија и водимо рачуна о
+томе да индекси почињу од нуле. Тако се са M[0,0] очитава вредност у нултој врсти и нултој колони, док се са  M[2,1] очитава вредност у другој
+врсти и првој колони.</p>
+<p>Баш као и код листи, и у библиотеци NumPy може да се користи оператор исецања :.  Тако се, рецимо, у матрици А димензије 5x5 која је приказана на
+доњој слици са:</p>
+<ul class="simple">
+<li><p>А[4, :] издвајају сви елементи последње врсте тј. жути блок,</p></li>
+<li><p>А[ :, 1::2] издвајају елементи сваке друге колоне тј. црвени блокови,</p></li>
+<li><p>А[1::2, 0:3:2] издвајају елементи плавог блока.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../_images/bibl4.png"><img alt="../_images/bibl4.png" class="align-center" src="../_images/bibl4.png" style="width: 400px;" /></a>
+<p>Операције сабирања и одузимања над вишедимензионим низовима се изводе елемент по елемент - сабирају се тј. одузимају елементи низова који се
+налазе на истим позицијама и као резултат се добија низ истих димензија. Оператори ових радњи су, као што очекујеш, + и -, а могу се користити и
+функције <code class="docutils literal notranslate"><span class="pre">add</span></code> и <code class="docutils literal notranslate"><span class="pre">subtract</span></code>.</p>
+<p>Следећим блоком кода се сабирају две матрице</p>
+<table class="colwidths-auto docutils align-left">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/bibl5.png"><img alt="mat1" src="../_images/bibl5.png" style="width: 150px;" /></a></p></td>
+<td><p><a class="reference internal" href="../_images/bibl6.png"><img alt="mat2" src="../_images/bibl6.png" style="width: 155px;" /></a></p></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">11</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">13</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">17</span><span class="p">]</span>
+<span class="p">])</span>
+
+<span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+<span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">14</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">18</span><span class="p">]</span>
+<span class="p">])</span>
+
+<span class="n">A</span> <span class="o">+</span> <span class="n">B</span>
+</pre></div>
+</div>
+<p>и као резлтат се добија матрица</p>
+<a class="reference internal image-reference" href="../_images/bibl7.png"><img alt="../_images/bibl7.png" class="align-center" src="../_images/bibl7.png" style="width: 130px;" /></a>
+<p>Када је реч о множењу, постоји могућност множења низова скаларима и у том случају се скаларом множи сваки елемент низа. Ту операцију означавамо
+са <cite>*</cite>. Да би се извршило право матрично множење користи се функција <code class="docutils literal notranslate"><span class="pre">dot</span></code>. Ево и примера:</p>
+<table class="colwidths-auto docutils align-left">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/bibl8.png"><img alt="mat3" src="../_images/bibl8.png" style="width: 250px;" /></a></p></td>
+<td><p><a class="reference internal" href="../_images/bibl9.png"><img alt="mat4" src="../_images/bibl9.png" style="width: 250px;" /></a></p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Када се примењују математичке функцију библиотеке NumPy над вишедимензионим низовима, оне се примењују над сваким њеним елементом. Тако се, рецимо,
+извршавањем следећег кода којим се примењује експоненцијална функција над елементима матрице М добијају следеће вредности:</p>
+<a class="reference internal image-reference" href="../_images/bibl10.png"><img alt="../_images/bibl10.png" class="align-center" src="../_images/bibl10.png" style="width: 350px;" /></a>
+<p>Постоји и могућност да се функција изврши само дуж неке димензије вишедимензионог низа, на пример, само по колонама или само по врстама. Наравно,
+то има смисла само за неке функције као што су проналажење максимума, минимума, сабирање или упросечавање. Следећим кодом се врши са прво
+врши сабирање елемената матрице М по врстама, а потом по колонама.</p>
+<table class="colwidths-auto docutils align-left">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/bibl11.png"><img alt="mat5" src="../_images/bibl11.png" style="width: 180px;" /></a></p></td>
+<td><p><a class="reference internal" href="../_images/bibl12.png"><img alt="mat6" src="../_images/bibl12.png" style="width: 180px;" /></a></p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>У раду нам често значи да брзо генеришемо низове са неким насумичним вредностима или векторе нула или јединица. Следећим позивима функција ће се генерисати, редом:
+- матрица са случајним бројевима димензије 2x3:  <code class="docutils literal notranslate"><span class="pre">np.random.random((2,</span> <span class="pre">3))</span></code>
+- матрица нула дизмензија 4x4: <code class="docutils literal notranslate"><span class="pre">np.zeros((4,</span> <span class="pre">4))</span></code>
+- матрица јединица димензија 4x2: <code class="docutils literal notranslate"><span class="pre">np.ones((4,</span> <span class="pre">2))</span></code>
+- један једнодимензиони низ са еквидистантним скупом 9 тачака из интервала од 0 до 2: <code class="docutils literal notranslate"><span class="pre">np.linspace(0,</span> <span class="pre">2,</span> <span class="pre">9)</span></code></p>
+<p><strong>TODO: графички приказати резултате</strong></p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Више о садржају и могућностима библиотеке NumPy можеш да пронађеш на званичном сајту <a class="reference external" href="http://www.numpy.org/">http://www.numpy.org/</a>.</p>
+</div>
+<div class="section" id="matplotlib">
+<h2>Библиотека Matplotlib<a class="headerlink" href="#matplotlib" title="Permalink to this heading">¶</a></h2>
+<p>Matplotlib је библиотека језика Python која се користи за 2D и 3D графику. Графички прикази су нам јако корисни у раду са подацима јер нам
+омогућавају да боље разумемо податке, као и да финије испратимо нека понашања алгоритама. Упознајмо функционалности ове библиотеке кроз два
+једноставна примера: исцртавање графика функције sin(x) и приказа тачкастог графика скупа података. Клик на дугме <a class="reference internal" href="../_images/algk2.png"><img alt="open" src="../_images/algk2.png" style="width: 100px;" /></a> ће ти отворити пратећу Google
+Colab свеску у којој можеш да испробаш кодове који следе.</p>
+<p>Уобичајено је да кодови који користе библиотеку Matplotlib започну наредбом <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">matplotlib.pyplot</span> <span class="pre">as</span> <span class="pre">plt</span></code>  којом се учитава панел за цртање
+<code class="docutils literal notranslate"><span class="pre">plt</span></code> и његове функције.</p>
+<p>Пример исцртавања графика функције sin(x) на интервалу [0, 10] започећемо креирањем еквидистантне мреже тачака <code class="docutils literal notranslate"><span class="pre">x</span></code> позивом функције <code class="docutils literal notranslate"><span class="pre">linspace</span></code>
+библиотеке NumPy. Ова функција очекује као аргументе крајеве интервала 0 и 10 и број подеоних тачака - у нашем случају то може да буде број 100.
+Потом ћемо израчунати вредност синусне функције за зваку од ових тачака позивом функције <code class="docutils literal notranslate"><span class="pre">sin(x)</span></code>. Њене вредности ћемо сачувати у променљивој <code class="docutils literal notranslate"><span class="pre">y</span></code> -
+и то ће сада бити један низ од 100 тачака јер се функција примењује над сваким елементом низа <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+<p>Наслов графикона постављамо позивом функције <code class="docutils literal notranslate"><span class="pre">title</span></code>, а обележја оса (текстове који ће објашњавати њихово значење) позивима функција <code class="docutils literal notranslate"><span class="pre">xlabel</span></code> и
+<code class="docutils literal notranslate"><span class="pre">ylabel</span></code>.
+Све ове функције су дефинисане на нивоу панела за цртање <code class="docutils literal notranslate"><span class="pre">plt</span></code>. Сам график се исцртава позивом функције <code class="docutils literal notranslate"><span class="pre">plot</span></code> и задавањем вредност <code class="docutils literal notranslate"><span class="pre">x</span></code> и <code class="docutils literal notranslate"><span class="pre">y</span></code> координата
+за цртање (зато смо тим именима и назвали полазни скуп тачака и вредности синусне функције). График се приказује позивом функције <code class="docutils literal notranslate"><span class="pre">show</span></code>.</p>
+<a class="reference internal image-reference" href="../_images/bibl14.png"><img alt="../_images/bibl14.png" class="align-center" src="../_images/bibl14.png" style="width: 780px;" /></a>
+<p>Тачкасте графиконе често користимо за увид у просторни распоред података. У примеру који следи креираћемо десет парова тачака са целобројним
+вредностима координата из интервала  [0, 20] и приказати их у виду тачкастог графикона.</p>
+<p>Низ парова тачака ћемо креирати тако што ћемо креирати низовe појединачних координата <code class="docutils literal notranslate"><span class="pre">x</span></code> и <code class="docutils literal notranslate"><span class="pre">y</span></code>. То ћемо урадити коришћењем функције <code class="docutils literal notranslate"><span class="pre">randomint</span></code> библиотеке
+<code class="docutils literal notranslate"><span class="pre">NumPy</span></code> чији аргументи <code class="docutils literal notranslate"><span class="pre">low</span></code>, <code class="docutils literal notranslate"><span class="pre">heigh</span></code> и <code class="docutils literal notranslate"><span class="pre">size</span></code> омогућавају контролу доње и горње границе интервала, као и контролу броја тачака. Сам тачкасти графикон се
+креира позивом функције <code class="docutils literal notranslate"><span class="pre">scatter</span></code> панела за цртање <code class="docutils literal notranslate"><span class="pre">plt</span></code>. Приликом позива овој функцији се задају вредности координата тачака, у нашем случају <code class="docutils literal notranslate"><span class="pre">x</span></code> и <code class="docutils literal notranslate"><span class="pre">y</span></code>.
+Додатно се може подесити боја тачака аргументом <code class="docutils literal notranslate"><span class="pre">color</span></code>, као и изменити сам симбол за приказ аргументом <code class="docutils literal notranslate"><span class="pre">marker</span></code>. На графику су уместо подразумеваних
+кружића црне боје коришћени зелени троугилићи усмерени на доле. График се приказује, као и у претходном примеру, позивом функције <code class="docutils literal notranslate"><span class="pre">show</span></code>.</p>
+<a class="reference internal image-reference" href="../_images/bibl15.png"><img alt="../_images/bibl15.png" class="align-center" src="../_images/bibl15.png" style="width: 780px;" /></a>
+<p>Можемо да приметимо да смо у овом примеру на нивоу библиотеке NumPy и њеног пакета <code class="docutils literal notranslate"><span class="pre">random</span></code> подесили генератор случајних бројева
+(такозвано својство seed) на вредност 7. То ће нам омогућити да сваки пут када покренемо овај код добијемо исти распоред тачака. Ово својство
+нам је важно због могућности поновног покретања експеримената (оно се зове поновљивост или репродуцибилност и још ћемо га помињати).</p>
+<p>Званични сајт библиотеке Matplotlib је <a class="reference external" href="https://matplotlib.org/">https://matplotlib.org/</a>, а осим ње постоје и друге библиотеке језика Python за визуелизације као што су
+Seaborn и Plotly.</p>
+</div>
+<div class="section" id="pandas">
+<h2>Библиотека Pandas<a class="headerlink" href="#pandas" title="Permalink to this heading">¶</a></h2>
+<p>Библиотека Pandas је намењена раду са табеларним подацима. Карактеришу је функције за учитавање различитих формата датотека а потом и многобројне
+функције за манипулацију над подацима. Линк до званичног сајта библиотеке је <a class="reference external" href="https://pandas.pydata.org/">https://pandas.pydata.org/</a> а са њеним могућностима ћемо се упознати
+нешто касније.</p>
+</div>
+</div>
+
+
+    </div>
+    
+    <div>
+<div class="lecture-prev-next-toggle">
+  <a  href="031_Platforma%20Google%20Colab.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Previous chapter </span> </a>
+  
+  <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Next chapter</span>  <i class="fas fa-arrow-right fa"></i> </a>
+</div>
+
+<script type="text/javascript">
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+</script>
+</div>
+
+    
+  </div>
+</div>
+
+<div class="petljadoc-resources">
+  <span class="pull-left">(Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>) <br> © 2022 Petlja</span>
+</div>
+
+
+<div class="lectureToolbox">
+
+  <label class="font-size-toggle" id="fontSizeToggle">
+
+      <i class="fas fa-font"></i><label>Letters</label>
+  </label>
+  <div class="font-change d-none" id="fontChangeModal">
+      <span class="dec-letter-icon" id="decLetterIcon">A-</span>
+      <label id="currentFontSize">16</label>
+      <span class="inc-letter-icon" id="incLetterIcon">A+</span>
+  </div>
+</div>
+
+</div>
+
+  </body>
+</html>

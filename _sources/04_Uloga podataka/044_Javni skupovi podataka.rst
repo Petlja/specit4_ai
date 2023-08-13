@@ -26,7 +26,7 @@ USI
 
 *Лого репозиторијума UCI*
 
-|
+-------
 
 Kaggle
 ~~~~~~
@@ -50,7 +50,7 @@ Kaggle
 
 *Лого платформе Kaggle*
 
-|
+-------
 
 Awesome Public Datasets
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -67,7 +67,7 @@ Awesome Public Datasets
 
 *Лого репозиторијума Awesomе Public Datasete*
 
-|
+-------
 
 .. questionnote::
 

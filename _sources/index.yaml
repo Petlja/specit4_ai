@@ -172,7 +172,7 @@ lessons:
         description: 
         guid: bb5037db-63ce-41bb-a1d2-520714df6236
       - type: reading
-        title: Алгоритам k најближих суседа
+        title: Алгоритам к-најближих суседа
         file: 074_Algoritam k najblizih suseda.rst
         description: 
         guid: a03b58e7-4efb-4176-b466-7b13504b6e54

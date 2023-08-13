@@ -1,0 +1,399 @@
+courseId: specit4_ai
+description:
+  externalLinks:
+  - href: https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html
+    text: Sphinx Docs
+  - href: https://github.com/Petlja/PetljaDoc/blob/master/README.md
+    text: Petljadoc
+  - href: https://github.com/RunestoneInteractive/overview
+    text: Runestone Interactive
+  longDescription: '<div class="document">
+
+    <p>This is an example of a long description...</p>
+
+    </div>
+
+    '
+  requirements:
+  - Petljadoc
+  - Runestone
+  - Sphinx
+  shortDescription: Савремена вештачка интелигенција
+  toc:
+  - Intro to Petljadoc INDEX.yaml
+  willLearn:
+  - Preview of Petljadoc course
+lang: en
+lessons:
+- activities:
+  - description: ''
+    file: 011_Savremena vestacka inteligencija.html
+    guid: ea163cb2-cae4-41f6-8d0e-58d7df54479b
+    normalized_title: Савремена вештачка интелигенција
+    src: 011_Savremena vestacka inteligencija.rst
+    title: Савремена вештачка интелигенција
+    type: reading
+  - description: ''
+    file: 012_Da li masina moze da misli.html
+    guid: 8ad6348a-c68e-45f5-9f2c-2f9c5d55afb8
+    normalized_title: Да ли машина може да мисли
+    src: 012_Da li masina moze da misli.rst
+    title: Да ли машина може да мисли?
+    type: reading
+  - description: ''
+    file: 013_Oblasti vestacke inteligencije.html
+    guid: 1fa5ee73-e204-4aaf-a558-a8d52e31f90c
+    normalized_title: Области вештачке интелигенције
+    src: 013_Oblasti vestacke inteligencije.rst
+    title: Области вештачке интелигенције
+    type: reading
+  - description: ''
+    file: 014_Uska opsta i super inteligencija.html
+    guid: ddf25f40-0bd3-4bf8-bc0a-e6301b731325
+    normalized_title: Уска, општа и супер интелигенција
+    src: 014_Uska opsta i super inteligencija.rst
+    title: Уска, општа и супер интелигенција
+    type: reading
+  archived-activities: []
+  description: ''
+  folder: 01_Uvod
+  guid: f6342ecd-e38b-477d-92ed-d9c102cd7d3c
+  normalized_title: Увод
+  title: Увод
+- activities:
+  - description: ''
+    file: 021_Programiranje vodjeno podacima.html
+    guid: 029e119d-dcae-4bc3-97a5-840d85f58d22
+    normalized_title: Програмирање вођено подацима
+    src: 021_Programiranje vodjeno podacima.rst
+    title: Програмирање вођено подацима
+    type: reading
+  - description: ''
+    file: 022_Zasto nam je potrebno programiranje vodjeno podacima.html
+    guid: 3699ded9-09e8-42b5-96ac-565a05f45d0f
+    normalized_title: Зашто нам је потребно програмирање вођено подацима
+    src: 022_Zasto nam je potrebno programiranje vodjeno podacima.rst
+    title: Зашто нам је потребно програмирање вођено подацима?
+    type: reading
+  - description: ''
+    file: 023_Osnovni pojmovi masinskog ucenja.html
+    guid: 0fc53818-2ae8-4d77-9b71-c23038e27c54
+    normalized_title: Основни појмови машинског учења
+    src: 023_Osnovni pojmovi masinskog ucenja.rst
+    title: Основни појмови машинског учења
+    type: reading
+  - description: ''
+    file: 024_Vrste masinskog ucenja.html
+    guid: 4b0950fa-9392-4dd2-98dd-a005fae236ff
+    normalized_title: Врсте машинског учења
+    src: 024_Vrste masinskog ucenja.rst
+    title: Врсте машинског учења
+    type: reading
+  archived-activities: []
+  description: ''
+  folder: 02_Programiranje vodjeno podacima
+  guid: 588b04e2-911a-4fa0-94f7-53eb81206430
+  normalized_title: Програмирање вођено подацима
+  title: Програмирање вођено подацима
+- activities:
+  - description: ''
+    file: 031_Platforma Google Colab.html
+    guid: 6c6e735d-bad1-4a9f-901c-06935fabc23a
+    normalized_title: Платформа Google Colab
+    src: 031_Platforma Google Colab.rst
+    title: Платформа Google Colab
+    type: reading
+  - description: ''
+    file: 032_ Biblioteke NumPy, Matplotlib i Pandas.html
+    guid: dd587de5-64f9-4824-8ec1-b3fc6d45cc26
+    normalized_title: Библиотеке NumPy, Matplotlib i Pandas
+    src: 032_ Biblioteke NumPy, Matplotlib i Pandas.rst
+    title: Библиотеке NumPy, Matplotlib i Pandas
+    type: reading
+  archived-activities: []
+  description: ''
+  folder: 03_Python
+  guid: 8dbe8fd8-d99d-4efd-9575-9090e48fff62
+  normalized_title: Python
+  title: Python
+- activities:
+  - description: ''
+    file: 041_Uloga podataka.html
+    guid: 183c6fdd-fcae-4f74-9d1e-75bc90093071
+    normalized_title: Улога података
+    src: 041_Uloga podataka.rst
+    title: Улога података
+    type: reading
+  - description: ''
+    file: 042_Kako nastaju skupovi podataka.html
+    guid: 1ce03411-7e12-4c47-9b9e-3f65ccf43a62
+    normalized_title: Како настају скупови података
+    src: 042_Kako nastaju skupovi podataka.rst
+    title: Како настају скупови података?
+    type: reading
+  - description: ''
+    file: 043_Popularni skupovi podataka.html
+    guid: 17182e47-e8c6-463d-aafc-09272d16c7e4
+    normalized_title: Популарни скупови података
+    src: 043_Popularni skupovi podataka.rst
+    title: Популарни скупови података
+    type: reading
+  - description: ''
+    file: 044_Javni skupovi podataka.html
+    guid: cdf65212-5955-4a65-8ef5-b5ab2844e5f9
+    normalized_title: Јавно доступни скупови података
+    src: 044_Javni skupovi podataka.rst
+    title: Јавно доступни скупови података
+    type: reading
+  archived-activities: []
+  description: ''
+  folder: 04_Uloga podataka
+  guid: 404ae6ad-c9c4-4201-a82e-9996f3a5c541
+  normalized_title: Улога података
+  title: Улога података
+- activities:
+  - description: ''
+    file: 051_Eksplorativna analiza skupa podataka.html
+    guid: 6250a2da-ff1d-4185-942a-03daeaae57d3
+    normalized_title: Експлоративна анализа скупа података
+    src: 051_Eksplorativna analiza skupa podataka.rst
+    title: Експлоративна анализа скупа података
+    type: reading
+  - description: ''
+    file: 052_Kreiranje reprezentacije skupa podataka.html
+    guid: d6b1f573-2eac-4644-86c3-6798b89ad20e
+    normalized_title: Креирање репрезентације скупа података
+    src: 052_Kreiranje reprezentacije skupa podataka.rst
+    title: Креирање репрезентације скупа података
+    type: reading
+  - description: ''
+    file: 053_Skupovi za treniranje validaciju i testiranje.html
+    guid: 5309b680-7be5-4a8f-bc9c-31211dd6bbee
+    normalized_title: Скупови за тренирање, валидацију и тестирање
+    src: 053_Skupovi za treniranje validaciju i testiranje.rst
+    title: Скупови за тренирање, валидацију и тестирање
+    type: reading
+  archived-activities: []
+  description: ''
+  folder: 05_EDA
+  guid: 6967fb08-a479-4ca0-88a9-cbd9eb8a1d59
+  normalized_title: EDA
+  title: EDA
+- activities:
+  - description: ''
+    file: 061_Linearna regresija.html
+    guid: 4e41f942-88ca-47ac-8b65-1d66788bc261
+    normalized_title: Линеарна регресија
+    src: 061_Linearna regresija.rst
+    title: Линеарна регресија
+    type: reading
+  - description: ''
+    file: 062_Gradijentni spust.html
+    guid: 639c2fae-88ad-4ee6-a086-15aaa95e2377
+    normalized_title: Градијентни спуст
+    src: 062_Gradijentni spust.rst
+    title: Градијентни спуст
+    type: reading
+  - description: ''
+    file: 063_Ocenjivanje modela linearne regresije.html
+    guid: d286994e-d707-455d-bdbb-e7dbb10e3ac2
+    normalized_title: Оцењивање модела линеарне регресије
+    src: 063_Ocenjivanje modela linearne regresije.rst
+    title: Оцењивање модела линеарне регресије
+    type: reading
+  - description: ''
+    file: 064_Visestruka linearna regresija ToDo.html
+    guid: 24e99d10-18ae-4f52-8c74-8a8a8e3a7c2f
+    normalized_title: Вишеструка линеарна регресија - ТоДо
+    src: 064_Visestruka linearna regresija ToDo.rst
+    title: Вишеструка линеарна регресија - ТоДо
+    type: reading
+  archived-activities: []
+  description: ''
+  folder: 06_Linearna regresija
+  guid: 11911fc4-d114-46a2-988e-6520743eb363
+  normalized_title: Линеарна регресија
+  title: Линеарна регресија
+- activities:
+  - description: ''
+    file: 071_Klasifikacija.html
+    guid: 47e1cf23-c154-49ab-a4a6-17d1790a54b4
+    normalized_title: Класификација
+    src: 071_Klasifikacija.rst
+    title: Класификација
+    type: reading
+  - description: ''
+    file: 072_Kako ocenjujemo model klasifikacije.html
+    guid: d343c498-1c42-4eb2-b662-825457747c92
+    normalized_title: Како оцењујемо модел класификације
+    src: 072_Kako ocenjujemo model klasifikacije.rst
+    title: Како оцењујемо модел класификације
+    type: reading
+  - description: ''
+    file: 073_Logisticka regresija.html
+    guid: bb5037db-63ce-41bb-a1d2-520714df6236
+    normalized_title: Логистичка регресија
+    src: 073_Logisticka regresija.rst
+    title: Логистичка регресија
+    type: reading
+  - description: ''
+    file: 074_Algoritam k najblizih suseda.html
+    guid: a03b58e7-4efb-4176-b466-7b13504b6e54
+    normalized_title: Алгоритам к-најближих суседа
+    src: 074_Algoritam k najblizih suseda.rst
+    title: Алгоритам к-најближих суседа
+    type: reading
+  - description: ''
+    file: 075_Hiperparametri.html
+    guid: 8442b7c0-debd-4790-af4d-4b07da6d5ac9
+    normalized_title: Хиперпараметри
+    src: 075_Hiperparametri.rst
+    title: Хиперпараметри
+    type: reading
+  archived-activities: []
+  description: ''
+  folder: 07_Klasifikacija
+  guid: 970f545b-223a-4a68-b807-6f28f9cb8578
+  normalized_title: Класификација
+  title: Класификација
+- activities:
+  - description: ''
+    file: 081_Generalizacija potprilagodjavanje i preprilagodjavanje.html
+    guid: 20ea4a55-e672-4dd0-bfeb-d1daf4ab04c7
+    normalized_title: Генерализација, потприлагођавање и преприлагођавање
+    src: 081_Generalizacija potprilagodjavanje i preprilagodjavanje.rst
+    title: Генерализација, потприлагођавање и преприлагођавање
+    type: reading
+  - description: ''
+    file: 082_Unakrsna validacija.html
+    guid: 72095168-4cc1-4b46-a922-17e337f29ddd
+    normalized_title: Унакрсна валидација
+    src: 082_Unakrsna validacija.rst
+    title: Унакрсна валидација
+    type: reading
+  - description: ''
+    file: 083_Regularizacija.html
+    guid: f1b52a47-bda6-45ce-b1b7-918ebd7836dc
+    normalized_title: Регуларизација
+    src: 083_Regularizacija.rst
+    title: Регуларизација
+    type: reading
+  archived-activities: []
+  description: ''
+  folder: 08_Prilagodjavanje
+  guid: 21eed1d8-c70e-4993-ac46-da60687e1aef
+  normalized_title: Прилагођавање
+  title: Прилагођавање
+- activities:
+  - description: ''
+    file: 091_Neuronske mreze.html
+    guid: 812d4b54-946a-4866-8174-43c28d44cc65
+    normalized_title: Неуронске мреже
+    src: 091_Neuronske mreze.rst
+    title: Неуронске мреже
+    type: reading
+  - description: ''
+    file: 092_Obucavanje neuronskih mreza.html
+    guid: 03851c22-25f5-4d9b-8854-994ff55a368e
+    normalized_title: Обучавање неуронских мрежа
+    src: 092_Obucavanje neuronskih mreza.rst
+    title: Обучавање неуронских мрежа
+    type: reading
+  - description: ''
+    file: 093_TensorFlow Playground.html
+    guid: 1a377816-abd8-4a8a-8a87-90d20b5a1c5a
+    normalized_title: TensorFlow Playground
+    src: 093_TensorFlow Playground.rst
+    title: TensorFlow Playground
+    type: reading
+  archived-activities: []
+  description: ''
+  folder: 09_Neuronske mreze uvod
+  guid: 6e59ff94-018d-455a-8a1c-5e5fcdca263e
+  normalized_title: Неуронске мреже - увод
+  title: Неуронске мреже - увод
+- activities:
+  - description: ''
+    file: 101_Razlicite vrste neuronskih mreza.html
+    guid: c9ffce49-a50a-4105-9d49-d224f0fe0178
+    normalized_title: Различите врсте неуронских мрежа
+    src: 101_Razlicite vrste neuronskih mreza.rst
+    title: Различите врсте неуронских мрежа
+    type: reading
+  - description: ''
+    file: 102_Konvolutivne neuronske mreze.html
+    guid: 84abd1cc-2f58-457a-82da-86003a080027
+    normalized_title: Конволутивне неуронске мреже
+    src: 102_Konvolutivne neuronske mreze.rst
+    title: Конволутивне неуронске мреже
+    type: reading
+  - description: ''
+    file: 103_Rekurentne neuronske mreze.html
+    guid: fabd40de-ac21-4545-93e8-289afdead955
+    normalized_title: Рекурентне неуронске мреже
+    src: 103_Rekurentne neuronske mreze.rst
+    title: Рекурентне неуронске мреже
+    type: reading
+  archived-activities: []
+  description: ''
+  folder: 10_Neuronske mreze vrste i primena
+  guid: e2f03d84-90cb-4ae8-97cd-fbd3f0640cf9
+  normalized_title: Неуронске мреже - врсте и примена
+  title: Неуронске мреже - врсте и примена
+- activities:
+  - description: ''
+    file: 121_Klasterovanje.html
+    guid: 9b1875a4-e108-4be7-aff4-4b6e5cf75444
+    normalized_title: Кластеровање
+    src: 121_Klasterovanje.rst
+    title: Кластеровање
+    type: reading
+  - description: ''
+    file: 122_Algoritam k sredina.html
+    guid: 4e20d190-b195-40f2-a457-1f0282e6fafd
+    normalized_title: Алгоритам к-средина
+    src: 122_Algoritam k sredina.rst
+    title: Алгоритам к-средина
+    type: reading
+  - description: ''
+    file: 123_Odredjivanje broja klastera.html
+    guid: 06d45309-1274-4a5c-8c38-3872f19f5aec
+    normalized_title: Одређивање броја кластера
+    src: 123_Odredjivanje broja klastera.rst
+    title: Одређивање броја кластера
+    type: reading
+  archived-activities: []
+  description: ''
+  folder: 12_Klasterovanje
+  guid: cd1c523e-4c40-4d70-88e3-37765e2ae232
+  normalized_title: Кластеровање
+  title: Кластеровање
+- activities:
+  - description: ''
+    file: 131_Ucenje potkrepljivanjem.html
+    guid: fcbebdb7-9709-4656-9e22-c30ad94a9e21
+    normalized_title: Учење поткрепљивањем
+    src: 131_Ucenje potkrepljivanjem.rst
+    title: Учење поткрепљивањем
+    type: reading
+  archived-activities: []
+  description: ''
+  folder: 13_Ucenje potkrepljivanjem
+  guid: 07703b0c-45fc-4b59-9cec-d0c6f55f5fa2
+  normalized_title: Учење поткрепљивањем
+  title: Учење поткрепљивањем
+- activities:
+  - description: ''
+    file: 141_Drustveno bitni aspekti.html
+    guid: 0955b9bc-a8bd-4e83-a9fa-d177bd7ec570
+    normalized_title: Друштвено битни аспекти
+    src: 141_Drustveno bitni aspekti.rst
+    title: Друштвено битни аспекти
+    type: reading
+  archived-activities: []
+  description: ''
+  folder: 14_Drustveno bitni aspekti
+  guid: c0039611-a809-4319-9ec7-70d505418b99
+  normalized_title: Друштвено битни аспекти
+  title: Друштвено битни аспекти
+title: Савремена вештачка интелигенција

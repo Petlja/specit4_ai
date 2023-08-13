@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Неуронске мреже</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/qchoice.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/associations.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/editor.css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja-course.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/nbstyle.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/runestonebase.js"></script>
+    <script src="../_static/skulpt.min.js"></script>
+    <script src="../_static/skulpt-stdlib.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/jquery.highlight.js"></script>
+    <script src="../_static/bookfuncs.js"></script>
+    <script src="../_static/codemirror.js"></script>
+    <script src="../_static/xml.js"></script>
+    <script src="../_static/css.js"></script>
+    <script src="../_static/python.js"></script>
+    <script src="../_static/htmlmixed.js"></script>
+    <script src="../_static/javascript.js"></script>
+    <script src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script src="../_static/activecode-i18n.en.js"></script>
+    <script src="../_static/activecode.js"></script>
+    <script src="../_static/clike.js"></script>
+    <script src="../_static/timed_activecode.js"></script>
+    <script src="../_static/animationbase.js"></script>
+    <script src="../_static/mchoice.js"></script>
+    <script src="../_static/timedmc.js"></script>
+    <script src="../_static/timed.js"></script>
+    <script src="../_static/mchoice-i18n.en.js"></script>
+    <script src="../_static/clickable.js"></script>
+    <script src="../_static/timedclickable.js"></script>
+    <script src="../_static/d3.v2.min.js"></script>
+    <script src="../_static/jquery.ba-bbq.min.js"></script>
+    <script src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script src="../_static/pytutor.js"></script>
+    <script src="../_static/codelens.js"></script>
+    <script src="../_static/skulpt.min.js"></script>
+    <script src="../_static/skulpt-stdlib.js"></script>
+    <script src="../_static/datafile.js"></script>
+    <script src="../_static/dragndrop.js"></script>
+    <script src="../_static/timeddnd.js"></script>
+    <script src="../_static/dragndrop-i18n.en.js"></script>
+    <script src="../_static/fitb.js"></script>
+    <script src="../_static/timedfitb.js"></script>
+    <script src="../_static/fitb-i18n.en.js"></script>
+    <script src="../_static/matrixeq.js"></script>
+    <script src="../_static/lib/prettify.js"></script>
+    <script src="../_static/lib/hammer.min.js"></script>
+    <script src="../_static/parsons.js"></script>
+    <script src="../_static/parsons-i18n.en.js"></script>
+    <script src="../_static/timedparsons.js"></script>
+    <script src="../_static/poll.js"></script>
+    <script src="../_static/reveal.js"></script>
+    <script src="../_static/shortanswer.js"></script>
+    <script src="../_static/timed_shortanswer.js"></script>
+    <script src="../_static/showEval.js"></script>
+    <script src="../_static/tabbedstuff.js"></script>
+    <script src="../_static/runestonevideo.js"></script>
+    <script src="../_static/webglinteractive.js"></script>
+    <script src="../_static/FileSaver.min.js"></script>
+    <script src="../_static/Blob.js"></script>
+    <script src="../_static/karelCorner.js"></script>
+    <script src="../_static/karelRobot.js"></script>
+    <script src="../_static/karelWorld.js"></script>
+    <script src="../_static/karelChat.js"></script>
+    <script src="../_static/karelRobotDrawer.js"></script>
+    <script src="../_static/karelUI.js"></script>
+    <script src="../_static/karel.js"></script>
+    <script src="../_static/karel-i18n.en.js"></script>
+    <script src="../_static/notes.js"></script>
+    <script src="../_static/pygamelib-init.js"></script>
+    <script src="../_static/gallery.js"></script>
+    <script src="../_static/associations.js"></script>
+    <script src="../_static/associations-i18n.en.js"></script>
+    <script src="../_static/editor.js"></script>
+    <script src="../_static/jszip.js"></script>
+    <script src="../_static/editor-i18n.en.js"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="../_static/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/waypoints.min.js"></script>
+    <script src="../_static/rangy-core.js"></script>
+    <script src="../_static/rangy-textrange.js"></script>
+    <script src="../_static/rangy-cssclassapplier.js"></script>
+    <script src="../_static/user-highlights.js"></script>
+    <script src="../_static/jquery.idle-timer.js"></script>
+    <script src="../_static/processing-1.4.1.min.js"></script>
+    <script src="../_static/jquery.hotkey.js"></script>
+    <script src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script src="../_static/course-errors.js"></script>
+    <script src="../_static/petlja.js"></script>
+    <script src="../_static/require.js"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+    <script type="text/javascript">
+      eBookConfig = {};
+      eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+      eBookConfig.app = eBookConfig.host + '/runestone';
+      eBookConfig.ajaxURL = eBookConfig.app + '/ajax/';
+      eBookConfig.course = 'os4_dig';
+      eBookConfig.logLevel = '0';
+      eBookConfig.loginRequired = 'false';
+      eBookConfig.build_info = "";
+      eBookConfig.isLoggedIn = false;
+      eBookConfig.useRunestoneServices = false;
+      eBookConfig.python3 = true;
+      eBookConfig.basecourse = 'os4_dig';
+      eBookConfig.runestone_version = '';
+      eBookConfig.imagesDir = '../_images/';
+      eBookConfig.staticDir = '../_static/';
+      if (typeof (Sk) != "undefined")
+        Sk.imgPath = eBookConfig.imagesDir;
+    </script>
+
+  </head>
+
+  <body>
+
+
+
+<div id="navbar" class="content-header">
+  <div class="right-side-nav">
+    
+    <div id="usefulLinksToggle" class="useful-links-toggle">
+        <a class="dropdown-toggle dropdown-toggle-burger" role="button" href="#" id="usefulLinksDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-bars fa-2x"></i>
+        </a>
+        <div class="dropdown-menu dropdown-nav-links shadow-lg" aria-labelledby="usefulLinksDropdown" x-placement="bottom-start" style="position: absolute; transform: translate3d(-55px, 32px, 0px); top: 0px; left: 0px; will-change: transform;">
+          <div class="links-title"> Useful links</div>
+          <div class="useful-link">
+            <a href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html" target="_blank">Sphinx Docs</a></div>
+          <div class="useful-link">
+            <a href="https://github.com/Petlja/PetljaDoc/blob/master/README.md" target="_blank">Petljadoc</a></div>
+          <div class="useful-link">
+            <a href="https://github.com/RunestoneInteractive/overview" target="_blank">Runestone Interactive</a></div>
+          
+        </div>
+    </div>
+
+    
+</div>
+
+<div class="left-side-nav">
+  <div class="course-logo-nav">
+      <a target="_blank" href="https://petlja.org">
+          <img src="../_static/img/petlja-logo-wt.svg" alt="petlja.org" id="lightPetljaLogo">
+      </a>
+  </div>
+  <div class="course-logo-nav-kabinet">
+      <a target="_blank" href="https://petlja.org/net.kabinet">
+          <img src="../_static/img/netkabinet-logo-strelica-wt.svg" alt="petlja.org" id="lightNetKabinetLogo">
+      </a>
+  </div>
+</div>
+
+
+<div class="content-header-label" id = "content-header-label" href="../">Савремена вештачка интелигенција</div>
+
+</div>
+
+
+
+
+<div class="petljaCourseContainer">
+
+<div class="petljaCourseContent">
+  
+           <div class="tableOfContent">
+            <h5> Table of content </h5>
+            </div>
+           <div>
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-01_Uvod>
+                    <h5>Увод</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../01_Uvod/011_Savremena%20vestacka%20inteligencija.html><div class="studioLecture" id=activity-01_Uvod-011_Savremena%20vestacka%20inteligencija><i class="fas fa-file-alt activity-icon"></i>Савремена вештачка интелигенција</div></a>
+                <a href=../01_Uvod/012_Da%20li%20masina%20moze%20da%20misli.html><div class="studioLecture" id=activity-01_Uvod-012_Da%20li%20masina%20moze%20da%20misli><i class="fas fa-file-alt activity-icon"></i>Да ли машина може да мисли?</div></a>
+                <a href=../01_Uvod/013_Oblasti%20vestacke%20inteligencije.html><div class="studioLecture" id=activity-01_Uvod-013_Oblasti%20vestacke%20inteligencije><i class="fas fa-file-alt activity-icon"></i>Области вештачке интелигенције</div></a>
+                <a href=../01_Uvod/014_Uska%20opsta%20i%20super%20inteligencija.html><div class="studioLecture" id=activity-01_Uvod-014_Uska%20opsta%20i%20super%20inteligencija><i class="fas fa-file-alt activity-icon"></i>Уска, општа и супер интелигенција</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02_Programiranje%20vodjeno%20podacima>
+                    <h5>Програмирање вођено подацима</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02_Programiranje%20vodjeno%20podacima/021_Programiranje%20vodjeno%20podacima.html><div class="studioLecture" id=activity-02_Programiranje%20vodjeno%20podacima-021_Programiranje%20vodjeno%20podacima><i class="fas fa-file-alt activity-icon"></i>Програмирање вођено подацима</div></a>
+                <a href=../02_Programiranje%20vodjeno%20podacima/022_Zasto%20nam%20je%20potrebno%20programiranje%20vodjeno%20podacima.html><div class="studioLecture" id=activity-02_Programiranje%20vodjeno%20podacima-022_Zasto%20nam%20je%20potrebno%20programiranje%20vodjeno%20podacima><i class="fas fa-file-alt activity-icon"></i>Зашто нам је потребно програмирање вођено подацима?</div></a>
+                <a href=../02_Programiranje%20vodjeno%20podacima/023_Osnovni%20pojmovi%20masinskog%20ucenja.html><div class="studioLecture" id=activity-02_Programiranje%20vodjeno%20podacima-023_Osnovni%20pojmovi%20masinskog%20ucenja><i class="fas fa-file-alt activity-icon"></i>Основни појмови машинског учења</div></a>
+                <a href=../02_Programiranje%20vodjeno%20podacima/024_Vrste%20masinskog%20ucenja.html><div class="studioLecture" id=activity-02_Programiranje%20vodjeno%20podacima-024_Vrste%20masinskog%20ucenja><i class="fas fa-file-alt activity-icon"></i>Врсте машинског учења</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-03_Python>
+                    <h5>Python</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../03_Python/031_Platforma%20Google%20Colab.html><div class="studioLecture" id=activity-03_Python-031_Platforma%20Google%20Colab><i class="fas fa-file-alt activity-icon"></i>Платформа Google Colab</div></a>
+                <a href=../03_Python/032_%20Biblioteke%20NumPy,%20Matplotlib%20i%20Pandas.html><div class="studioLecture" id=activity-03_Python-032_%20Biblioteke%20NumPy,%20Matplotlib%20i%20Pandas><i class="fas fa-file-alt activity-icon"></i>Библиотеке NumPy, Matplotlib i Pandas</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-04_Uloga%20podataka>
+                    <h5>Улога података</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../04_Uloga%20podataka/041_Uloga%20podataka.html><div class="studioLecture" id=activity-04_Uloga%20podataka-041_Uloga%20podataka><i class="fas fa-file-alt activity-icon"></i>Улога података</div></a>
+                <a href=../04_Uloga%20podataka/042_Kako%20nastaju%20skupovi%20podataka.html><div class="studioLecture" id=activity-04_Uloga%20podataka-042_Kako%20nastaju%20skupovi%20podataka><i class="fas fa-file-alt activity-icon"></i>Како настају скупови података?</div></a>
+                <a href=../04_Uloga%20podataka/043_Popularni%20skupovi%20podataka.html><div class="studioLecture" id=activity-04_Uloga%20podataka-043_Popularni%20skupovi%20podataka><i class="fas fa-file-alt activity-icon"></i>Популарни скупови података</div></a>
+                <a href=../04_Uloga%20podataka/044_Javni%20skupovi%20podataka.html><div class="studioLecture" id=activity-04_Uloga%20podataka-044_Javni%20skupovi%20podataka><i class="fas fa-file-alt activity-icon"></i>Јавно доступни скупови података</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-05_EDA>
+                    <h5>EDA</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../05_EDA/051_Eksplorativna%20analiza%20skupa%20podataka.html><div class="studioLecture" id=activity-05_EDA-051_Eksplorativna%20analiza%20skupa%20podataka><i class="fas fa-file-alt activity-icon"></i>Експлоративна анализа скупа података</div></a>
+                <a href=../05_EDA/052_Kreiranje%20reprezentacije%20skupa%20podataka.html><div class="studioLecture" id=activity-05_EDA-052_Kreiranje%20reprezentacije%20skupa%20podataka><i class="fas fa-file-alt activity-icon"></i>Креирање репрезентације скупа података</div></a>
+                <a href=../05_EDA/053_Skupovi%20za%20treniranje%20validaciju%20i%20testiranje.html><div class="studioLecture" id=activity-05_EDA-053_Skupovi%20za%20treniranje%20validaciju%20i%20testiranje><i class="fas fa-file-alt activity-icon"></i>Скупови за тренирање, валидацију и тестирање</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-06_Linearna%20regresija>
+                    <h5>Линеарна регресија</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../06_Linearna%20regresija/061_Linearna%20regresija.html><div class="studioLecture" id=activity-06_Linearna%20regresija-061_Linearna%20regresija><i class="fas fa-file-alt activity-icon"></i>Линеарна регресија</div></a>
+                <a href=../06_Linearna%20regresija/062_Gradijentni%20spust.html><div class="studioLecture" id=activity-06_Linearna%20regresija-062_Gradijentni%20spust><i class="fas fa-file-alt activity-icon"></i>Градијентни спуст</div></a>
+                <a href=../06_Linearna%20regresija/063_Ocenjivanje%20modela%20linearne%20regresije.html><div class="studioLecture" id=activity-06_Linearna%20regresija-063_Ocenjivanje%20modela%20linearne%20regresije><i class="fas fa-file-alt activity-icon"></i>Оцењивање модела линеарне регресије</div></a>
+                <a href=../06_Linearna%20regresija/064_Visestruka%20linearna%20regresija%20ToDo.html><div class="studioLecture" id=activity-06_Linearna%20regresija-064_Visestruka%20linearna%20regresija%20ToDo><i class="fas fa-file-alt activity-icon"></i>Вишеструка линеарна регресија - ТоДо</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-07_Klasifikacija>
+                    <h5>Класификација</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../07_Klasifikacija/071_Klasifikacija.html><div class="studioLecture" id=activity-07_Klasifikacija-071_Klasifikacija><i class="fas fa-file-alt activity-icon"></i>Класификација</div></a>
+                <a href=../07_Klasifikacija/072_Kako%20ocenjujemo%20model%20klasifikacije.html><div class="studioLecture" id=activity-07_Klasifikacija-072_Kako%20ocenjujemo%20model%20klasifikacije><i class="fas fa-file-alt activity-icon"></i>Како оцењујемо модел класификације</div></a>
+                <a href=../07_Klasifikacija/073_Logisticka%20regresija.html><div class="studioLecture" id=activity-07_Klasifikacija-073_Logisticka%20regresija><i class="fas fa-file-alt activity-icon"></i>Логистичка регресија</div></a>
+                <a href=../07_Klasifikacija/074_Algoritam%20k%20najblizih%20suseda.html><div class="studioLecture" id=activity-07_Klasifikacija-074_Algoritam%20k%20najblizih%20suseda><i class="fas fa-file-alt activity-icon"></i>Алгоритам к-најближих суседа</div></a>
+                <a href=../07_Klasifikacija/075_Hiperparametri.html><div class="studioLecture" id=activity-07_Klasifikacija-075_Hiperparametri><i class="fas fa-file-alt activity-icon"></i>Хиперпараметри</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-08_Prilagodjavanje>
+                    <h5>Прилагођавање</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../08_Prilagodjavanje/081_Generalizacija%20potprilagodjavanje%20i%20preprilagodjavanje.html><div class="studioLecture" id=activity-08_Prilagodjavanje-081_Generalizacija%20potprilagodjavanje%20i%20preprilagodjavanje><i class="fas fa-file-alt activity-icon"></i>Генерализација, потприлагођавање и преприлагођавање</div></a>
+                <a href=../08_Prilagodjavanje/082_Unakrsna%20validacija.html><div class="studioLecture" id=activity-08_Prilagodjavanje-082_Unakrsna%20validacija><i class="fas fa-file-alt activity-icon"></i>Унакрсна валидација</div></a>
+                <a href=../08_Prilagodjavanje/083_Regularizacija.html><div class="studioLecture" id=activity-08_Prilagodjavanje-083_Regularizacija><i class="fas fa-file-alt activity-icon"></i>Регуларизација</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-09_Neuronske%20mreze%20uvod>
+                    <h5>Неуронске мреже - увод</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../09_Neuronske%20mreze%20uvod/091_Neuronske%20mreze.html><div class="studioLecture" id=activity-09_Neuronske%20mreze%20uvod-091_Neuronske%20mreze><i class="fas fa-file-alt activity-icon"></i>Неуронске мреже</div></a>
+                <a href=../09_Neuronske%20mreze%20uvod/092_Obucavanje%20neuronskih%20mreza.html><div class="studioLecture" id=activity-09_Neuronske%20mreze%20uvod-092_Obucavanje%20neuronskih%20mreza><i class="fas fa-file-alt activity-icon"></i>Обучавање неуронских мрежа</div></a>
+                <a href=../09_Neuronske%20mreze%20uvod/093_TensorFlow%20Playground.html><div class="studioLecture" id=activity-09_Neuronske%20mreze%20uvod-093_TensorFlow%20Playground><i class="fas fa-file-alt activity-icon"></i>TensorFlow Playground</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-10_Neuronske%20mreze%20vrste%20i%20primena>
+                    <h5>Неуронске мреже - врсте и примена</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../10_Neuronske%20mreze%20vrste%20i%20primena/101_Razlicite%20vrste%20neuronskih%20mreza.html><div class="studioLecture" id=activity-10_Neuronske%20mreze%20vrste%20i%20primena-101_Razlicite%20vrste%20neuronskih%20mreza><i class="fas fa-file-alt activity-icon"></i>Различите врсте неуронских мрежа</div></a>
+                <a href=../10_Neuronske%20mreze%20vrste%20i%20primena/102_Konvolutivne%20neuronske%20mreze.html><div class="studioLecture" id=activity-10_Neuronske%20mreze%20vrste%20i%20primena-102_Konvolutivne%20neuronske%20mreze><i class="fas fa-file-alt activity-icon"></i>Конволутивне неуронске мреже</div></a>
+                <a href=../10_Neuronske%20mreze%20vrste%20i%20primena/103_Rekurentne%20neuronske%20mreze.html><div class="studioLecture" id=activity-10_Neuronske%20mreze%20vrste%20i%20primena-103_Rekurentne%20neuronske%20mreze><i class="fas fa-file-alt activity-icon"></i>Рекурентне неуронске мреже</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-12_Klasterovanje>
+                    <h5>Кластеровање</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../12_Klasterovanje/121_Klasterovanje.html><div class="studioLecture" id=activity-12_Klasterovanje-121_Klasterovanje><i class="fas fa-file-alt activity-icon"></i>Кластеровање</div></a>
+                <a href=../12_Klasterovanje/122_Algoritam%20k%20sredina.html><div class="studioLecture" id=activity-12_Klasterovanje-122_Algoritam%20k%20sredina><i class="fas fa-file-alt activity-icon"></i>Алгоритам к-средина</div></a>
+                <a href=../12_Klasterovanje/123_Odredjivanje%20broja%20klastera.html><div class="studioLecture" id=activity-12_Klasterovanje-123_Odredjivanje%20broja%20klastera><i class="fas fa-file-alt activity-icon"></i>Одређивање броја кластера</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-13_Ucenje%20potkrepljivanjem>
+                    <h5>Учење поткрепљивањем</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../13_Ucenje%20potkrepljivanjem/131_Ucenje%20potkrepljivanjem.html><div class="studioLecture" id=activity-13_Ucenje%20potkrepljivanjem-131_Ucenje%20potkrepljivanjem><i class="fas fa-file-alt activity-icon"></i>Учење поткрепљивањем</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-14_Drustveno%20bitni%20aspekti>
+                    <h5>Друштвено битни аспекти</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../14_Drustveno%20bitni%20aspekti/141_Drustveno%20bitni%20aspekti.html><div class="studioLecture" id=activity-14_Drustveno%20bitni%20aspekti-141_Drustveno%20bitni%20aspekti><i class="fas fa-file-alt activity-icon"></i>Друштвено битни аспекти</div></a>
+                </div>
+            </div>
+                </div>
+</div>
+
+
+
+<div class="lectureContent">
+
+  <div id="errors">
+  </div>
+  
+  <div class="lectureContentMaterial">
+  
+    <div id="main-content">
+    
+  <div class="section" id="id1">
+<h1>Неуронске мреже<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
+        <div class="course-content">
+            
+<p>У овој лекцији ћемо упознати, неуронске мреже, посебну групу алгоритама машинског учења. Њима дугујемо многе заниљиве пробоје у свету вештачке
+интелигенције.</p>
+
+    </div></div>
+<p>Са часова биологије ти је познато да је ћелија основна јединица грађе и функције свих живих бића. Из угла вештачке интелигенције и учења,
+најзаниљивије су нам ћелије мозга. Оне се зову неурони. Неурони се састоје из тела у којем је језгро и дужих и краћих наставака који се зову
+аксони и дендрити. Наставци неуронима омогућавају да се повежу са другим неуронима. Те тачке повезивања неурона се називају синапсама. Оне
+омогућавају да се сигнали тј. електрични импулси који генерише један неурон пренесу до другог неурона. Занимљиво је да један неурон може бити
+повезан са милионима других неурона. То значи да је он прима и обрађује сигнале који стижу од мноштва других неурона и на основу својих интерних
+механизама фино прорачунава сигнал који даље шаље другим неуроним. Уобичајено је да се ово стање назива стање активације неурона. Оно траје тек
+делић секунде али омогућава да се изврше суптилне калкулације и генерише сигнал који се пренеси кроз цео нервни систем.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/nm1.png"><img alt="../_images/nm1.png" src="../_images/nm1.png" style="width: 500px;" /></a>
+</div>
+<p>(слика је преузета са <a class="reference external" href="https://www.google.com/url?sa=i&amp;url=https%3A%2F%2Fwww.researchgate.net%2Ffigure%2FSchematic-of-two-interconnected-neurons-Action-potentials-propagate-from-the-pre-neuron_fig6_316534311&amp;psig=AOvVaw0rHwMLQBL7XDGzjvd9vSeK&amp;ust=1691038820418000&amp;source=images&amp;cd=vfe&amp;opi=89978449&amp;ved=0CBMQjhxqGAoTCMjg99OYvYADFQAAAAAdAAAAABCJAQ">https://www.google.com/url?sa=i&amp;url=https%3A%2F%2Fwww.researchgate.net%2Ffigure%2FSchematic-of-two-interconnected-neurons-Action-potentials-propagate-from-the-pre-neuron_fig6_316534311&amp;psig=AOvVaw0rHwMLQBL7XDGzjvd9vSeK&amp;ust=1691038820418000&amp;source=images&amp;cd=vfe&amp;opi=89978449&amp;ved=0CBMQjhxqGAoTCMjg99OYvYADFQAAAAAdAAAAABCJAQ</a>)</p>
+<hr class="docutils" />
+<p>Неурон који сусрећемо у вештачкој интелигенцији је математичка апстракција неурона мозга. Њега описујемо функцијом више променљивих f(x1, x2, …, xn)
+где свака од променљивих x1, x2, …, xn одговара по једном сигналу који стиже до неурона. Како нису сви сигнали подједнако важни за активности
+неурона, придружују им се тежине  w1, w2, …, wn. Веће вредности ових бројева указују да је сигнал важнији, а мање вредности да је сигнал мање
+важан. Тако, укупна стимулација неурона одговара тежинској суми w1x1+w2x2+…..+wnxn. Да би могло да се утиче на додатна понашања неурона, овој
+суми се додаје и један слободан члан b тако да укупна стимулација неурона заправо износи w1x1+w2x2+…..+wnxn + b. Она се даље прослеђује такозваној
+активационој функцији φ која има задатак да израчуна излаз неурона. У зависности од избора активационе функције зависиће и вредности излаза које се
+добијају. Ако сада све систематично запишемо, добијамо да је за примљене сигнале x1, x2, …, xn излаз неурона y = φ(w1x1+w2x2+…..+wnxn+ b).
+Поступак који смо описали можеш да испратиш и на доњој илустрацији.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/nm2.png"><img alt="../_images/nm2.png" src="../_images/nm2.png" style="width: 600px;" /></a>
+</div>
+<p><em>Математичка апстракција неурона</em></p>
+<hr class="docutils" />
+<p>Скривени блок <strong>(???) блок или дугме, који је наслов?</strong>
+Приближимо додатно смисао параметра b. Природни неурон карактерише такозвани праг активације - уколико је укупан сигнал који неурон прими већи од
+вредности прага активације, он се активира, обрађује сигнал и прослеђује резултат обраде даље другим неуронима. Сличу улогу у математичком моделу
+неурона има и параметар b. Уколико је укупни сигнал већи од прага активације b тј. ако је  w1x1+w2x2+…..+wnxn &gt;b неурон ће се активирати.
+Стога нам параметар b оставља могућност да утичемо на додатна понашања неурона. Израз w1x1+w2x2+…..+wnxn &gt;b се може записати и као w1x1+w2x2+…..+wnxn - b &gt; 0
+па је у том смислу параметар b и саставни део суме.</p>
+<p>Када неуроне повежемо међу собом добијамо <strong>неуронску мрежу</strong> (енгл. <em>neural network</em>). Неуронска мрежа се по правилу састоји од <strong>слојева</strong> (енгл. <em>layer</em>), посебно удружених група неурона.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/nm3.png"><img alt="../_images/nm3.png" src="../_images/nm3.png" style="width: 600px;" /></a>
+</div>
+<p><em>Слојеви неуронске мреже</em></p>
+<p>(слика је преузета са <a class="reference external" href="https://medium.com/&#64;b.terryjack/introduction-to-deep-learning-feed-forward-neural-networks-ffnns-a-k-a-c688d83a309d">https://medium.com/&#64;b.terryjack/introduction-to-deep-learning-feed-forward-neural-networks-ffnns-a-k-a-c688d83a309d</a>)</p>
+<hr class="docutils" />
+<p><strong>Улазни слој</strong> (енгл. <em>input layer</em>)  је слој који се налази на улазу неуронске мреже. Улазне сигнале x1, x2, …, xn овог слоја повезујемо са
+вредностима атрибута које имамо у скупу података и тако прилазимо практичној примени неуронских мрежа. На пример, ако располажемо скупом
+података у којем се налазе три атрибута, температура, влажност ваздуха и атмосферски притисак, улазни слој ће имати три неурона: први ће
+одговарати првом атрибуту, температури, други ће одговарати другом атрибуту, влажности ваздуха, а трећи неурон трећем атрибуту тј. атмосферском
+притиску. За једну конкретну инстанцу скупа података са вредностима температуре, влажности ваздуха и атмосферског притиска који износе,
+редом, 19℃, 77% и 1011.2 mb имаћемо вредности сигнала x1=19 , x2=77 и x3=1011.2. У духу претходне приче, први неурон улазног слоја прима и
+обрађује само сигнал x1 и то тако што га пропушта без било какве модификације (то је могуће за избор активационе функције φ(x)=x и вредност w1=1 и b=0). Слично важи и за преостала два неурона и њихове сигнале x2 и x3. То би значило да нам улазни слој омогућава да подаци уђу у мрежу.</p>
+<p><strong>Излазни слој</strong> (енгл. <em>output layer</em>) је слој који се налази на излазу неуронске мреже. Као што наслућујеш, он нам омогућава да очитамо
+резултате које је неуронска мрежа израчунала за нас. У зависности од задатка који се решава, зависиће и број неурона који се налази у овом слоју.</p>
+
+    <div class="quiz-question">
+
+            <div class="course-box course-box-question course-content petlja-problem-box choice-question">
+                <div class="image-background"></div>
+                <div class="petlja-problem-box-icon-holder"> </div>
+                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image  qchoice-image" />
+                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image-quiz  qchoice-image" /> 
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="p91">
+            <p>Q-6: Шта мислиш, ако користимо неуронску мрежу за задатак регресије, колико неурона имамо у излазном слоју?</p>
+
+            <li data-component="answer" data-correct id="p91_opt_a">1</li><li data-component="feedback" id="p91_opt_a">Одговор је тачан.</li>
+            
+            <li data-component="answer"  id="p91_opt_b">3</li><li data-component="feedback" id="p91_opt_b">Одговор није тачан.</li>
+            
+            <li data-component="answer"  id="p91_opt_c">5</li><li data-component="feedback" id="p91_opt_c">Одговор није тачан.</li>
+            
+
+            </ul>
+            </div>
+            
+    </div>
+<p>У задацима регресије, пошто очекујемо једну бројчану вредност као резултат (количину падавина или нешто слично) довољан нам је један неурон.
+Његов излаз треба да одговара предикцији коју очекујемо. За задатак класификације, размотримо посебно бинарну класификацију и вишекласну
+класификацију. Како код бинарне класификације очекујемо две вредности, 0 или 1, можда ће ти прва помисао бити да су нам потребна два неурона.
+Ипак, ако боље размислиш приметићеш да је довољан чак и један неурон: ако његов излаз пређе неки праг, неку унапред дефинисану вредност, то
+можемо водити као резултат 1, или у супротоном, као резултат 0. У случају вишекласне класификације можемо да имамо више класа па је практично
+да за сваку класу уведемо по један неурон.</p>
+
+        <div class="course-box course-box-question course-content petlja-problem-box fitb-question">
+        <div class="image-background"></div>
+        <div class="petlja-problem-box-icon-holder"> </div>
+        <img src="../_static/img/fitb-img.svg" class="petlja-problem-image  fitb-image" /> 
+        <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image-quiz  qchoice-image" /> 
+        
+        <div data-component="fillintheblank" id="d91">
+            <p>Колико неурона у излазном слоју нам је потребно у задатку класификације слика цифара?</p>
+<p>Одговор: <input type="text"></p>
+
+        <script type="application/json">
+            [[{"regex": "^ *^10|deset|\u0414\u0435\u0441\u0435\u0442|Deset|DESET|\u0414\u0415\u0421\u0415\u0422|\u0434\u0435\u0441\u0435\u0442$ *$", "regexFlags": "", "feedback": "<p>\u041e\u0434\u0433\u043e\u0432\u043e\u0440 \u0458\u0435 \u0442\u0430\u0447\u0430\u043d.</p>\n"}, {"regex": "^ *x *$", "regexFlags": "", "feedback": "<p>\u041e\u0434\u0433\u043e\u0432\u043e\u0440 \u043d\u0438\u0458\u0435 \u0442\u0430\u0447\u0430\u043d.</p>\n"}]]
+        </script>
+
+        </div>
+        </div>
+            <p>Сложићеш се да у задатку вишекласне класификације очекујемо да сви излази неурона излазног слоја буду 0 осим једног који има вредност 1 - тако
+ћемо тачно знати о којој је класи реч.</p>
+<p>Слојеве неуронске мреже које се налазе између улазног и излазног слоја називамо <strong>скривеним слојевима</strong> (енгл. <em>hidden layers</em>). Уобичајено је да
+се неуронске мреже које имају више од једног скривеног слоја називају <strong>дубоким неуронским мрежама</strong> (енгл. <em>deep neural networks</em>).
+Одатле долази и име дубоко учења (енгл. deep learning) за област машинског учења која их изучава и име <strong>плитко учење</strong> (енгл. <em>shallow learning</em>)
+за класичније форме учења.</p>
+<p><strong>Потпуно повезане неуонске мреже</strong> (енгл. <em>fully connected neural networks</em>) су мреже код којих је сваки неурон претходног слоја повезан за
+сваким неуроном наредног слоја. Слика на којој су приказани слојеви неуронске мреже приказује и једну потпуно повезану неуронску мрежу јер су
+сви неурони улазног слоја повезани са свим неуронима првог скривеног слоја, затим су сви неурони првог скривеног слоја повезани са свим неуронима
+другог скривеног слоја, и на крају, сви неурони другог скривеног слоја су повезани са свим неуроним (на нашој слици само једним) излазног слоја.
+Начини на који су неурони слојева повезани између себе одређује архитектуру неуронских мрежа и нека специфична својства мрежа која даље одређују
+у којим областима могу да се користе. У наредној лекцији упознаћемо неке такве типове.</p>
+<p>Размотримо сада шта смо заправо добили увођењем неурона и неуронских мрежа. Претпоставимо да имамо три атрибута x1, x2 и x3. Линеарну зависност
+између атрибута и циљне променљиве смо математички описивали једначином y = ꞵ0+ ꞵ1x1 + ꞵ2x2 + ꞵ3x3. Уколико уместо параметара ꞵ запишемо w а
+уместо ꞵ0 запишемо  b и пребацимо га на крај, добијамо заправо тежинску суму w1x1+w2x2+w3x3 + b коју израчунава један неурон за сигнале које
+прима. То значи да када не би било активационе функције φ и неурон би моделовао линеарну зависност између атрибута (сигнала) и излаза. Ово
+можемо графички приказати и мрежом која се састоји само од улазног слоја са три неурона и излазног слоја за једним неуроном као на доњој слици.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/nm4.png"><img alt="../_images/nm4.png" src="../_images/nm4.png" style="width: 300px;" /></a>
+</div>
+<hr class="docutils" />
+<p>Ако активациона функција не би постојала, да ли би из угла моделовања зависности нешто променило додавање новог скривеног слоја? Нека то буде
+слој жуте боје на следећој слици.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/nm5.png"><img alt="../_images/nm5.png" src="../_images/nm5.png" style="width: 300px;" /></a>
+</div>
+<p><strong>ТОДО: дорадити слику и додати обележја x и w</strong></p>
+<hr class="docutils" />
+<p>Сада сваки неурон скривеног слоја израчунава неку линарну комбинацију атрибута, а неурон излазног слоја неку линеарну комбинацију вредности
+скривеног слоја. То би значило да наш неурон излазног слоја опет израчунава неку линеарну комбинацију атрибута и да се нисмо пуно померили
+од представљања неких сложенијих зависности између атрибута и излаза. Додатно, не би померили чак ни додавањем 100 скривених слојева - увек
+бисмо моделовали линеарну зависност.</p>
+<p>Зато укључивање активационе функције у израчунавања неурона значајно мења скуп могућности које имамо. Уколико искористимо неку нелинеарну
+активациону функцију моћи ћемо да моделујемо и неке нелинеарне зависности између атрибута и циљне променљиве. Тако постојање нелинеарне
+активационе функције у скривеном слоју из прехтодног примера омогућава да неурон излазног слоја сада израчунава неку нелинеарну комбинацију
+атрибута. У овом светлу, додавање нових слојева има много више смила. Комбинујући нелинеарности већег броја слојева нам омогућава да моделујемо
+комплексне зависности између атрибута и излаза.</p>
+<p>Да би се све коцкице уклопиле, остаје још да продискутујемо које су то нелинеарне активационе функције које су популарне у машинском учењу.
+То су сигмоидна функција коју смо упознали у причи о логистичкој регресији, тенгес хиперболички, исправљена линеарна јединица и накошена
+исправљена линеарна јединица. Формуле по којима се ове функције израчунавају и њихови графици су приказане на доњој слици. Као што можеш
+да приметиш ове функције заиста нису линеарне - њихови графици нису праве.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/nm6.png"><img alt="../_images/nm6.png" src="../_images/nm6.png" style="width: 780px;" /></a>
+</div>
+<p><em>Најчешће избори активационих функција</em></p>
+<p>(слика је преузета са <a class="reference external" href="https://www.researchgate.net/figure/Artificial-neural-network-activation-functions-In-this-figure-the-most-common_fig8_344331692">https://www.researchgate.net/figure/Artificial-neural-network-activation-functions-In-this-figure-the-most-common_fig8_344331692</a></p>
+<hr class="docutils" />
+<p>Да бисмо употпунили причу о комбиновању различитих активационих функција, посматрајмо функцијe f(x) = 2x и g(x) = 1-x. Можемо да приметимо да су
+обе функције линеарне функције једне променљиве. Њиховим комбиновањем, композицијом функција, добијамо функцију g(f(x)) = 1-2x која је, такође,
+линеарна функција једне променљиве. Графике све три функције можемо да видимо и на доњој слици.</p>
+<a class="reference internal image-reference" href="../_images/nm7.png"><img alt="../_images/nm7.png" class="align-center" src="../_images/nm7.png" style="width: 780px;" /></a>
+<p>Посматрајмо сада функције  f(x) = ReLU(2x) и g(x) = ReLu(1-x) које се од претходних функција разлику по томе што у њима фигурише активациона функција
+исправљена линеарна јединица. Зато су обе функције нелинеарне. Њиховим комбиновањем тј. њиховом композицијом, добијамо функцију
+g(f(x)) = ReLU(1- ReLU(2x)) која је, такође, нелинеарна и која има нови ”облик”: омогућава нам да изразимо нешто другачију зависност
+између улазне променљиве и излаза.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/nm8.png"><img alt="../_images/nm8.png" src="../_images/nm8.png" style="width: 780px;" /></a>
+</div>
+<p>(слика је преузета из књиге Deep Learning with JavaScript, страна 85)</p>
+<hr class="docutils" />
+<p>Избор одговарајуће активационе функције зависи од природе задатка и неких својстава које неуронска мрежа треба да има у току обучавања.
+Како се то ради приближићемо у следећој лекцији.</p>
+</div>
+
+
+    </div>
+    
+    <div>
+<div class="lecture-prev-next-toggle">
+  <a  href="index.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Previous chapter </span> </a>
+  
+  <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Next chapter</span>  <i class="fas fa-arrow-right fa"></i> </a>
+</div>
+
+<script type="text/javascript">
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+</script>
+</div>
+
+    
+  </div>
+</div>
+
+<div class="petljadoc-resources">
+  <span class="pull-left">(Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>) <br> © 2022 Petlja</span>
+</div>
+
+
+<div class="lectureToolbox">
+
+  <label class="font-size-toggle" id="fontSizeToggle">
+
+      <i class="fas fa-font"></i><label>Letters</label>
+  </label>
+  <div class="font-change d-none" id="fontChangeModal">
+      <span class="dec-letter-icon" id="decLetterIcon">A-</span>
+      <label id="currentFontSize">16</label>
+      <span class="inc-letter-icon" id="incLetterIcon">A+</span>
+  </div>
+</div>
+
+</div>
+
+  </body>
+</html>

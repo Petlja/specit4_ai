@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Конволутивне неуронске мреже</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/qchoice.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/associations.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/editor.css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja-course.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/nbstyle.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/runestonebase.js"></script>
+    <script src="../_static/skulpt.min.js"></script>
+    <script src="../_static/skulpt-stdlib.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/jquery.highlight.js"></script>
+    <script src="../_static/bookfuncs.js"></script>
+    <script src="../_static/codemirror.js"></script>
+    <script src="../_static/xml.js"></script>
+    <script src="../_static/css.js"></script>
+    <script src="../_static/python.js"></script>
+    <script src="../_static/htmlmixed.js"></script>
+    <script src="../_static/javascript.js"></script>
+    <script src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script src="../_static/activecode-i18n.en.js"></script>
+    <script src="../_static/activecode.js"></script>
+    <script src="../_static/clike.js"></script>
+    <script src="../_static/timed_activecode.js"></script>
+    <script src="../_static/animationbase.js"></script>
+    <script src="../_static/mchoice.js"></script>
+    <script src="../_static/timedmc.js"></script>
+    <script src="../_static/timed.js"></script>
+    <script src="../_static/mchoice-i18n.en.js"></script>
+    <script src="../_static/clickable.js"></script>
+    <script src="../_static/timedclickable.js"></script>
+    <script src="../_static/d3.v2.min.js"></script>
+    <script src="../_static/jquery.ba-bbq.min.js"></script>
+    <script src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script src="../_static/pytutor.js"></script>
+    <script src="../_static/codelens.js"></script>
+    <script src="../_static/skulpt.min.js"></script>
+    <script src="../_static/skulpt-stdlib.js"></script>
+    <script src="../_static/datafile.js"></script>
+    <script src="../_static/dragndrop.js"></script>
+    <script src="../_static/timeddnd.js"></script>
+    <script src="../_static/dragndrop-i18n.en.js"></script>
+    <script src="../_static/fitb.js"></script>
+    <script src="../_static/timedfitb.js"></script>
+    <script src="../_static/fitb-i18n.en.js"></script>
+    <script src="../_static/matrixeq.js"></script>
+    <script src="../_static/lib/prettify.js"></script>
+    <script src="../_static/lib/hammer.min.js"></script>
+    <script src="../_static/parsons.js"></script>
+    <script src="../_static/parsons-i18n.en.js"></script>
+    <script src="../_static/timedparsons.js"></script>
+    <script src="../_static/poll.js"></script>
+    <script src="../_static/reveal.js"></script>
+    <script src="../_static/shortanswer.js"></script>
+    <script src="../_static/timed_shortanswer.js"></script>
+    <script src="../_static/showEval.js"></script>
+    <script src="../_static/tabbedstuff.js"></script>
+    <script src="../_static/runestonevideo.js"></script>
+    <script src="../_static/webglinteractive.js"></script>
+    <script src="../_static/FileSaver.min.js"></script>
+    <script src="../_static/Blob.js"></script>
+    <script src="../_static/karelCorner.js"></script>
+    <script src="../_static/karelRobot.js"></script>
+    <script src="../_static/karelWorld.js"></script>
+    <script src="../_static/karelChat.js"></script>
+    <script src="../_static/karelRobotDrawer.js"></script>
+    <script src="../_static/karelUI.js"></script>
+    <script src="../_static/karel.js"></script>
+    <script src="../_static/karel-i18n.en.js"></script>
+    <script src="../_static/notes.js"></script>
+    <script src="../_static/pygamelib-init.js"></script>
+    <script src="../_static/gallery.js"></script>
+    <script src="../_static/associations.js"></script>
+    <script src="../_static/associations-i18n.en.js"></script>
+    <script src="../_static/editor.js"></script>
+    <script src="../_static/jszip.js"></script>
+    <script src="../_static/editor-i18n.en.js"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="../_static/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/waypoints.min.js"></script>
+    <script src="../_static/rangy-core.js"></script>
+    <script src="../_static/rangy-textrange.js"></script>
+    <script src="../_static/rangy-cssclassapplier.js"></script>
+    <script src="../_static/user-highlights.js"></script>
+    <script src="../_static/jquery.idle-timer.js"></script>
+    <script src="../_static/processing-1.4.1.min.js"></script>
+    <script src="../_static/jquery.hotkey.js"></script>
+    <script src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script src="../_static/course-errors.js"></script>
+    <script src="../_static/petlja.js"></script>
+    <script src="../_static/require.js"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+    <script type="text/javascript">
+      eBookConfig = {};
+      eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+      eBookConfig.app = eBookConfig.host + '/runestone';
+      eBookConfig.ajaxURL = eBookConfig.app + '/ajax/';
+      eBookConfig.course = 'os4_dig';
+      eBookConfig.logLevel = '0';
+      eBookConfig.loginRequired = 'false';
+      eBookConfig.build_info = "";
+      eBookConfig.isLoggedIn = false;
+      eBookConfig.useRunestoneServices = false;
+      eBookConfig.python3 = true;
+      eBookConfig.basecourse = 'os4_dig';
+      eBookConfig.runestone_version = '';
+      eBookConfig.imagesDir = '../_images/';
+      eBookConfig.staticDir = '../_static/';
+      if (typeof (Sk) != "undefined")
+        Sk.imgPath = eBookConfig.imagesDir;
+    </script>
+
+  </head>
+
+  <body>
+
+
+
+<div id="navbar" class="content-header">
+  <div class="right-side-nav">
+    
+    <div id="usefulLinksToggle" class="useful-links-toggle">
+        <a class="dropdown-toggle dropdown-toggle-burger" role="button" href="#" id="usefulLinksDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-bars fa-2x"></i>
+        </a>
+        <div class="dropdown-menu dropdown-nav-links shadow-lg" aria-labelledby="usefulLinksDropdown" x-placement="bottom-start" style="position: absolute; transform: translate3d(-55px, 32px, 0px); top: 0px; left: 0px; will-change: transform;">
+          <div class="links-title"> Useful links</div>
+          <div class="useful-link">
+            <a href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html" target="_blank">Sphinx Docs</a></div>
+          <div class="useful-link">
+            <a href="https://github.com/Petlja/PetljaDoc/blob/master/README.md" target="_blank">Petljadoc</a></div>
+          <div class="useful-link">
+            <a href="https://github.com/RunestoneInteractive/overview" target="_blank">Runestone Interactive</a></div>
+          
+        </div>
+    </div>
+
+    
+</div>
+
+<div class="left-side-nav">
+  <div class="course-logo-nav">
+      <a target="_blank" href="https://petlja.org">
+          <img src="../_static/img/petlja-logo-wt.svg" alt="petlja.org" id="lightPetljaLogo">
+      </a>
+  </div>
+  <div class="course-logo-nav-kabinet">
+      <a target="_blank" href="https://petlja.org/net.kabinet">
+          <img src="../_static/img/netkabinet-logo-strelica-wt.svg" alt="petlja.org" id="lightNetKabinetLogo">
+      </a>
+  </div>
+</div>
+
+
+<div class="content-header-label" id = "content-header-label" href="../">Савремена вештачка интелигенција</div>
+
+</div>
+
+
+
+
+<div class="petljaCourseContainer">
+
+<div class="petljaCourseContent">
+  
+           <div class="tableOfContent">
+            <h5> Table of content </h5>
+            </div>
+           <div>
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-01_Uvod>
+                    <h5>Увод</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../01_Uvod/011_Savremena%20vestacka%20inteligencija.html><div class="studioLecture" id=activity-01_Uvod-011_Savremena%20vestacka%20inteligencija><i class="fas fa-file-alt activity-icon"></i>Савремена вештачка интелигенција</div></a>
+                <a href=../01_Uvod/012_Da%20li%20masina%20moze%20da%20misli.html><div class="studioLecture" id=activity-01_Uvod-012_Da%20li%20masina%20moze%20da%20misli><i class="fas fa-file-alt activity-icon"></i>Да ли машина може да мисли?</div></a>
+                <a href=../01_Uvod/013_Oblasti%20vestacke%20inteligencije.html><div class="studioLecture" id=activity-01_Uvod-013_Oblasti%20vestacke%20inteligencije><i class="fas fa-file-alt activity-icon"></i>Области вештачке интелигенције</div></a>
+                <a href=../01_Uvod/014_Uska%20opsta%20i%20super%20inteligencija.html><div class="studioLecture" id=activity-01_Uvod-014_Uska%20opsta%20i%20super%20inteligencija><i class="fas fa-file-alt activity-icon"></i>Уска, општа и супер интелигенција</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02_Programiranje%20vodjeno%20podacima>
+                    <h5>Програмирање вођено подацима</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02_Programiranje%20vodjeno%20podacima/021_Programiranje%20vodjeno%20podacima.html><div class="studioLecture" id=activity-02_Programiranje%20vodjeno%20podacima-021_Programiranje%20vodjeno%20podacima><i class="fas fa-file-alt activity-icon"></i>Програмирање вођено подацима</div></a>
+                <a href=../02_Programiranje%20vodjeno%20podacima/022_Zasto%20nam%20je%20potrebno%20programiranje%20vodjeno%20podacima.html><div class="studioLecture" id=activity-02_Programiranje%20vodjeno%20podacima-022_Zasto%20nam%20je%20potrebno%20programiranje%20vodjeno%20podacima><i class="fas fa-file-alt activity-icon"></i>Зашто нам је потребно програмирање вођено подацима?</div></a>
+                <a href=../02_Programiranje%20vodjeno%20podacima/023_Osnovni%20pojmovi%20masinskog%20ucenja.html><div class="studioLecture" id=activity-02_Programiranje%20vodjeno%20podacima-023_Osnovni%20pojmovi%20masinskog%20ucenja><i class="fas fa-file-alt activity-icon"></i>Основни појмови машинског учења</div></a>
+                <a href=../02_Programiranje%20vodjeno%20podacima/024_Vrste%20masinskog%20ucenja.html><div class="studioLecture" id=activity-02_Programiranje%20vodjeno%20podacima-024_Vrste%20masinskog%20ucenja><i class="fas fa-file-alt activity-icon"></i>Врсте машинског учења</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-03_Python>
+                    <h5>Python</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../03_Python/031_Platforma%20Google%20Colab.html><div class="studioLecture" id=activity-03_Python-031_Platforma%20Google%20Colab><i class="fas fa-file-alt activity-icon"></i>Платформа Google Colab</div></a>
+                <a href=../03_Python/032_%20Biblioteke%20NumPy,%20Matplotlib%20i%20Pandas.html><div class="studioLecture" id=activity-03_Python-032_%20Biblioteke%20NumPy,%20Matplotlib%20i%20Pandas><i class="fas fa-file-alt activity-icon"></i>Библиотеке NumPy, Matplotlib i Pandas</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-04_Uloga%20podataka>
+                    <h5>Улога података</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../04_Uloga%20podataka/041_Uloga%20podataka.html><div class="studioLecture" id=activity-04_Uloga%20podataka-041_Uloga%20podataka><i class="fas fa-file-alt activity-icon"></i>Улога података</div></a>
+                <a href=../04_Uloga%20podataka/042_Kako%20nastaju%20skupovi%20podataka.html><div class="studioLecture" id=activity-04_Uloga%20podataka-042_Kako%20nastaju%20skupovi%20podataka><i class="fas fa-file-alt activity-icon"></i>Како настају скупови података?</div></a>
+                <a href=../04_Uloga%20podataka/043_Popularni%20skupovi%20podataka.html><div class="studioLecture" id=activity-04_Uloga%20podataka-043_Popularni%20skupovi%20podataka><i class="fas fa-file-alt activity-icon"></i>Популарни скупови података</div></a>
+                <a href=../04_Uloga%20podataka/044_Javni%20skupovi%20podataka.html><div class="studioLecture" id=activity-04_Uloga%20podataka-044_Javni%20skupovi%20podataka><i class="fas fa-file-alt activity-icon"></i>Јавно доступни скупови података</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-05_EDA>
+                    <h5>EDA</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../05_EDA/051_Eksplorativna%20analiza%20skupa%20podataka.html><div class="studioLecture" id=activity-05_EDA-051_Eksplorativna%20analiza%20skupa%20podataka><i class="fas fa-file-alt activity-icon"></i>Експлоративна анализа скупа података</div></a>
+                <a href=../05_EDA/052_Kreiranje%20reprezentacije%20skupa%20podataka.html><div class="studioLecture" id=activity-05_EDA-052_Kreiranje%20reprezentacije%20skupa%20podataka><i class="fas fa-file-alt activity-icon"></i>Креирање репрезентације скупа података</div></a>
+                <a href=../05_EDA/053_Skupovi%20za%20treniranje%20validaciju%20i%20testiranje.html><div class="studioLecture" id=activity-05_EDA-053_Skupovi%20za%20treniranje%20validaciju%20i%20testiranje><i class="fas fa-file-alt activity-icon"></i>Скупови за тренирање, валидацију и тестирање</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-06_Linearna%20regresija>
+                    <h5>Линеарна регресија</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../06_Linearna%20regresija/061_Linearna%20regresija.html><div class="studioLecture" id=activity-06_Linearna%20regresija-061_Linearna%20regresija><i class="fas fa-file-alt activity-icon"></i>Линеарна регресија</div></a>
+                <a href=../06_Linearna%20regresija/062_Gradijentni%20spust.html><div class="studioLecture" id=activity-06_Linearna%20regresija-062_Gradijentni%20spust><i class="fas fa-file-alt activity-icon"></i>Градијентни спуст</div></a>
+                <a href=../06_Linearna%20regresija/063_Ocenjivanje%20modela%20linearne%20regresije.html><div class="studioLecture" id=activity-06_Linearna%20regresija-063_Ocenjivanje%20modela%20linearne%20regresije><i class="fas fa-file-alt activity-icon"></i>Оцењивање модела линеарне регресије</div></a>
+                <a href=../06_Linearna%20regresija/064_Visestruka%20linearna%20regresija%20ToDo.html><div class="studioLecture" id=activity-06_Linearna%20regresija-064_Visestruka%20linearna%20regresija%20ToDo><i class="fas fa-file-alt activity-icon"></i>Вишеструка линеарна регресија - ТоДо</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-07_Klasifikacija>
+                    <h5>Класификација</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../07_Klasifikacija/071_Klasifikacija.html><div class="studioLecture" id=activity-07_Klasifikacija-071_Klasifikacija><i class="fas fa-file-alt activity-icon"></i>Класификација</div></a>
+                <a href=../07_Klasifikacija/072_Kako%20ocenjujemo%20model%20klasifikacije.html><div class="studioLecture" id=activity-07_Klasifikacija-072_Kako%20ocenjujemo%20model%20klasifikacije><i class="fas fa-file-alt activity-icon"></i>Како оцењујемо модел класификације</div></a>
+                <a href=../07_Klasifikacija/073_Logisticka%20regresija.html><div class="studioLecture" id=activity-07_Klasifikacija-073_Logisticka%20regresija><i class="fas fa-file-alt activity-icon"></i>Логистичка регресија</div></a>
+                <a href=../07_Klasifikacija/074_Algoritam%20k%20najblizih%20suseda.html><div class="studioLecture" id=activity-07_Klasifikacija-074_Algoritam%20k%20najblizih%20suseda><i class="fas fa-file-alt activity-icon"></i>Алгоритам к-најближих суседа</div></a>
+                <a href=../07_Klasifikacija/075_Hiperparametri.html><div class="studioLecture" id=activity-07_Klasifikacija-075_Hiperparametri><i class="fas fa-file-alt activity-icon"></i>Хиперпараметри</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-08_Prilagodjavanje>
+                    <h5>Прилагођавање</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../08_Prilagodjavanje/081_Generalizacija%20potprilagodjavanje%20i%20preprilagodjavanje.html><div class="studioLecture" id=activity-08_Prilagodjavanje-081_Generalizacija%20potprilagodjavanje%20i%20preprilagodjavanje><i class="fas fa-file-alt activity-icon"></i>Генерализација, потприлагођавање и преприлагођавање</div></a>
+                <a href=../08_Prilagodjavanje/082_Unakrsna%20validacija.html><div class="studioLecture" id=activity-08_Prilagodjavanje-082_Unakrsna%20validacija><i class="fas fa-file-alt activity-icon"></i>Унакрсна валидација</div></a>
+                <a href=../08_Prilagodjavanje/083_Regularizacija.html><div class="studioLecture" id=activity-08_Prilagodjavanje-083_Regularizacija><i class="fas fa-file-alt activity-icon"></i>Регуларизација</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-09_Neuronske%20mreze%20uvod>
+                    <h5>Неуронске мреже - увод</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../09_Neuronske%20mreze%20uvod/091_Neuronske%20mreze.html><div class="studioLecture" id=activity-09_Neuronske%20mreze%20uvod-091_Neuronske%20mreze><i class="fas fa-file-alt activity-icon"></i>Неуронске мреже</div></a>
+                <a href=../09_Neuronske%20mreze%20uvod/092_Obucavanje%20neuronskih%20mreza.html><div class="studioLecture" id=activity-09_Neuronske%20mreze%20uvod-092_Obucavanje%20neuronskih%20mreza><i class="fas fa-file-alt activity-icon"></i>Обучавање неуронских мрежа</div></a>
+                <a href=../09_Neuronske%20mreze%20uvod/093_TensorFlow%20Playground.html><div class="studioLecture" id=activity-09_Neuronske%20mreze%20uvod-093_TensorFlow%20Playground><i class="fas fa-file-alt activity-icon"></i>TensorFlow Playground</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-10_Neuronske%20mreze%20vrste%20i%20primena>
+                    <h5>Неуронске мреже - врсте и примена</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../10_Neuronske%20mreze%20vrste%20i%20primena/101_Razlicite%20vrste%20neuronskih%20mreza.html><div class="studioLecture" id=activity-10_Neuronske%20mreze%20vrste%20i%20primena-101_Razlicite%20vrste%20neuronskih%20mreza><i class="fas fa-file-alt activity-icon"></i>Различите врсте неуронских мрежа</div></a>
+                <a href=../10_Neuronske%20mreze%20vrste%20i%20primena/102_Konvolutivne%20neuronske%20mreze.html><div class="studioLecture" id=activity-10_Neuronske%20mreze%20vrste%20i%20primena-102_Konvolutivne%20neuronske%20mreze><i class="fas fa-file-alt activity-icon"></i>Конволутивне неуронске мреже</div></a>
+                <a href=../10_Neuronske%20mreze%20vrste%20i%20primena/103_Rekurentne%20neuronske%20mreze.html><div class="studioLecture" id=activity-10_Neuronske%20mreze%20vrste%20i%20primena-103_Rekurentne%20neuronske%20mreze><i class="fas fa-file-alt activity-icon"></i>Рекурентне неуронске мреже</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-12_Klasterovanje>
+                    <h5>Кластеровање</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../12_Klasterovanje/121_Klasterovanje.html><div class="studioLecture" id=activity-12_Klasterovanje-121_Klasterovanje><i class="fas fa-file-alt activity-icon"></i>Кластеровање</div></a>
+                <a href=../12_Klasterovanje/122_Algoritam%20k%20sredina.html><div class="studioLecture" id=activity-12_Klasterovanje-122_Algoritam%20k%20sredina><i class="fas fa-file-alt activity-icon"></i>Алгоритам к-средина</div></a>
+                <a href=../12_Klasterovanje/123_Odredjivanje%20broja%20klastera.html><div class="studioLecture" id=activity-12_Klasterovanje-123_Odredjivanje%20broja%20klastera><i class="fas fa-file-alt activity-icon"></i>Одређивање броја кластера</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-13_Ucenje%20potkrepljivanjem>
+                    <h5>Учење поткрепљивањем</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../13_Ucenje%20potkrepljivanjem/131_Ucenje%20potkrepljivanjem.html><div class="studioLecture" id=activity-13_Ucenje%20potkrepljivanjem-131_Ucenje%20potkrepljivanjem><i class="fas fa-file-alt activity-icon"></i>Учење поткрепљивањем</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-14_Drustveno%20bitni%20aspekti>
+                    <h5>Друштвено битни аспекти</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../14_Drustveno%20bitni%20aspekti/141_Drustveno%20bitni%20aspekti.html><div class="studioLecture" id=activity-14_Drustveno%20bitni%20aspekti-141_Drustveno%20bitni%20aspekti><i class="fas fa-file-alt activity-icon"></i>Друштвено битни аспекти</div></a>
+                </div>
+            </div>
+                </div>
+</div>
+
+
+
+<div class="lectureContent">
+
+  <div id="errors">
+  </div>
+  
+  <div class="lectureContentMaterial">
+  
+    <div id="main-content">
+    
+  <div class="section" id="id1">
+<h1>Конволутивне неуронске мреже<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
+        <div class="course-content">
+            
+<p>Конволутивне неуронске мреже су врста неуронских мрежа које се примарно користе у области рачунарског вида за рад са сликама и видео садржајима.</p>
+
+    </div></div>
+<p>Црно-беле слике представљамо матрицама пиксела. Број врста ове матрице одговара висини слике, док број колона ове матрице одговара њеној ширини.
+Појединачне вредности пиксела су бројеви у распону од 0 до 255 где 0 представља црну а 255 белу боју.  Све вредности између представљају неку
+нијансу сиве. Да ли можеш да наслутиш шта се крије иза слике која је представљена доњом матрицом пиксела? Ако се одмакнeш довољно далеко па
+нацрташ контуре дуж тамнијих нијанси, можда ћеш успети да погодиш шта је на слици. Помоћ је да су у заједници која се бави машинским учењем
+слике мачака прилично чест избор.</p>
+<a class="reference internal image-reference" href="../_images/knm1.png"><img alt="../_images/knm1.png" class="align-center" src="../_images/knm1.png" style="width: 500px;" /></a>
+<p>Можеш да откријеш и следеће блок и провериш о којој је слици реч.</p>
+<a class="reference internal image-reference" href="../_images/knm2.png"><img alt="../_images/knm2.png" class="align-center" src="../_images/knm2.png" style="width: 420px;" /></a>
+<p>Баш као што је и нама, људима, тешко да разумемо шта се то налази на слици приказаној скупином бројева, тако и је и са конволутивним неуронским
+мрежама. Оне анализу слике започињу тако што прво препознају неке просте елеменате као што су хоризонталне и вертикалне лине, а затим их даље
+комбинују и додају комплексност све док не стигну до неких сложених описа слике који им могу помоћи да реше тражени задатак. Сада је природно
+питање како кренути од простих контура и надограђивати их тако да се добију комплексније структуре. Одговор ће нам дати оператор <strong>конволуције</strong>.</p>
+<p>Оператор конволуције је најлакше увести кроз илустрације. Замислимо да имамо на улазу матрицу димензија 6x6 пиксела која представља слику и
+једну малу матрицу, такозвани филтер, димензија 3x3 пиксела. Нека су то баш матрице које су приказане на доњој слици. Над сликом започињемо
+примену оператора конволуције (обележићемо га са ✷) тако што преклопимо део слике у горњем левом углу са филтером, затим помножимо појединачне
+вредности и збир тако добијених вредности упишемо у једну нову матрицу. Та матрица ће заправо представљати резултат примене оператора конволуције.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/knm3.png"><img alt="../_images/knm3.png" src="../_images/knm3.png" style="width: 780px;" /></a>
+</div>
+<p><em>Конволуција - корак 1</em></p>
+<hr class="docutils" />
+<p>Наставићемо даље да примењујемо оператор конволуције: преклопићемо филтер са делом слике који се налази у горњем левом углу али тако да је он
+сада померен за један пиксел у односу на леву ивицу тј. у односу на претходни положај. Опет ћемо помножити појединачне вредности, сабрати их и
+уписати у резултујућу матрицу.</p>
+<a class="reference internal image-reference" href="../_images/knm4.png"><img alt="../_images/knm4.png" class="align-center" src="../_images/knm4.png" style="width: 780px;" /></a>
+<dl class="simple">
+<dt>Филтер овако можемо да померамо за по једну позицију десно све до ивице. Ту је потебно да га спустимо за једну позицију наниже и вратимо тик уз</dt><dd><p>ивицу. Затим можемо да наставимо поступак док не стигнемо до доњег десног угла. Као резултат ове операције, добићемо матрицу димензија 4x4
+пиксела и чије су вредности приказане на доњој слици (обавезно се увери!).</p>
+</dd>
+</dl>
+<a class="reference internal image-reference" href="../_images/knm5.png"><img alt="../_images/knm5.png" class="align-center" src="../_images/knm5.png" style="width: 300px;" /></a>
+<p>Колико ће филтер бити померен у свакој итерацији дефинише се хиперпараметром који зовемо померај (енгл. stride). У нашем случају померај је
+имао вредност 1 јер смо филтер померали за једну позицију удесно тј. када је требало  за једну позицију наниже. Да би могли да утичемо и на
+димензије резултујуће матрице приликом примене операције конволуције (обично желимо да очувамо димензије које одговарају улазној матрици),
+можемо да додамо оквир око полазне слике. То је најчешће неки блок нула или јединица или бројева чије вредности одговарају вредностима најближег
+пиксела на слици. Оквир званично називамо проширење (енгл. padding) и његову ширину увек наглашавамо приликом примене операције конволуције.
+Оно нам је посебно значајан уколико су карактеристике које желимо да наш модел научи близу ивице слике.</p>
+<p>Доња анимација илуструје цео процес примене филтера над сликом тј. над њеном матрицом. Као што можеш приметити, коришћен је померај величине 1 и проширење величине 1.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/knm6.png"><img alt="../_images/knm6.png" src="../_images/knm6.png" style="width: 600px;" /></a>
+</div>
+<p><strong>ТОДО: прилагодити димензије слика и обележја</strong></p>
+<hr class="docutils" />
+<p>Ако филтер из горњег примера применимо користећи операцију конволуције над почетном сликом маце, добићемо доњу слику. Можемо да приметимо да су
+на њој наглашене све вертикалне линије које се појављују на слици.</p>
+<p><strong>ТОДО: слика</strong></p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<p>Да ли си изненађен тиме што је горњи филтер детектовао вертикалне ивице?</p>
+
+    </div></div>
+
+    <div data-component="reveal" id="r1021"   data-showtitle="Прикажи одговор" data-hidetitle="Сакриј одговор">
+    <p>Ево  једног појашњења.</p>
+<p>Посматрај слику с лева на десно. Када први пут пређеш из светлог дела слике у тамни део слике заправо видиш вертикалну ивицу. Применимо
+сада с лева на десно филтер операцијом конволуције. Највећи резултат једне итерације конволуције биће када је десна страна нашег филтера
+(колона са бројевима -1) позиционирана баш на вертикалној ивици. Пошто је ивица тамна, вредности које тој боји одговарају су мале јер је
+црна боја представљена нулом. Вредности лево од ивице су светле па су бројеви који одговарају тим бојама већи (вредност за белу боју је 255).
+Када мале вредности, које одговарају црној боји ивица, помножимо са -1 тј. десним делом филтера, а велике вредности, које одговарају светлим
+бојама лево од ивице, помножимо са 0 и 1 тј. преосталим колонама филтера, резултат је већа вредност него када би се филтер нашао било где друго
+где нема вертикалних ивица (бројеви који множе вредности -1 би били већи па би укупни збир био мањи). Тај контраст у вредностима се осликава и
+на резултујућој слици - вертикалне линије су ту беле (велике вредности пиксела) док је све остало црно (мале вредности пиксела). На овај начин
+дајемо способност конволуцији да израчуна оно што људи могу да закључе гледањем. На неки начин, овако јој дајемо вид.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+
+    </div>
+    
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<p>Како би издвојио хоризонталне ивице на слици? Који би филтер искористио?</p>
+
+    </div></div>
+
+    <div data-component="reveal" id="r1022"   data-showtitle="Прикажи одговор" data-hidetitle="Сакриј одговор">
+    <p>Довољно је да заротираш филтер који издваја вертикалне ивице! Да ли ти то има смисла?</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+
+    </div>
+    <p>Сада када знамо како да издвојимо вертикалне и хоризонталне ивице, комбиновањем на разне начине можемо да издвајамо и линије које нису само
+хоризонталне и вертикалне. Даљим комбиновањем тих резултата можемо да издвајамо чак и сферне контуре. На  ово смо мислили када смо рекли да
+крећемо од јасних карактеристика лаких за учење а затим корак по корак градимо на комплексности карактеристика које можемо да научимо.</p>
+<p>Слојеви неуронске мреже које карактерише примена опертора конволуције називају се конволутивни слојеви. Док су пионири у области рачунарског
+вида креирали филтере ручно, циљ обучавања конволутивних неуронских мрежа је да науче вредности које у њима фигуришу.</p>
+<p>На доњој слици можеш да видиш приказе научених филтера по слојевима једне конволутивне неуронске мреже која препознаје лица. На најнижем слоју
+то су неке хоризонталне, вертикалне и дијагоналне линије, на другом слоју то су већ обриси који одоговарају деловима лица попут носа, очију и уста,
+док су на трећем слоју то филтери који одговарају контурама лица.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/knm7.png"><img alt="../_images/knm7.png" src="../_images/knm7.png" style="width: 700px;" /></a>
+</div>
+<p><strong>ТОДО: избацити улазну слику и прилагодити терминологију</strong></p>
+<p>(слика је преузета са <a class="reference external" href="https://i.stack.imgur.com/fz6eL.png">https://i.stack.imgur.com/fz6eL.png</a>)</p>
+<hr class="docutils" />
+<p>Уз операцију конволуције, конволутивне мреже карактерише и операција агрегације (енгл. pooling). Као што само име каже, циљ ове операције да
+агрегира тј. обједини  улазе. На доњој слици можеш да видиш две врсте оператора агрегације: оног који користи максимум и оног који користи
+просек да би агрегирао информације. Баш као и оператор конволуције и овај оператор се примењује над блоковима улаза тако што се уочи блок и
+над њим изврши потребно израчунавање. Овако добијена вредност се уписује у нову матрицу. На слици су оба оператора примењена над блоковима димензије
+2x2.  Интуитивно говоређи, максимумима наглашавамо најдоминантнији део, док рачунањем просека узимамо у обзир допринос свих делова.</p>
+<a class="reference internal image-reference" href="../_images/knm8.png"><img alt="../_images/knm8.png" class="align-center" src="../_images/knm8.png" style="width: 780px;" /></a>
+
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<p>Применом операције агрегације добијамо могућност да смањимо димензију улаза али уз истовремено задржавање дела информација које су садржане.
+На слици можеш да видиш да смо применом оператора агрегације свели матрицу са димензије 4x4 на димензију 2x2. Зашто нам је смањење димензије
+потребно? Па, мрежа као резултат треба да нам да неки конкретан одговор, рецимо да ли је на слици мачка или не.</p>
+
+    </div></div>
+
+    <div data-component="reveal" id="r1023"   data-showtitle="Прикажи одговор" data-hidetitle="Сакриј одговор">
+    <p>Излаз операције агрегације можемо да замислимо и као слику коју добијамо када ставимо наочаре чија диоптрија нам не одговара.
+Што смо више смањили слику применом операције агрегације, то смо даље од диоптрије која нам одговара. Другим речима, успећемо да
+видимо обрисе оригиналне слике али уз значајан губитак детаља и све веће коришћење наше маште како бисмо слици дали смисао.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+
+    </div>
+    <p>Слојеви неуронске мреже које карактерише примена оператор агрегације се зову слојеви агрегације (енгл. <em>pooling layers</em>). У њима нема додатних
+параметара које мрежа треба научи, али нам, као што смо видели, помажу да контролишемо димензије матрица са којима радимо.</p>
+<p>Сада када знамо који су то градивни слојеви једне конволутивне неуронске мреже, хајде да видимо како можемо да их повежемо и добијемо функционалан
+модел који може да нам помогне у решавању задатка класификације. Замислићемо да треба да решимо задатак вишекласне класификације у којем за
+сваку слику цртаног лика треба да одредимо да ли је Твити, Шиља или Патак Дача. Посматрајмо илустрацију архитектуре дубоке конволутивне неуронске
+мреже коју смо одабрали за решавање овог задатка и продискутујмо каква је мотивација за њено креирање.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/knm9.png"><img alt="../_images/knm9.png" src="../_images/knm9.png" style="width: 780px;" /></a>
+</div>
+<p>(слика је преузета са <a class="reference external" href="https://www.analyticsvidhya.com/blog/2022/01/convolutional-neural-network-an-overview/">https://www.analyticsvidhya.com/blog/2022/01/convolutional-neural-network-an-overview/</a>)</p>
+<hr class="docutils" />
+<p>На улазу мреже се налази улазни слој који садржи пикселе слике. Затим следи конволутивни слој (блок плаве боје). Циљ овог слоја је да применом
+оператора конволуције издвоји неки први скуп апстрактних атрибута. Након тога постављамо слој агрегације (зелени блок) а затим још по један
+конволутивни слој (жути блок) и слој агрегације (наранџасти блок). Слојеви конволуције и агрегације се у пракси комбинују и често налазе
+један до другог јер се слојевима агрегације додатно агрегира тј. сумира оно што су конволутивни слојеви научили. Други конволутивни слој
+нам омогућава примену другог оператора конволуције над атрибутима које је већ издвојио први конволутивни слој и формирање комплекснијих атрибута
+слике. Након овог блока слојева следи слој (сиви блок) који има задатак да ”исправи” матрицу (или презицније тензор) коју смо добили до тог
+тренутка и препакује њене вредности тако да све буду једна до друге у једном низу. Слојеви са овом сврхом се називају слојеви исправљања
+(енгл. <em>flattening layers</em>). Након исправљања можемо даље да надовежемо неку потпуно повезану неуронску мрежу. Ова мрежа ће сада као улазе
+имати апстрактне атрибуте које за њу учи комбинација конволутивих слојева и слојева агрегације. Осим исправљеног улазног слоја, на слици
+видимо и један скривени слој као и излазни слој у којем се налазе тачно три неурона - за сваког од цртаних ликова по један. Излазне вредности
+ових неурона одговарају вероватноћи да слика са улаза припада баш класи коју они представљају. За слику Твитија коју имамо на улазу, можемо да
+приметимо да је излазна вредност трећег неурона, који баш одговара тој класи, највећа и да износи 0.7.
+Сада можемо да видимо и како изгледа архитектура мреже VGGNet, једне популарне конволутивне мреже која се активно користи у пракси.</p>
+<p>VGGNet представља дубоку конволутивну неуронску мрежу развијену од стране оксфордског тима Visual Geometry Group (отуда и назив VGGNet).
+На престижном такмичењу <em>Large Scale Visual Recognition Challenge</em> одржаном 2014. године  ова мрежа се показала као најбоља у решавању проблема
+локализације објеката на слици и као друга по реду у проблему класификације објеката са слике. За задатак класификације коришћено је преко 1.2
+милиона слика скупа ImageNet који смо упознали и класификација у могућих 1000 класа. Да би се ова мрежа истренирала било је потребно између 15 и 20
+дана користећи 4 графичке картице (најбоље у том тренутку) NVIDIA Titan Black. Пре ње је најбоља у овим задацима била мрежа AlexNet која је
+значајна по томе што је увела праксу коришћења графичких картица за обучавање неуронских мрежа и омогућила даљи развој дубоког учења.</p>
+<p>Архитектура мреже VGG-16, везије мреже са 16 слојева, приказа је на доњој слици. Као што можемо да видимо на улазу се очекује слика у боји димензе
+244x244 пиксела, а мрежа комбинује конволутивне слојеве и слојеве агрегације (са максимумом) и завршава потпуно повезаном неуронском мрежом са
+1000 неурона на излазу где сваки неурон одговара једној конкретној класи скупа ImageNet. Сама мрежа има 138 милиона параметара и за њихово чување
+је потребно око 500МB меморије.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/knm10.png"><img alt="../_images/knm10.png" src="../_images/knm10.png" style="width: 600px;" /></a>
+</div>
+<p><em>Приказ мреже VGG-16</em></p>
+<p>(слика је преузета са <a class="reference external" href="https://viso.ai/deep-learning/vgg-very-deep-convolutional-networks/">https://viso.ai/deep-learning/vgg-very-deep-convolutional-networks/</a>)</p>
+<hr class="docutils" />
+<p>Повећавање броја слојева конволутивног дела мреже у пракси најчешће даје боље резултате. Ипак број слојева се не може бесконачно повећавати.
+Не само због ограничења ресурса, времена и цене већ и због математичких својстава дубоких неуронских мрежа која даље отежавају примену
+алгоритма пропагације уназад и само тренирање мреже.</p>
+
+    <div class="note-wrapper suggestionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/suggestionnote-img.svg" class="note-image suggestionnote-image" /> 
+        <div class="course-content">
+            
+<p>Ако те занима овај математички проблем, можеш да пробаш да прочиташ више о нестајућим и експлодирајућим градијентима, а посебно у делу
+конволутивних мрежа и о резидуалним конекцијама.</p>
+
+    </div></div>
+<p>Пре него ли се и практично опробамо у задатку рада са конволутивним неуронским мрежама, осврнимо се питање рада са сликама у боји.
+Њих до сада нисмо помињали.</p>
+<p>Када треба да представимо слику у боји, ону које користи RGB формат боја и све боје приказују као комбинцацује црвене, зелене и плаве боје,
+користимо три матрице. За сваку од боја предвиђена је по једна матрица. Број матрица које користимо за приказ слика називамо <strong>каналима</strong>.
+Тако црно-беле слике имају само један канал, док слике у боји имају три канала.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/knm11.png"><img alt="../_images/knm11.png" src="../_images/knm11.png" style="width: 500px;" /></a>
+</div>
+<p><em>Приказ слика које користе RGB формат боја</em></p>
+<p>(слика је преузета са <a class="reference external" href="https://datahacker.rs/image-representation/">https://datahacker.rs/image-representation/</a>)</p>
+<hr class="docutils" />
+<p>Присуство боја утиче на извођење операције конволуције тако што број канала филтера треба прилагодити броју канала слике на коју га примењујемо.
+Даље треба упарити сваки од канала филтера са каналом слике (црвени са црвеним, плави са плавим и зелени са зеленим) и извршити операцију
+конволуције као да се ради са једним каналом. Затим треба сабрати матрице које добијамо на овај начин и резултујућу матрицу прогласити финалним
+резултатом.  На доњој слици можемо да видимо два филтера у конволутивном слоју која се примењују над улазном сликом у боју. Као резултат примене
+сваког од ових филтера ћемо добити засебне матрице које када ”спојимо” представљају финални резултат конволутивног слоја. У пракси се на нивоу
+једног конволутивног слоја обично поставља више филтера па се као резултати добијају тензори. Над овим тензорима се даље примењују на исти начин
+операције конволуције - води се само рачуна о томе да број канала филтера одговара димензији тензора (рецимо, за наредну примену у примеру који
+смо разматрали то би био број 2) и да се упари одговарају канал са одговарајућим каналом филтера.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/knm12.png"><img alt="../_images/knm12.png" src="../_images/knm12.png" style="width: 600px;" /></a>
+</div>
+<p><em>Примена оператора конволуције на улазе са више канала</em></p>
+<hr class="docutils" />
+<p>Што се тиче операције агрегације, она се примењује над сваким каналом улазне слике. На пример, ако улазна слика има 3 канала, операција агрегације
+ће бити примењена над сваким каналом засебно. Ово значи и да операција агрегације чува број канала приликом примене. На доњој слици може се
+видети илустрација овог процеса.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/knm13.png"><img alt="../_images/knm13.png" src="../_images/knm13.png" style="width: 400px;" /></a>
+</div>
+<p><em>Примена оператора агрегације на улазе са више канала</em></p>
+<hr class="docutils" />
+<p>Опробајмо сада како конволутивна мрежа VGG-16 заиста ради! Отвори код који се налази у Google Colab свесци кликом на дугме <a class="reference internal" href="../_images/algk2.png"><img alt="open" src="../_images/algk2.png" style="width: 100px;" /></a> да би лакше могао да
+пратиш причу.</p>
+<p>Једном истрениран модел неуронске мреже може да се поделити са заједницом тако што се поделе параметри који фигуришу у њему. У овом примеру
+користићемо модел који је доступан у библиотеци Keras. Библиотека Keras је библиотека отвореног кода са широком употребом у заједници која се
+бави машинским учењем. Да бисмо могли да искористимо модел мреже VGG-16 потребно је да извршимо следеће две наредбе:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tensorflow.keras.applications</span> <span class="kn">import</span> <span class="n">VGG16</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">VGG16</span><span class="p">(</span><span class="n">weights</span><span class="o">=</span><span class="s1">&#39;imagenet&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Информације о моделу који смо учитали можемо да прочитамо користећи функцију <code class="docutils literal notranslate"><span class="pre">model.summary()</span></code>. Њен резултат је опис слојева мреже праћен информацијом о величинама улаза
+који ти слојеви очекују. Сада можеш да извршиш наредбу:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Немој да те збуни ако не разумеш све детаље који се приказују након извршавања ове наредбе. Важно је да знаш да се на улазу очекује слика димензије
+224x224 пиксела у боји (зато је и поред улазног слоја наведено 224, 224, 3) и да на излазу имаш једну од 1000 класа. Испис можеш да упоредиш и са
+сликом модела VGG-16 коју смо разматрали и тако откријеш више информација.</p>
+<p>Важно је да нагласимо да мрежу VGG-16 нећемо тренирати - корисићемо само истренирани модел. Зато параметре модела у току рада не смемо да мењамо -
+сваки има свој допринос. Укупан број параметара модела који можемо да прочитамо у сажетку мреже је нешто преко 138 милиона.</p>
+<p>Идеја је да слика над којом ћемо тестирати модел буде нека произвољна слика са веба. Да бисмо то успели да урадимо користићемо пар стандардних
+Python библиотека. За задати URL функција <code class="docutils literal notranslate"><span class="pre">ucitaj_sliku</span></code> ће нам помоћи да превучемо слику коју желимо.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">ucitaj_sliku</span> <span class="p">(</span><span class="n">url_putanja</span><span class="p">):</span>
+   <span class="n">odgovor</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">url_putanja</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+   <span class="k">return</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">odgovor</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Ми смо за тестирање одабрали слику златног ретривера са адресе <a class="reference external" href="https://unsplash.com/photos/x5oPmHmY3kQ">https://unsplash.com/photos/x5oPmHmY3kQ</a> која може слободно да се користи. Ти можеш
+одабрати слику коју желиш! Важно је да имаш на уму да класа објекта на слици мора бити позната моделу. Пошто је модел VGG-16 трениран на преко 1.2
+милиона слика познаје јако пуно класа, чак 1000 различитих. Златни ретривер је једна од њих. Уколико моделу дамо слику са неким објектом који
+не познаје, он ће нам дати предикције класа чије слике највише подсећају на нашу. Видећемо на крају које све класе наликују на златног ретривера.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/knm14.png"><img alt="../_images/knm14.png" src="../_images/knm14.png" style="width: 250px;" /></a>
+</div>
+<p>Јунак приче о моделу VGG-16</p>
+<hr class="docutils" />
+<p>Пошто слика коју треба да проследимо моделу треба да буде специјално припремљена, урадићемо следеће:</p>
+<ol class="arabic simple">
+<li><p>поставити јој димензије на 224x224 и рећи да користи три канала боја RGB</p></li>
+</ol>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">test_slika</span> <span class="o">=</span> <span class="n">test_slika</span><span class="o">.</span><span class="n">resize</span><span class="p">((</span><span class="mi">224</span><span class="p">,</span> <span class="mi">224</span><span class="p">))</span>
+<span class="n">test_slika</span> <span class="o">=</span> <span class="n">test_slika</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="s1">&#39;RGB&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>трансформисати слику  у одговарајући матрични формат</p></li>
+</ol>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">matricni_oblik_test_slike</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">img_to_array</span><span class="p">(</span><span class="n">test_slika</span><span class="p">)</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>направити пакетић који садржи нашу слику</p></li>
+</ol>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">paketic</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="n">matricni_oblik_test_slike</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>извршити нумеричко претпроцесирање слике у виду нормализације</p></li>
+</ol>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">test_skup_slika</span> <span class="o">=</span> <span class="n">preprocess_input</span><span class="p">(</span><span class="n">paketic</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Тек овако припремљену слику можемо да проследимо моделу за класификацију. Функција која ће нам помоћи се (очекивано) зове <code class="docutils literal notranslate"><span class="pre">predict</span></code>.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">predikcije_modela</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">test_skup_slika</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Променљива <code class="docutils literal notranslate"><span class="pre">predikcije_modela</span></code> у којој смо сачували предикције модела је низ дужине 1000 и садржи вероватноће припадности наше слике свакој од
+1000 класа које модел распознаје. Да бисмо издвојили класу којој припада наша слика, можемо искорисити функцију <code class="docutils literal notranslate"><span class="pre">decode_predictions</span></code> која ће нам
+вратити вероватноће и имена за 5 највероватнијих класа. Ово ће нам дати увид у то колико је модел сигуран приликом класификације.
+Након што извршимо следећу наредбу добићемо информације о највероватнијим класама.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">najverovatnije_klase</span> <span class="o">=</span> <span class="n">decode_predictions</span><span class="p">(</span><span class="n">predikcije_modela</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Када ове предикције графички прикажемо кодом који је наведен ниже добићемо графикон са стубићима који нам омогућава да лакше анализирамо резултате.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">ime_klase</span> <span class="o">=</span> <span class="p">[</span><span class="n">torka</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">torka</span> <span class="ow">in</span> <span class="n">najverovatnije_klase</span><span class="p">]</span>
+<span class="n">verovatnoca_pripadnosti</span> <span class="o">=</span> <span class="p">[</span><span class="n">torka</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="k">for</span> <span class="n">torka</span> <span class="ow">in</span> <span class="n">najverovatnije_klase</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">ime_klase</span><span class="p">,</span> <span class="n">verovatnoca_pripadnosti</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;teal&#39;</span><span class="p">,</span> <span class="s1">&#39;yellow&#39;</span><span class="p">,</span> <span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;orange&#39;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Пет највероватнијих класа&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Вероватноћа припадности&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/knm15.png"><img alt="../_images/knm15.png" class="align-center" src="../_images/knm15.png" style="width: 780px;" /></a>
+<p>Као што можемо видети, модел је са великом сигурношћу (вероватноћа је 0.804)  предвидео да је слика коју смо одабрали слика златног ретривера.
+Неке од других класа које је модел узео у обзир су неке друге врсте ретривера. Необично је да се у листи резултата појавила и тениска лоптица.
+Вероватно зато што у скупу за обучавање постоји и слике у којима ретривери трче за тениским лоптицама. Овакво понашање модела би у пракси
+требали додатно да испитамо.</p>
+</div>
+
+
+    </div>
+    
+    <div>
+<div class="lecture-prev-next-toggle">
+  <a  href="101_Razlicite%20vrste%20neuronskih%20mreza.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Previous chapter </span> </a>
+  
+  <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Next chapter</span>  <i class="fas fa-arrow-right fa"></i> </a>
+</div>
+
+<script type="text/javascript">
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+</script>
+</div>
+
+    
+  </div>
+</div>
+
+<div class="petljadoc-resources">
+  <span class="pull-left">(Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>) <br> © 2022 Petlja</span>
+</div>
+
+
+<div class="lectureToolbox">
+
+  <label class="font-size-toggle" id="fontSizeToggle">
+
+      <i class="fas fa-font"></i><label>Letters</label>
+  </label>
+  <div class="font-change d-none" id="fontChangeModal">
+      <span class="dec-letter-icon" id="decLetterIcon">A-</span>
+      <label id="currentFontSize">16</label>
+      <span class="inc-letter-icon" id="incLetterIcon">A+</span>
+  </div>
+</div>
+
+</div>
+
+  </body>
+</html>

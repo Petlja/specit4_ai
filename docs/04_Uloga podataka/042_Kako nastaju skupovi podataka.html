@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Како настају скупови података?</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/qchoice.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/associations.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/editor.css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja-course.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/nbstyle.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/runestonebase.js"></script>
+    <script src="../_static/skulpt.min.js"></script>
+    <script src="../_static/skulpt-stdlib.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/jquery.highlight.js"></script>
+    <script src="../_static/bookfuncs.js"></script>
+    <script src="../_static/codemirror.js"></script>
+    <script src="../_static/xml.js"></script>
+    <script src="../_static/css.js"></script>
+    <script src="../_static/python.js"></script>
+    <script src="../_static/htmlmixed.js"></script>
+    <script src="../_static/javascript.js"></script>
+    <script src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script src="../_static/activecode-i18n.en.js"></script>
+    <script src="../_static/activecode.js"></script>
+    <script src="../_static/clike.js"></script>
+    <script src="../_static/timed_activecode.js"></script>
+    <script src="../_static/animationbase.js"></script>
+    <script src="../_static/mchoice.js"></script>
+    <script src="../_static/timedmc.js"></script>
+    <script src="../_static/timed.js"></script>
+    <script src="../_static/mchoice-i18n.en.js"></script>
+    <script src="../_static/clickable.js"></script>
+    <script src="../_static/timedclickable.js"></script>
+    <script src="../_static/d3.v2.min.js"></script>
+    <script src="../_static/jquery.ba-bbq.min.js"></script>
+    <script src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script src="../_static/pytutor.js"></script>
+    <script src="../_static/codelens.js"></script>
+    <script src="../_static/skulpt.min.js"></script>
+    <script src="../_static/skulpt-stdlib.js"></script>
+    <script src="../_static/datafile.js"></script>
+    <script src="../_static/dragndrop.js"></script>
+    <script src="../_static/timeddnd.js"></script>
+    <script src="../_static/dragndrop-i18n.en.js"></script>
+    <script src="../_static/fitb.js"></script>
+    <script src="../_static/timedfitb.js"></script>
+    <script src="../_static/fitb-i18n.en.js"></script>
+    <script src="../_static/matrixeq.js"></script>
+    <script src="../_static/lib/prettify.js"></script>
+    <script src="../_static/lib/hammer.min.js"></script>
+    <script src="../_static/parsons.js"></script>
+    <script src="../_static/parsons-i18n.en.js"></script>
+    <script src="../_static/timedparsons.js"></script>
+    <script src="../_static/poll.js"></script>
+    <script src="../_static/reveal.js"></script>
+    <script src="../_static/shortanswer.js"></script>
+    <script src="../_static/timed_shortanswer.js"></script>
+    <script src="../_static/showEval.js"></script>
+    <script src="../_static/tabbedstuff.js"></script>
+    <script src="../_static/runestonevideo.js"></script>
+    <script src="../_static/webglinteractive.js"></script>
+    <script src="../_static/FileSaver.min.js"></script>
+    <script src="../_static/Blob.js"></script>
+    <script src="../_static/karelCorner.js"></script>
+    <script src="../_static/karelRobot.js"></script>
+    <script src="../_static/karelWorld.js"></script>
+    <script src="../_static/karelChat.js"></script>
+    <script src="../_static/karelRobotDrawer.js"></script>
+    <script src="../_static/karelUI.js"></script>
+    <script src="../_static/karel.js"></script>
+    <script src="../_static/karel-i18n.en.js"></script>
+    <script src="../_static/notes.js"></script>
+    <script src="../_static/pygamelib-init.js"></script>
+    <script src="../_static/gallery.js"></script>
+    <script src="../_static/associations.js"></script>
+    <script src="../_static/associations-i18n.en.js"></script>
+    <script src="../_static/editor.js"></script>
+    <script src="../_static/jszip.js"></script>
+    <script src="../_static/editor-i18n.en.js"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="../_static/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/waypoints.min.js"></script>
+    <script src="../_static/rangy-core.js"></script>
+    <script src="../_static/rangy-textrange.js"></script>
+    <script src="../_static/rangy-cssclassapplier.js"></script>
+    <script src="../_static/user-highlights.js"></script>
+    <script src="../_static/jquery.idle-timer.js"></script>
+    <script src="../_static/processing-1.4.1.min.js"></script>
+    <script src="../_static/jquery.hotkey.js"></script>
+    <script src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script src="../_static/course-errors.js"></script>
+    <script src="../_static/petlja.js"></script>
+    <script src="../_static/require.js"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+    <script type="text/javascript">
+      eBookConfig = {};
+      eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+      eBookConfig.app = eBookConfig.host + '/runestone';
+      eBookConfig.ajaxURL = eBookConfig.app + '/ajax/';
+      eBookConfig.course = 'os4_dig';
+      eBookConfig.logLevel = '0';
+      eBookConfig.loginRequired = 'false';
+      eBookConfig.build_info = "";
+      eBookConfig.isLoggedIn = false;
+      eBookConfig.useRunestoneServices = false;
+      eBookConfig.python3 = true;
+      eBookConfig.basecourse = 'os4_dig';
+      eBookConfig.runestone_version = '';
+      eBookConfig.imagesDir = '../_images/';
+      eBookConfig.staticDir = '../_static/';
+      if (typeof (Sk) != "undefined")
+        Sk.imgPath = eBookConfig.imagesDir;
+    </script>
+
+  </head>
+
+  <body>
+
+
+
+<div id="navbar" class="content-header">
+  <div class="right-side-nav">
+    
+    <div id="usefulLinksToggle" class="useful-links-toggle">
+        <a class="dropdown-toggle dropdown-toggle-burger" role="button" href="#" id="usefulLinksDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-bars fa-2x"></i>
+        </a>
+        <div class="dropdown-menu dropdown-nav-links shadow-lg" aria-labelledby="usefulLinksDropdown" x-placement="bottom-start" style="position: absolute; transform: translate3d(-55px, 32px, 0px); top: 0px; left: 0px; will-change: transform;">
+          <div class="links-title"> Useful links</div>
+          <div class="useful-link">
+            <a href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html" target="_blank">Sphinx Docs</a></div>
+          <div class="useful-link">
+            <a href="https://github.com/Petlja/PetljaDoc/blob/master/README.md" target="_blank">Petljadoc</a></div>
+          <div class="useful-link">
+            <a href="https://github.com/RunestoneInteractive/overview" target="_blank">Runestone Interactive</a></div>
+          
+        </div>
+    </div>
+
+    
+</div>
+
+<div class="left-side-nav">
+  <div class="course-logo-nav">
+      <a target="_blank" href="https://petlja.org">
+          <img src="../_static/img/petlja-logo-wt.svg" alt="petlja.org" id="lightPetljaLogo">
+      </a>
+  </div>
+  <div class="course-logo-nav-kabinet">
+      <a target="_blank" href="https://petlja.org/net.kabinet">
+          <img src="../_static/img/netkabinet-logo-strelica-wt.svg" alt="petlja.org" id="lightNetKabinetLogo">
+      </a>
+  </div>
+</div>
+
+
+<div class="content-header-label" id = "content-header-label" href="../">Савремена вештачка интелигенција</div>
+
+</div>
+
+
+
+
+<div class="petljaCourseContainer">
+
+<div class="petljaCourseContent">
+  
+           <div class="tableOfContent">
+            <h5> Table of content </h5>
+            </div>
+           <div>
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-01_Uvod>
+                    <h5>Увод</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../01_Uvod/011_Savremena%20vestacka%20inteligencija.html><div class="studioLecture" id=activity-01_Uvod-011_Savremena%20vestacka%20inteligencija><i class="fas fa-file-alt activity-icon"></i>Савремена вештачка интелигенција</div></a>
+                <a href=../01_Uvod/012_Da%20li%20masina%20moze%20da%20misli.html><div class="studioLecture" id=activity-01_Uvod-012_Da%20li%20masina%20moze%20da%20misli><i class="fas fa-file-alt activity-icon"></i>Да ли машина може да мисли?</div></a>
+                <a href=../01_Uvod/013_Oblasti%20vestacke%20inteligencije.html><div class="studioLecture" id=activity-01_Uvod-013_Oblasti%20vestacke%20inteligencije><i class="fas fa-file-alt activity-icon"></i>Области вештачке интелигенције</div></a>
+                <a href=../01_Uvod/014_Uska%20opsta%20i%20super%20inteligencija.html><div class="studioLecture" id=activity-01_Uvod-014_Uska%20opsta%20i%20super%20inteligencija><i class="fas fa-file-alt activity-icon"></i>Уска, општа и супер интелигенција</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02_Programiranje%20vodjeno%20podacima>
+                    <h5>Програмирање вођено подацима</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02_Programiranje%20vodjeno%20podacima/021_Programiranje%20vodjeno%20podacima.html><div class="studioLecture" id=activity-02_Programiranje%20vodjeno%20podacima-021_Programiranje%20vodjeno%20podacima><i class="fas fa-file-alt activity-icon"></i>Програмирање вођено подацима</div></a>
+                <a href=../02_Programiranje%20vodjeno%20podacima/022_Zasto%20nam%20je%20potrebno%20programiranje%20vodjeno%20podacima.html><div class="studioLecture" id=activity-02_Programiranje%20vodjeno%20podacima-022_Zasto%20nam%20je%20potrebno%20programiranje%20vodjeno%20podacima><i class="fas fa-file-alt activity-icon"></i>Зашто нам је потребно програмирање вођено подацима?</div></a>
+                <a href=../02_Programiranje%20vodjeno%20podacima/023_Osnovni%20pojmovi%20masinskog%20ucenja.html><div class="studioLecture" id=activity-02_Programiranje%20vodjeno%20podacima-023_Osnovni%20pojmovi%20masinskog%20ucenja><i class="fas fa-file-alt activity-icon"></i>Основни појмови машинског учења</div></a>
+                <a href=../02_Programiranje%20vodjeno%20podacima/024_Vrste%20masinskog%20ucenja.html><div class="studioLecture" id=activity-02_Programiranje%20vodjeno%20podacima-024_Vrste%20masinskog%20ucenja><i class="fas fa-file-alt activity-icon"></i>Врсте машинског учења</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-03_Python>
+                    <h5>Python</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../03_Python/031_Platforma%20Google%20Colab.html><div class="studioLecture" id=activity-03_Python-031_Platforma%20Google%20Colab><i class="fas fa-file-alt activity-icon"></i>Платформа Google Colab</div></a>
+                <a href=../03_Python/032_%20Biblioteke%20NumPy,%20Matplotlib%20i%20Pandas.html><div class="studioLecture" id=activity-03_Python-032_%20Biblioteke%20NumPy,%20Matplotlib%20i%20Pandas><i class="fas fa-file-alt activity-icon"></i>Библиотеке NumPy, Matplotlib i Pandas</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-04_Uloga%20podataka>
+                    <h5>Улога података</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../04_Uloga%20podataka/041_Uloga%20podataka.html><div class="studioLecture" id=activity-04_Uloga%20podataka-041_Uloga%20podataka><i class="fas fa-file-alt activity-icon"></i>Улога података</div></a>
+                <a href=../04_Uloga%20podataka/042_Kako%20nastaju%20skupovi%20podataka.html><div class="studioLecture" id=activity-04_Uloga%20podataka-042_Kako%20nastaju%20skupovi%20podataka><i class="fas fa-file-alt activity-icon"></i>Како настају скупови података?</div></a>
+                <a href=../04_Uloga%20podataka/043_Popularni%20skupovi%20podataka.html><div class="studioLecture" id=activity-04_Uloga%20podataka-043_Popularni%20skupovi%20podataka><i class="fas fa-file-alt activity-icon"></i>Популарни скупови података</div></a>
+                <a href=../04_Uloga%20podataka/044_Javni%20skupovi%20podataka.html><div class="studioLecture" id=activity-04_Uloga%20podataka-044_Javni%20skupovi%20podataka><i class="fas fa-file-alt activity-icon"></i>Јавно доступни скупови података</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-05_EDA>
+                    <h5>EDA</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../05_EDA/051_Eksplorativna%20analiza%20skupa%20podataka.html><div class="studioLecture" id=activity-05_EDA-051_Eksplorativna%20analiza%20skupa%20podataka><i class="fas fa-file-alt activity-icon"></i>Експлоративна анализа скупа података</div></a>
+                <a href=../05_EDA/052_Kreiranje%20reprezentacije%20skupa%20podataka.html><div class="studioLecture" id=activity-05_EDA-052_Kreiranje%20reprezentacije%20skupa%20podataka><i class="fas fa-file-alt activity-icon"></i>Креирање репрезентације скупа података</div></a>
+                <a href=../05_EDA/053_Skupovi%20za%20treniranje%20validaciju%20i%20testiranje.html><div class="studioLecture" id=activity-05_EDA-053_Skupovi%20za%20treniranje%20validaciju%20i%20testiranje><i class="fas fa-file-alt activity-icon"></i>Скупови за тренирање, валидацију и тестирање</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-06_Linearna%20regresija>
+                    <h5>Линеарна регресија</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../06_Linearna%20regresija/061_Linearna%20regresija.html><div class="studioLecture" id=activity-06_Linearna%20regresija-061_Linearna%20regresija><i class="fas fa-file-alt activity-icon"></i>Линеарна регресија</div></a>
+                <a href=../06_Linearna%20regresija/062_Gradijentni%20spust.html><div class="studioLecture" id=activity-06_Linearna%20regresija-062_Gradijentni%20spust><i class="fas fa-file-alt activity-icon"></i>Градијентни спуст</div></a>
+                <a href=../06_Linearna%20regresija/063_Ocenjivanje%20modela%20linearne%20regresije.html><div class="studioLecture" id=activity-06_Linearna%20regresija-063_Ocenjivanje%20modela%20linearne%20regresije><i class="fas fa-file-alt activity-icon"></i>Оцењивање модела линеарне регресије</div></a>
+                <a href=../06_Linearna%20regresija/064_Visestruka%20linearna%20regresija%20ToDo.html><div class="studioLecture" id=activity-06_Linearna%20regresija-064_Visestruka%20linearna%20regresija%20ToDo><i class="fas fa-file-alt activity-icon"></i>Вишеструка линеарна регресија - ТоДо</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-07_Klasifikacija>
+                    <h5>Класификација</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../07_Klasifikacija/071_Klasifikacija.html><div class="studioLecture" id=activity-07_Klasifikacija-071_Klasifikacija><i class="fas fa-file-alt activity-icon"></i>Класификација</div></a>
+                <a href=../07_Klasifikacija/072_Kako%20ocenjujemo%20model%20klasifikacije.html><div class="studioLecture" id=activity-07_Klasifikacija-072_Kako%20ocenjujemo%20model%20klasifikacije><i class="fas fa-file-alt activity-icon"></i>Како оцењујемо модел класификације</div></a>
+                <a href=../07_Klasifikacija/073_Logisticka%20regresija.html><div class="studioLecture" id=activity-07_Klasifikacija-073_Logisticka%20regresija><i class="fas fa-file-alt activity-icon"></i>Логистичка регресија</div></a>
+                <a href=../07_Klasifikacija/074_Algoritam%20k%20najblizih%20suseda.html><div class="studioLecture" id=activity-07_Klasifikacija-074_Algoritam%20k%20najblizih%20suseda><i class="fas fa-file-alt activity-icon"></i>Алгоритам к-најближих суседа</div></a>
+                <a href=../07_Klasifikacija/075_Hiperparametri.html><div class="studioLecture" id=activity-07_Klasifikacija-075_Hiperparametri><i class="fas fa-file-alt activity-icon"></i>Хиперпараметри</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-08_Prilagodjavanje>
+                    <h5>Прилагођавање</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../08_Prilagodjavanje/081_Generalizacija%20potprilagodjavanje%20i%20preprilagodjavanje.html><div class="studioLecture" id=activity-08_Prilagodjavanje-081_Generalizacija%20potprilagodjavanje%20i%20preprilagodjavanje><i class="fas fa-file-alt activity-icon"></i>Генерализација, потприлагођавање и преприлагођавање</div></a>
+                <a href=../08_Prilagodjavanje/082_Unakrsna%20validacija.html><div class="studioLecture" id=activity-08_Prilagodjavanje-082_Unakrsna%20validacija><i class="fas fa-file-alt activity-icon"></i>Унакрсна валидација</div></a>
+                <a href=../08_Prilagodjavanje/083_Regularizacija.html><div class="studioLecture" id=activity-08_Prilagodjavanje-083_Regularizacija><i class="fas fa-file-alt activity-icon"></i>Регуларизација</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-09_Neuronske%20mreze%20uvod>
+                    <h5>Неуронске мреже - увод</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../09_Neuronske%20mreze%20uvod/091_Neuronske%20mreze.html><div class="studioLecture" id=activity-09_Neuronske%20mreze%20uvod-091_Neuronske%20mreze><i class="fas fa-file-alt activity-icon"></i>Неуронске мреже</div></a>
+                <a href=../09_Neuronske%20mreze%20uvod/092_Obucavanje%20neuronskih%20mreza.html><div class="studioLecture" id=activity-09_Neuronske%20mreze%20uvod-092_Obucavanje%20neuronskih%20mreza><i class="fas fa-file-alt activity-icon"></i>Обучавање неуронских мрежа</div></a>
+                <a href=../09_Neuronske%20mreze%20uvod/093_TensorFlow%20Playground.html><div class="studioLecture" id=activity-09_Neuronske%20mreze%20uvod-093_TensorFlow%20Playground><i class="fas fa-file-alt activity-icon"></i>TensorFlow Playground</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-10_Neuronske%20mreze%20vrste%20i%20primena>
+                    <h5>Неуронске мреже - врсте и примена</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../10_Neuronske%20mreze%20vrste%20i%20primena/101_Razlicite%20vrste%20neuronskih%20mreza.html><div class="studioLecture" id=activity-10_Neuronske%20mreze%20vrste%20i%20primena-101_Razlicite%20vrste%20neuronskih%20mreza><i class="fas fa-file-alt activity-icon"></i>Различите врсте неуронских мрежа</div></a>
+                <a href=../10_Neuronske%20mreze%20vrste%20i%20primena/102_Konvolutivne%20neuronske%20mreze.html><div class="studioLecture" id=activity-10_Neuronske%20mreze%20vrste%20i%20primena-102_Konvolutivne%20neuronske%20mreze><i class="fas fa-file-alt activity-icon"></i>Конволутивне неуронске мреже</div></a>
+                <a href=../10_Neuronske%20mreze%20vrste%20i%20primena/103_Rekurentne%20neuronske%20mreze.html><div class="studioLecture" id=activity-10_Neuronske%20mreze%20vrste%20i%20primena-103_Rekurentne%20neuronske%20mreze><i class="fas fa-file-alt activity-icon"></i>Рекурентне неуронске мреже</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-12_Klasterovanje>
+                    <h5>Кластеровање</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../12_Klasterovanje/121_Klasterovanje.html><div class="studioLecture" id=activity-12_Klasterovanje-121_Klasterovanje><i class="fas fa-file-alt activity-icon"></i>Кластеровање</div></a>
+                <a href=../12_Klasterovanje/122_Algoritam%20k%20sredina.html><div class="studioLecture" id=activity-12_Klasterovanje-122_Algoritam%20k%20sredina><i class="fas fa-file-alt activity-icon"></i>Алгоритам к-средина</div></a>
+                <a href=../12_Klasterovanje/123_Odredjivanje%20broja%20klastera.html><div class="studioLecture" id=activity-12_Klasterovanje-123_Odredjivanje%20broja%20klastera><i class="fas fa-file-alt activity-icon"></i>Одређивање броја кластера</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-13_Ucenje%20potkrepljivanjem>
+                    <h5>Учење поткрепљивањем</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../13_Ucenje%20potkrepljivanjem/131_Ucenje%20potkrepljivanjem.html><div class="studioLecture" id=activity-13_Ucenje%20potkrepljivanjem-131_Ucenje%20potkrepljivanjem><i class="fas fa-file-alt activity-icon"></i>Учење поткрепљивањем</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-14_Drustveno%20bitni%20aspekti>
+                    <h5>Друштвено битни аспекти</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../14_Drustveno%20bitni%20aspekti/141_Drustveno%20bitni%20aspekti.html><div class="studioLecture" id=activity-14_Drustveno%20bitni%20aspekti-141_Drustveno%20bitni%20aspekti><i class="fas fa-file-alt activity-icon"></i>Друштвено битни аспекти</div></a>
+                </div>
+            </div>
+                </div>
+</div>
+
+
+
+<div class="lectureContent">
+
+  <div id="errors">
+  </div>
+  
+  <div class="lectureContentMaterial">
+  
+    <div id="main-content">
+    
+  <div class="section" id="id1">
+<h1>Како настају скупови података?<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
+        <div class="course-content">
+            
+<p>У овој секцији ћемо одговорити на питање које ти је сигурно пало на памет у току читања садржаја: како настају скупови
+података?  Иако је сваки скуп података прича за себе, појмови као што су лабелирање, усаглашеност лабелaра или
+пристрасност избора су често присутни. Зато читај даље да сазнаш више о овим појмовима!</p>
+
+    </div></div>
+<p>Свака инстанца скупа података који се користи за надгледано машинско учење представљена је као пар улазних и излазних
+вредности. Иако овакви скупови података могу да настају спонтано, на пример, очитавањима улазних и излазних вредности
+са неког сензора, много чешће се за њихово креирање ангажује посебан тим који има одговарајуће вештине и знања и чије
+активности треба координисати.</p>
+<p>Креирање скупа података започиње припремама <strong>смерница и упутстава</strong> које јасно описују задатак који се решева, дефинишу
+изворе података, опсеге вредности, поделу података и ток комуникације унутар тима. Смернице обично садрже и опис алата
+који ће се користити у раду као и одговоре на неке честе недоумице које могу да се јаве у току креирања скупа.</p>
+<p>Да би лакше ипратили сваки од ових корака, можемо у паралели пратити креирање скупа података за задатак препознавања
+(детекције) лажних вести. Као што ти је познато, многе информације на вебу нису тачне - односе се на измишљене чињенице
+и детаље догађаја или садрже научно неутемељене тврдње и савете. Као такве могу нашкодити и појединцима и целом друштву.
+Зато је задатак препознавања лажних вести важан и неопходан у анализи електронских медија и друштвених мрежа.
+Из угла машинског учења, задатак препознавања лажних вести се може посматрати као задатак бинарне класификације,
+налик задатку класификације непожељне поште: за задати текст треба утврдити да ли је лажан или не.</p>
+<p>Креирање скупа података започиње приступом изворима података. Извори података могу бити репозиторијуму у којима се већ
+налазе делови скупа података, одређене странице са веба, кориснички-генерисани садржаји или било шта друго.
+Смернице за креирање скупа података у овом случају дефинишу линкове до извора података и све што ближе одређује преузимање
+садржаја. У примеру креирања скупа за задатак препознавања лажних вести, смернице би требало да садрже линкове до портала са којих се могу преузети новински
+чланци за анализу, временске опсеге одређене почетним и крајњим датумом, језик чланака, можда и тему чланка. Приликом преузимања садржаја, обавезно се прате
+права приступа и лиценце под којима су садржаји доступни.</p>
+<p>Након преузимања садржаја, прелази се на корак елементарне обраде података. Овај корак подразумева широк скуп радњи које се односе на додатну контролу
+квалитета преузетих садржаја, усаглашавање формата записа, елиминацију дупликата или извора који не задовољавају неки екстерни критеријум (на пример,
+новинска вест може бити превише кратка).</p>
+<p>Када се припреме садржаји, креира се тим који може да им придружи лабеле неопходне за решавање самог задатка и скуп смерница које описују њихове задатке.
+Учесници који помажу у задацима креирања скупа података називају се <strong>анотатори</strong> или <strong>лабелари</strong>. Задатак лабелара је да у складу са смерницама свакој од улазних
+вредности придруже одговарајућу излазну вредност. Тако, након што прочита вест, лабелар треба да придружи обележје које одговара тачној или лажној вести, на
+пример, у смерницама за те сврхе могу бити наведени бројеви 0 и 1. Цео поступак придруживања обележја се назива анотација или <strong>лабелирање</strong>.</p>
+<p>Пожељно је да улазне податке погледа и обележи већи број лабелара. Мотивација за овакав дизајн је већа поузданост самог скупа података. На пример, уколико
+сваку вест у скупу вести прочита пет лабелара и свих пет се сложи да је вест лажна, можемо говорити о високој позданости. Уколико три лабелара кажу да је вест
+лажна а два не, онда смо мање поуздани у резултат лабелирања. Оваква поставка нам заправо може указивати и да је задатак тежак, субјективан или да смернице
+нису довољно јасне и прецизне и да би их требало допунити.</p>
+<p>Колико тачно лабелара ће бити укључено у сам процес, зависи од већег броја околности: временских рокова, распложивог буџета, поседовања одговарајућих
+компетенција (на пример, за задатак препознавања лажних вести хтели бисмо да ангажујемо студенте журналистике или новинаре). Некада и сама природа задатка
+сугерише бројност тима. Рецимо, у задацима класификације обично се бира непаран број лабелара како би увек једна група могла да ”надгласа” другу групу.</p>
+<p>Процес обележавања података може да изгледа и нешто другачије. На пример, сваку вест у скупу података може да прочита по један анотатор и придружи јој
+одговарајуће обележје, а затим поново може да је прочита контролни анотатор и коригује обележје уколико је неопходно. Контролни анотатор је обично неко
+ко има више доменског искуства и боље познаје сам проблем и који брзо може проверити коректност анотације.</p>
+<p>Како усаглашеност лабелара директно утиче на квалитет скупа података, уобичајена је пракса коришћења формалних мере за њено оцењивање. Заједнички ћемо
+упознати једну такву меру, Кохенову капу (није реч о одевном предмету који чува главу већ о грчком слову κ), а самостално можеш више истражити о мерама као
+што је Клипендорфова алфа (опет је у питању грчко слово), Флесиова капа и друге.</p>
+<p>Кохенова капа је мера која се користи за проверу усаглашености обележавања између два лабелара. Треба имати на уму да провера усаглашености није исто што и
+провера тачности (када креирамо скуп података немамо референтне вредности) - два лабелара могу бити усаглашена и оба придружити погрешну лабелу.</p>
+<p>Претпоставимо да су лабелари Ана и Бранко обележавали 50 новинских вести: за 17 су се сложили да су тачне, за 19 да су лажне, док се су на преосталим вестима
+њихова мишљења мимоишла. Резултате њиховоих обележавања можемо приказати схемом као на доњој слици.  То значи да се њихова реализована усаглашеност
+(обележавамо је са po) може израчунати као количник  po = (17+19)/50 = 0,72 тј. као количник броја вести за које су се обележја преклопила и укупног броја
+вести.</p>
+<a class="reference internal image-reference" href="../_images/kns1.png"><img alt="../_images/kns1.png" class="align-center" src="../_images/kns1.png" style="width: 500px;" /></a>
+<p>Могло се десити и да су се обележја која су Ана и Бранко придруживали новинским вестима сасвим насумична: рецимо, могли су бацати новчић и ако падне глава
+закључити да је вест тачна, а ако падне писмо да је лажна. И у овом хипотетичком случају би опет дошло до неки преклапања. Вероватноћу једног таквог догађаја
+би могли израчунати као вероватноћу истовременог избора две тачне вести или истовременог избора две нетачне вести из скупа вести. Вероватноћа избора тачне
+вести за Ану је 25/50, док је за Бранка 23/30. Слично, вероватноћа избора лажне вести за Ану је 25/50, док је за Бранка 27/50. Тако се вероватноћа насумичног
+преклапања може израчунати као збир производа поменутих вероватноћа истовременог избора или две тачне или две нетачне вести. Ову вероватноћу зовемо насумичном
+усаглашеношћу (обележавамо је са pe) и на доњој слици можеш још једном видети како је иурачунавамо.</p>
+<a class="reference internal image-reference" href="../_images/kns2.png"><img alt="../_images/kns2.png" class="align-center" src="../_images/kns2.png" style="width: 500px;" /></a>
+<p>Ово нас доводи до вредности капа коефицијента: <a class="reference internal" href="../_images/kns3.png"><img alt="kns3" src="../_images/kns3.png" style="width: 100px;" /></a>.</p>
+<p>С обзиром на значење вредности pо и pe можемо закључити да се на овај начин мери усаглашеност анотатора у односу на насумично обележавање. Вредности овог
+коефицијента су у распону од -1 до 1, а веће вредности означавају бољу усаглашеност.</p>
+<p>Заменом израчунатих вредности, за скуп вести на којима су радили Ана и Бранко добијамо да Кохенова капа износи 0,44. Ову вредност, даље можемо интерптретира у
+складу са неким устаљеним протоколима и закључити о квалитету нашег скупа података. Једна таква интерпретација је наведена ниже у табели. Како је вредност
+коефицијента већа од 0.4 али мања од 0.6 можемо да закључимо да је реч о умереној усаглашености лабелара - то даље може значити да морамо да поправимо и
+допунимо смернице или да боље обучимо лабеларе за рад.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/kns4.png"><img alt="../_images/kns4.png" src="../_images/kns4.png" style="width: 250px;" /></a>
+</div>
+<p><em>Скала за интерпретацију вредности Кохенове капе</em></p>
+<hr class="docutils" />
+<p>Када је реч о окружењима која се користе у задацима лабелирања, постоји јако велики број како комерцијалних тако и отврених јавно доступних алата и платформи.
+Избор је условљен и доменом па тако постоје посебне платформе за задатке рачунског вида (нпр. aлат <a class="reference external" href="https://github.com/opencv/cvat">CVAT</a>), обраду природних
+језика (нпр. алат <a class="reference external" href="https://github.com/doccano/doccano">Doccano</a>),
+обраду звука и видеа. Постоје и платформе општег типа као што су <a class="reference external" href="https://github.com/HumanSignal/label-studio">Label Studio</a>,
+<a class="reference external" href="https://universaldatatool.com/">Universal Data Tool</a>, <a class="reference external" href="https://prodi.gy/">Prodigy</a>, <a class="reference external" href="https://appen.com/">Appen</a> и друге које омогућавају рад са свим врстама
+садржаја.</p>
+<p>Занимљиво је напоменути да постоје и платформе које аутоматизују цео процес креирања скупа података: од дефинисања задатака, упошљавања лабелара, придруживања
+одређеног скупа улаза лабелару, па до праћења усаглашености анотатора и извожења креираног скупа. Једна таква платформа, вероватно најпознатија, је
+<a class="reference external" href="https://www.mturk.com/">Mechanical Turk</a> компаније Amazon.</p>
+<p>Још један аспект који директно може да утиче на квалитет креираног скупа података је пристрастност. Рецимо, ако у скупу за класификацију вести има несразмерно
+више коректних вести у односу на лажне вести, многи алгоритми машинског учења неће бити у могућности да науче да разликују ове две класе вести. Слично,
+уколико се у скупу података налази несразмерно више слика белих људи у односу на слике тамнопутих људи, алгоритми за детекцију лица можда неће успети да науче
+задатак препознавања лица подједнако успешно у ове две категорије. Тенденција да скупови података садрже значајно више примерака једне класе у односу на друге
+класе назива се пристрастност избора (енгл. selection bias). У неким ситуацијама, упркос пажљивом дизајнирању скупа података, не може да се успостави баланс
+овога типа. На пример, у свету медицине постоје болести које су јако ретке па је одност броја пацијената природно несразмеран. Видећемо нешто касније да ове
+околности морамо да решавамо кроз нешто другачији дизајн алгоритама учења.</p>
+
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<p>Креирај свој скуп лажних вести. Требаће ти и помоћ барем два пријатеља из разреда (провери, можда ће и чланови породице желети да учествују). Пронађи на вебу неколико лажних и неколико
+коректних вести - можеш да користиш и твитове ако је лакше. Направи табелу која има две колоне, у првој упиши текстове свих вести (мало их промешај, да не
+буду све вести из једне групе једна до друге) а другу колону остави за лабеле. Пошаљи овај фајл својим пријатељима и замоли их да обележе лажне вести.
+Не заборави да им напишеш и прецизне смернице! Када ти врате обележене вести, споји све лабеле у једну табелу и процени квалитет свог скупа користећи
+Кохенову капу. Да ли си задовољан резултатом?</p>
+
+    </div></div>
+<p>Приликом креирања табеле ће ти можда пасти на памет да одмах направиш три колоне, једну са вестима и две додатне колоне за лабеле, за сваког пријатеља по
+једну, и да ту табелу поставиш негде у облаку тако да  је сви видите. То није добар корак јер када један анотатор може да види лабеле другог анотатора то
+може да утиче на његову одлуку и размишљање. И то је једна врста пристрасности. Зато увек одвајамо послове анотатора и лабеле које придружују.</p>
+</div>
+
+
+    </div>
+    
+    <div>
+<div class="lecture-prev-next-toggle">
+  <a  href="041_Uloga%20podataka.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Previous chapter </span> </a>
+  
+  <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Next chapter</span>  <i class="fas fa-arrow-right fa"></i> </a>
+</div>
+
+<script type="text/javascript">
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+</script>
+</div>
+
+    
+  </div>
+</div>
+
+<div class="petljadoc-resources">
+  <span class="pull-left">(Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>) <br> © 2022 Petlja</span>
+</div>
+
+
+<div class="lectureToolbox">
+
+  <label class="font-size-toggle" id="fontSizeToggle">
+
+      <i class="fas fa-font"></i><label>Letters</label>
+  </label>
+  <div class="font-change d-none" id="fontChangeModal">
+      <span class="dec-letter-icon" id="decLetterIcon">A-</span>
+      <label id="currentFontSize">16</label>
+      <span class="inc-letter-icon" id="incLetterIcon">A+</span>
+  </div>
+</div>
+
+</div>
+
+  </body>
+</html>

@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Градијентни спуст</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/qchoice.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/associations.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/editor.css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja-course.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/nbstyle.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/runestonebase.js"></script>
+    <script src="../_static/skulpt.min.js"></script>
+    <script src="../_static/skulpt-stdlib.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/jquery.highlight.js"></script>
+    <script src="../_static/bookfuncs.js"></script>
+    <script src="../_static/codemirror.js"></script>
+    <script src="../_static/xml.js"></script>
+    <script src="../_static/css.js"></script>
+    <script src="../_static/python.js"></script>
+    <script src="../_static/htmlmixed.js"></script>
+    <script src="../_static/javascript.js"></script>
+    <script src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script src="../_static/activecode-i18n.en.js"></script>
+    <script src="../_static/activecode.js"></script>
+    <script src="../_static/clike.js"></script>
+    <script src="../_static/timed_activecode.js"></script>
+    <script src="../_static/animationbase.js"></script>
+    <script src="../_static/mchoice.js"></script>
+    <script src="../_static/timedmc.js"></script>
+    <script src="../_static/timed.js"></script>
+    <script src="../_static/mchoice-i18n.en.js"></script>
+    <script src="../_static/clickable.js"></script>
+    <script src="../_static/timedclickable.js"></script>
+    <script src="../_static/d3.v2.min.js"></script>
+    <script src="../_static/jquery.ba-bbq.min.js"></script>
+    <script src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script src="../_static/pytutor.js"></script>
+    <script src="../_static/codelens.js"></script>
+    <script src="../_static/skulpt.min.js"></script>
+    <script src="../_static/skulpt-stdlib.js"></script>
+    <script src="../_static/datafile.js"></script>
+    <script src="../_static/dragndrop.js"></script>
+    <script src="../_static/timeddnd.js"></script>
+    <script src="../_static/dragndrop-i18n.en.js"></script>
+    <script src="../_static/fitb.js"></script>
+    <script src="../_static/timedfitb.js"></script>
+    <script src="../_static/fitb-i18n.en.js"></script>
+    <script src="../_static/matrixeq.js"></script>
+    <script src="../_static/lib/prettify.js"></script>
+    <script src="../_static/lib/hammer.min.js"></script>
+    <script src="../_static/parsons.js"></script>
+    <script src="../_static/parsons-i18n.en.js"></script>
+    <script src="../_static/timedparsons.js"></script>
+    <script src="../_static/poll.js"></script>
+    <script src="../_static/reveal.js"></script>
+    <script src="../_static/shortanswer.js"></script>
+    <script src="../_static/timed_shortanswer.js"></script>
+    <script src="../_static/showEval.js"></script>
+    <script src="../_static/tabbedstuff.js"></script>
+    <script src="../_static/runestonevideo.js"></script>
+    <script src="../_static/webglinteractive.js"></script>
+    <script src="../_static/FileSaver.min.js"></script>
+    <script src="../_static/Blob.js"></script>
+    <script src="../_static/karelCorner.js"></script>
+    <script src="../_static/karelRobot.js"></script>
+    <script src="../_static/karelWorld.js"></script>
+    <script src="../_static/karelChat.js"></script>
+    <script src="../_static/karelRobotDrawer.js"></script>
+    <script src="../_static/karelUI.js"></script>
+    <script src="../_static/karel.js"></script>
+    <script src="../_static/karel-i18n.en.js"></script>
+    <script src="../_static/notes.js"></script>
+    <script src="../_static/pygamelib-init.js"></script>
+    <script src="../_static/gallery.js"></script>
+    <script src="../_static/associations.js"></script>
+    <script src="../_static/associations-i18n.en.js"></script>
+    <script src="../_static/editor.js"></script>
+    <script src="../_static/jszip.js"></script>
+    <script src="../_static/editor-i18n.en.js"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="../_static/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/waypoints.min.js"></script>
+    <script src="../_static/rangy-core.js"></script>
+    <script src="../_static/rangy-textrange.js"></script>
+    <script src="../_static/rangy-cssclassapplier.js"></script>
+    <script src="../_static/user-highlights.js"></script>
+    <script src="../_static/jquery.idle-timer.js"></script>
+    <script src="../_static/processing-1.4.1.min.js"></script>
+    <script src="../_static/jquery.hotkey.js"></script>
+    <script src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script src="../_static/course-errors.js"></script>
+    <script src="../_static/petlja.js"></script>
+    <script src="../_static/require.js"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+    <script type="text/javascript">
+      eBookConfig = {};
+      eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+      eBookConfig.app = eBookConfig.host + '/runestone';
+      eBookConfig.ajaxURL = eBookConfig.app + '/ajax/';
+      eBookConfig.course = 'os4_dig';
+      eBookConfig.logLevel = '0';
+      eBookConfig.loginRequired = 'false';
+      eBookConfig.build_info = "";
+      eBookConfig.isLoggedIn = false;
+      eBookConfig.useRunestoneServices = false;
+      eBookConfig.python3 = true;
+      eBookConfig.basecourse = 'os4_dig';
+      eBookConfig.runestone_version = '';
+      eBookConfig.imagesDir = '../_images/';
+      eBookConfig.staticDir = '../_static/';
+      if (typeof (Sk) != "undefined")
+        Sk.imgPath = eBookConfig.imagesDir;
+    </script>
+
+  </head>
+
+  <body>
+
+
+
+<div id="navbar" class="content-header">
+  <div class="right-side-nav">
+    
+    <div id="usefulLinksToggle" class="useful-links-toggle">
+        <a class="dropdown-toggle dropdown-toggle-burger" role="button" href="#" id="usefulLinksDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-bars fa-2x"></i>
+        </a>
+        <div class="dropdown-menu dropdown-nav-links shadow-lg" aria-labelledby="usefulLinksDropdown" x-placement="bottom-start" style="position: absolute; transform: translate3d(-55px, 32px, 0px); top: 0px; left: 0px; will-change: transform;">
+          <div class="links-title"> Useful links</div>
+          <div class="useful-link">
+            <a href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html" target="_blank">Sphinx Docs</a></div>
+          <div class="useful-link">
+            <a href="https://github.com/Petlja/PetljaDoc/blob/master/README.md" target="_blank">Petljadoc</a></div>
+          <div class="useful-link">
+            <a href="https://github.com/RunestoneInteractive/overview" target="_blank">Runestone Interactive</a></div>
+          
+        </div>
+    </div>
+
+    
+</div>
+
+<div class="left-side-nav">
+  <div class="course-logo-nav">
+      <a target="_blank" href="https://petlja.org">
+          <img src="../_static/img/petlja-logo-wt.svg" alt="petlja.org" id="lightPetljaLogo">
+      </a>
+  </div>
+  <div class="course-logo-nav-kabinet">
+      <a target="_blank" href="https://petlja.org/net.kabinet">
+          <img src="../_static/img/netkabinet-logo-strelica-wt.svg" alt="petlja.org" id="lightNetKabinetLogo">
+      </a>
+  </div>
+</div>
+
+
+<div class="content-header-label" id = "content-header-label" href="../">Савремена вештачка интелигенција</div>
+
+</div>
+
+
+
+
+<div class="petljaCourseContainer">
+
+<div class="petljaCourseContent">
+  
+           <div class="tableOfContent">
+            <h5> Table of content </h5>
+            </div>
+           <div>
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-01_Uvod>
+                    <h5>Увод</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../01_Uvod/011_Savremena%20vestacka%20inteligencija.html><div class="studioLecture" id=activity-01_Uvod-011_Savremena%20vestacka%20inteligencija><i class="fas fa-file-alt activity-icon"></i>Савремена вештачка интелигенција</div></a>
+                <a href=../01_Uvod/012_Da%20li%20masina%20moze%20da%20misli.html><div class="studioLecture" id=activity-01_Uvod-012_Da%20li%20masina%20moze%20da%20misli><i class="fas fa-file-alt activity-icon"></i>Да ли машина може да мисли?</div></a>
+                <a href=../01_Uvod/013_Oblasti%20vestacke%20inteligencije.html><div class="studioLecture" id=activity-01_Uvod-013_Oblasti%20vestacke%20inteligencije><i class="fas fa-file-alt activity-icon"></i>Области вештачке интелигенције</div></a>
+                <a href=../01_Uvod/014_Uska%20opsta%20i%20super%20inteligencija.html><div class="studioLecture" id=activity-01_Uvod-014_Uska%20opsta%20i%20super%20inteligencija><i class="fas fa-file-alt activity-icon"></i>Уска, општа и супер интелигенција</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02_Programiranje%20vodjeno%20podacima>
+                    <h5>Програмирање вођено подацима</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02_Programiranje%20vodjeno%20podacima/021_Programiranje%20vodjeno%20podacima.html><div class="studioLecture" id=activity-02_Programiranje%20vodjeno%20podacima-021_Programiranje%20vodjeno%20podacima><i class="fas fa-file-alt activity-icon"></i>Програмирање вођено подацима</div></a>
+                <a href=../02_Programiranje%20vodjeno%20podacima/022_Zasto%20nam%20je%20potrebno%20programiranje%20vodjeno%20podacima.html><div class="studioLecture" id=activity-02_Programiranje%20vodjeno%20podacima-022_Zasto%20nam%20je%20potrebno%20programiranje%20vodjeno%20podacima><i class="fas fa-file-alt activity-icon"></i>Зашто нам је потребно програмирање вођено подацима?</div></a>
+                <a href=../02_Programiranje%20vodjeno%20podacima/023_Osnovni%20pojmovi%20masinskog%20ucenja.html><div class="studioLecture" id=activity-02_Programiranje%20vodjeno%20podacima-023_Osnovni%20pojmovi%20masinskog%20ucenja><i class="fas fa-file-alt activity-icon"></i>Основни појмови машинског учења</div></a>
+                <a href=../02_Programiranje%20vodjeno%20podacima/024_Vrste%20masinskog%20ucenja.html><div class="studioLecture" id=activity-02_Programiranje%20vodjeno%20podacima-024_Vrste%20masinskog%20ucenja><i class="fas fa-file-alt activity-icon"></i>Врсте машинског учења</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-03_Python>
+                    <h5>Python</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../03_Python/031_Platforma%20Google%20Colab.html><div class="studioLecture" id=activity-03_Python-031_Platforma%20Google%20Colab><i class="fas fa-file-alt activity-icon"></i>Платформа Google Colab</div></a>
+                <a href=../03_Python/032_%20Biblioteke%20NumPy,%20Matplotlib%20i%20Pandas.html><div class="studioLecture" id=activity-03_Python-032_%20Biblioteke%20NumPy,%20Matplotlib%20i%20Pandas><i class="fas fa-file-alt activity-icon"></i>Библиотеке NumPy, Matplotlib i Pandas</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-04_Uloga%20podataka>
+                    <h5>Улога података</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../04_Uloga%20podataka/041_Uloga%20podataka.html><div class="studioLecture" id=activity-04_Uloga%20podataka-041_Uloga%20podataka><i class="fas fa-file-alt activity-icon"></i>Улога података</div></a>
+                <a href=../04_Uloga%20podataka/042_Kako%20nastaju%20skupovi%20podataka.html><div class="studioLecture" id=activity-04_Uloga%20podataka-042_Kako%20nastaju%20skupovi%20podataka><i class="fas fa-file-alt activity-icon"></i>Како настају скупови података?</div></a>
+                <a href=../04_Uloga%20podataka/043_Popularni%20skupovi%20podataka.html><div class="studioLecture" id=activity-04_Uloga%20podataka-043_Popularni%20skupovi%20podataka><i class="fas fa-file-alt activity-icon"></i>Популарни скупови података</div></a>
+                <a href=../04_Uloga%20podataka/044_Javni%20skupovi%20podataka.html><div class="studioLecture" id=activity-04_Uloga%20podataka-044_Javni%20skupovi%20podataka><i class="fas fa-file-alt activity-icon"></i>Јавно доступни скупови података</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-05_EDA>
+                    <h5>EDA</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../05_EDA/051_Eksplorativna%20analiza%20skupa%20podataka.html><div class="studioLecture" id=activity-05_EDA-051_Eksplorativna%20analiza%20skupa%20podataka><i class="fas fa-file-alt activity-icon"></i>Експлоративна анализа скупа података</div></a>
+                <a href=../05_EDA/052_Kreiranje%20reprezentacije%20skupa%20podataka.html><div class="studioLecture" id=activity-05_EDA-052_Kreiranje%20reprezentacije%20skupa%20podataka><i class="fas fa-file-alt activity-icon"></i>Креирање репрезентације скупа података</div></a>
+                <a href=../05_EDA/053_Skupovi%20za%20treniranje%20validaciju%20i%20testiranje.html><div class="studioLecture" id=activity-05_EDA-053_Skupovi%20za%20treniranje%20validaciju%20i%20testiranje><i class="fas fa-file-alt activity-icon"></i>Скупови за тренирање, валидацију и тестирање</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-06_Linearna%20regresija>
+                    <h5>Линеарна регресија</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../06_Linearna%20regresija/061_Linearna%20regresija.html><div class="studioLecture" id=activity-06_Linearna%20regresija-061_Linearna%20regresija><i class="fas fa-file-alt activity-icon"></i>Линеарна регресија</div></a>
+                <a href=../06_Linearna%20regresija/062_Gradijentni%20spust.html><div class="studioLecture" id=activity-06_Linearna%20regresija-062_Gradijentni%20spust><i class="fas fa-file-alt activity-icon"></i>Градијентни спуст</div></a>
+                <a href=../06_Linearna%20regresija/063_Ocenjivanje%20modela%20linearne%20regresije.html><div class="studioLecture" id=activity-06_Linearna%20regresija-063_Ocenjivanje%20modela%20linearne%20regresije><i class="fas fa-file-alt activity-icon"></i>Оцењивање модела линеарне регресије</div></a>
+                <a href=../06_Linearna%20regresija/064_Visestruka%20linearna%20regresija%20ToDo.html><div class="studioLecture" id=activity-06_Linearna%20regresija-064_Visestruka%20linearna%20regresija%20ToDo><i class="fas fa-file-alt activity-icon"></i>Вишеструка линеарна регресија - ТоДо</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-07_Klasifikacija>
+                    <h5>Класификација</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../07_Klasifikacija/071_Klasifikacija.html><div class="studioLecture" id=activity-07_Klasifikacija-071_Klasifikacija><i class="fas fa-file-alt activity-icon"></i>Класификација</div></a>
+                <a href=../07_Klasifikacija/072_Kako%20ocenjujemo%20model%20klasifikacije.html><div class="studioLecture" id=activity-07_Klasifikacija-072_Kako%20ocenjujemo%20model%20klasifikacije><i class="fas fa-file-alt activity-icon"></i>Како оцењујемо модел класификације</div></a>
+                <a href=../07_Klasifikacija/073_Logisticka%20regresija.html><div class="studioLecture" id=activity-07_Klasifikacija-073_Logisticka%20regresija><i class="fas fa-file-alt activity-icon"></i>Логистичка регресија</div></a>
+                <a href=../07_Klasifikacija/074_Algoritam%20k%20najblizih%20suseda.html><div class="studioLecture" id=activity-07_Klasifikacija-074_Algoritam%20k%20najblizih%20suseda><i class="fas fa-file-alt activity-icon"></i>Алгоритам к-најближих суседа</div></a>
+                <a href=../07_Klasifikacija/075_Hiperparametri.html><div class="studioLecture" id=activity-07_Klasifikacija-075_Hiperparametri><i class="fas fa-file-alt activity-icon"></i>Хиперпараметри</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-08_Prilagodjavanje>
+                    <h5>Прилагођавање</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../08_Prilagodjavanje/081_Generalizacija%20potprilagodjavanje%20i%20preprilagodjavanje.html><div class="studioLecture" id=activity-08_Prilagodjavanje-081_Generalizacija%20potprilagodjavanje%20i%20preprilagodjavanje><i class="fas fa-file-alt activity-icon"></i>Генерализација, потприлагођавање и преприлагођавање</div></a>
+                <a href=../08_Prilagodjavanje/082_Unakrsna%20validacija.html><div class="studioLecture" id=activity-08_Prilagodjavanje-082_Unakrsna%20validacija><i class="fas fa-file-alt activity-icon"></i>Унакрсна валидација</div></a>
+                <a href=../08_Prilagodjavanje/083_Regularizacija.html><div class="studioLecture" id=activity-08_Prilagodjavanje-083_Regularizacija><i class="fas fa-file-alt activity-icon"></i>Регуларизација</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-09_Neuronske%20mreze%20uvod>
+                    <h5>Неуронске мреже - увод</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../09_Neuronske%20mreze%20uvod/091_Neuronske%20mreze.html><div class="studioLecture" id=activity-09_Neuronske%20mreze%20uvod-091_Neuronske%20mreze><i class="fas fa-file-alt activity-icon"></i>Неуронске мреже</div></a>
+                <a href=../09_Neuronske%20mreze%20uvod/092_Obucavanje%20neuronskih%20mreza.html><div class="studioLecture" id=activity-09_Neuronske%20mreze%20uvod-092_Obucavanje%20neuronskih%20mreza><i class="fas fa-file-alt activity-icon"></i>Обучавање неуронских мрежа</div></a>
+                <a href=../09_Neuronske%20mreze%20uvod/093_TensorFlow%20Playground.html><div class="studioLecture" id=activity-09_Neuronske%20mreze%20uvod-093_TensorFlow%20Playground><i class="fas fa-file-alt activity-icon"></i>TensorFlow Playground</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-10_Neuronske%20mreze%20vrste%20i%20primena>
+                    <h5>Неуронске мреже - врсте и примена</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../10_Neuronske%20mreze%20vrste%20i%20primena/101_Razlicite%20vrste%20neuronskih%20mreza.html><div class="studioLecture" id=activity-10_Neuronske%20mreze%20vrste%20i%20primena-101_Razlicite%20vrste%20neuronskih%20mreza><i class="fas fa-file-alt activity-icon"></i>Различите врсте неуронских мрежа</div></a>
+                <a href=../10_Neuronske%20mreze%20vrste%20i%20primena/102_Konvolutivne%20neuronske%20mreze.html><div class="studioLecture" id=activity-10_Neuronske%20mreze%20vrste%20i%20primena-102_Konvolutivne%20neuronske%20mreze><i class="fas fa-file-alt activity-icon"></i>Конволутивне неуронске мреже</div></a>
+                <a href=../10_Neuronske%20mreze%20vrste%20i%20primena/103_Rekurentne%20neuronske%20mreze.html><div class="studioLecture" id=activity-10_Neuronske%20mreze%20vrste%20i%20primena-103_Rekurentne%20neuronske%20mreze><i class="fas fa-file-alt activity-icon"></i>Рекурентне неуронске мреже</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-12_Klasterovanje>
+                    <h5>Кластеровање</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../12_Klasterovanje/121_Klasterovanje.html><div class="studioLecture" id=activity-12_Klasterovanje-121_Klasterovanje><i class="fas fa-file-alt activity-icon"></i>Кластеровање</div></a>
+                <a href=../12_Klasterovanje/122_Algoritam%20k%20sredina.html><div class="studioLecture" id=activity-12_Klasterovanje-122_Algoritam%20k%20sredina><i class="fas fa-file-alt activity-icon"></i>Алгоритам к-средина</div></a>
+                <a href=../12_Klasterovanje/123_Odredjivanje%20broja%20klastera.html><div class="studioLecture" id=activity-12_Klasterovanje-123_Odredjivanje%20broja%20klastera><i class="fas fa-file-alt activity-icon"></i>Одређивање броја кластера</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-13_Ucenje%20potkrepljivanjem>
+                    <h5>Учење поткрепљивањем</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../13_Ucenje%20potkrepljivanjem/131_Ucenje%20potkrepljivanjem.html><div class="studioLecture" id=activity-13_Ucenje%20potkrepljivanjem-131_Ucenje%20potkrepljivanjem><i class="fas fa-file-alt activity-icon"></i>Учење поткрепљивањем</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-14_Drustveno%20bitni%20aspekti>
+                    <h5>Друштвено битни аспекти</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../14_Drustveno%20bitni%20aspekti/141_Drustveno%20bitni%20aspekti.html><div class="studioLecture" id=activity-14_Drustveno%20bitni%20aspekti-141_Drustveno%20bitni%20aspekti><i class="fas fa-file-alt activity-icon"></i>Друштвено битни аспекти</div></a>
+                </div>
+            </div>
+                </div>
+</div>
+
+
+
+<div class="lectureContent">
+
+  <div id="errors">
+  </div>
+  
+  <div class="lectureContentMaterial">
+  
+    <div id="main-content">
+    
+  <div class="section" id="id1">
+<h1>Градијентни спуст<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
+        <div class="course-content">
+            
+<p>У овој лекцији упознаћемо градијентни спуст, технику која нам помаже да пронађемо параметре за које функција средњеквадратне грешке има најмању
+вредност. Ову технику можемо, под одређеним условима, да применимо и на друге функције.</p>
+
+    </div></div>
+<p>Опет ћеш морати нешто да замислиш - овога пута да се налазиш на врху једне лепе планине. То и не пада тако тешко! Невоља је што сада следи задатак:
+да се брзо спустиш до подножја! Један начин да то урадиш је да прво погледаш око себе и провериш дуж ког правца у твојој околини је планина
+најстрмија - имај на уму да треба баш брзо да се спустиш! Онда можеш да направиш један пажљиви корак у том правцу па да застанеш и опет погледаш
+око себе. Опет можеш да приметиш дуж ког правца је планина најсртрмија у твојој околини, направиш корак у том правцу и застанеш. Јасно ти је да
+овај редослед осматрања, избора правца и искорака можеш да наставиш да понављаш све док не стигнеш до подножја. Ту те чека освежење за успешно
+обављени задатак!</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/gs1.png"><img alt="../_images/gs1.png" src="../_images/gs1.png" style="width: 450px;" /></a>
+</div>
+<p>(слика је преузета са <a class="reference external" href="https://creazilla.com/nodes/37642-river-flowing-through-the-mountains-clipart">https://creazilla.com/nodes/37642-river-flowing-through-the-mountains-clipart</a>)</p>
+<hr class="docutils" />
+<p>Мало физичке активности у сред приче о линеарној регресији није на одмет, али наслућујеш да постоји још нешто. Функција срењеквадратне грешке
+зависи од избора параметара ꞵ0 и ꞵ1 - за различите комбинације вредности ꞵ0 и ꞵ1 добијамо различите вредности грешке. Ако нацртамо график ове
+функције, на пример, дуж x-осе забележимо вредности ꞵ0, дуж y-осе забележимо вредности ꞵ1, а дуж z-осе вредности грешке, добићемо график који
+изгледа као на доњој слици. Ако црвеном тачком обележимо неки насумични избор параметара ꞵ0 и ꞵ1, да бисмо стигли до тачке за коју је вредност
+грешке најмања заиста морамо да се спустимо у подножје ове површи. Зато је ”техника” коју смо развили у претходном примеру врло релеванта.
+Потребно је само да осмислимо како да тражимо најстрмије правце спуста. У томе ће нам помоћи изводи функција.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/gs2.png"><img alt="../_images/gs2.png" src="../_images/gs2.png" style="width: 450px;" /></a>
+</div>
+<p><em>График функције средњеквадратне грешке</em></p>
+<p><strong>(ТОДО: прилагодити обележја а и б)</strong></p>
+<hr class="docutils" />
+
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
+        <div class="course-content">
+            
+<p>Најмања вредност једне функције се зове минимум.</p>
+
+    </div></div>
+<p>Посматрајмо сада квадратну функција f(x) = (x-1)2 чији је график приказан на доњој слици и покушајмо да техником спуста стигнемо до њеног минимума -
+он је у тачки x=1 и износи 0.</p>
+<a class="reference internal image-reference" href="../_images/gs3.png"><img alt="../_images/gs3.png" class="align-center" src="../_images/gs3.png" style="width: 500px;" /></a>
+<p>Уочимо и црвену тачку која одговара вредности x=3 (насумично смо је одабрали) и која означава стартну позицију кретања ка минимуму ове функције.
+Делује да је наранџастом линијом обележен најстрмији правац дуж кога можемо да започнемо спуст. Занимљиво је да ова линија заправо представља
+тангенту наше функције у тачки x=3. Ако дуж овог правца направимо корак, наћи ћемо се у новој тачки. Обележимо и њену вредност црвеном бојом и
+прикажимо је на графику. Она је мало ближе очекиваном минимуму.</p>
+<a class="reference internal image-reference" href="../_images/gs4.png"><img alt="../_images/gs4.png" class="align-center" src="../_images/gs4.png" style="width: 500px;" /></a>
+<p>Сада можемо да поновимо поступак: нацртајмо тангенту у новој тачки, а потом и направимо корак дуж тог правца.</p>
+<a class="reference internal image-reference" href="../_images/gs5.png"><img alt="../_images/gs5.png" class="align-center" src="../_images/gs5.png" style="width: 500px;" /></a>
+<p>Након одређеног броја корака, овај поступак ће нас довести до минимума функције тј. до тачке x=1.</p>
+<a class="reference internal image-reference" href="../_images/gs6.png"><img alt="../_images/gs6.png" class="align-center" src="../_images/gs6.png" style="width: 500px;" /></a>
+<p>У Google Coalb свесци која прати овај материјал можеш и сам да покренеш анимацију и увериш се да је тако. Довољно је да кликнеш на дугме <a class="reference internal" href="../_images/algk2.png"><img alt="open" src="../_images/algk2.png" style="width: 100px;" /></a>
+и отвориш је.</p>
+<p>Пре него што детаљније прођемо кроз поступак који смо описали, подсетимо се какве су то праве тангенте.  За неку фиксирану тачку x коефицијент
+правца тангенте у тачки x једнак је вредности првог извода извода функције у тачки x. Први извод наше функције је функција f’(x) = 2x-2 и у
+почетној тачки x=3 вредност извода је f’(x) = 4.  То значи да тангента има једначину y = 4x - 8 (број -8 смо добили из услова да ова права
+мора да садржи тачку (3, 4)).  Зато можемо и да кажемо да тангента има правац који одговара изводу функције у некој тачки, а за само кретање
+у том правцу да је кретање дуж правца извода у тој тачки.  Сада је дилема, да ли се крећемо уз или низ  тј. да ли пратимо правац извода или
+његов супротан правац? Па, пошто желимо да се спуштамо ка минимуму треба да пратимо правац супротан правцу извода функције.</p>
+<p>Ако сада са x0 oбележимо почетну тачку, нову тачку x1 добили смо тако што смо направили корак дуж правца извода функције у тачки x0. Ако са α
+обележимо дужину корака, вредност нове тачке  x1 израчунавамо као x1 = x0 - α f’(x0). Пошто поступак понављамо, вредност тачке x2  израчунавамо
+као x2 = x1 - α f’(x1) и настављамо редом са израчунавањима x3 = x2 - α f’(x2),  x4 = x3 - α f’(x3), …  Поступак понављамо све док за две
+узастопне вредности, рецимо за x34 и x35, вредности функције нису довољно близу тј. док апсолутна вредност разлике између f(x35) - f(x34) није мања од неке
+унапред задате течности, рецимо 0.001. Тако рачунски можемо да се приближимо појму конвергенције у математици.</p>
+<p>Вредност α коју смо увели се зове корак учења и представља врло важан параметар алгоритма који смо описали. Уколико су вредности за α много мале,
+требаће нам пуно времена да стигнемо до минимума. Са друге стране ако су вредности за α много велике, може се десити да прескочимо минимум или
+западнемо у цик-цак замку сталним какутањима око њега! Погледај доњу слику!</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/gs7.png"><img alt="../_images/gs7.png" src="../_images/gs7.png" style="width: 780px;" /></a>
+</div>
+<p><em>Утицај избора корака учења</em></p>
+<hr class="docutils" />
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/gs8.png"><img alt="../_images/gs8.png" src="../_images/gs8.png" style="width: 280px;" /></a>
+</div>
+<p><em>Цик-цак замка</em></p>
+<hr class="docutils" />
+<p>Оба ова понашања обавезно провери и сам у пратећој свесци користећи различита подешавања за корак учења у анимацији.</p>
+<p>Алгоритам који смо описали се зове <strong>градијентни спуст</strong> (енгл. <em>gradient descent</em>) и упркос својој једноставности представља један од најважнијих
+алгоритма у машинском учењу јер омогућава проналажење најмање вредности функције грешке. Постоји много детаља у вези са овим алгоритмом у које
+ми нећемо залазити а који се тичу особина функција на које овај алгоритам може успешно да се примени, нумеричког израчунавања извода и избора
+корака учења. Сви они се морају размотрити приликом практичне примене алгоритма.</p>
+<p>Сам алгоритам није неугодно испрограмирати па ћемо се упустити у авантуру. Потребна нам је функција <code class="docutils literal notranslate"><span class="pre">f</span></code> која ће да рачуна вредност задате функције и
+функција <code class="docutils literal notranslate"><span class="pre">f_izvod</span></code> која ће да израчунава вредност извода задате функције. Потребно је да дефинишемо и корак учења <code class="docutils literal notranslate"><span class="pre">alfa</span></code> и зауставне критеријуме:
+поступак ћемо обуставити када вредности функције у двема узастопним итерацијама буду довољно близу (разлика њихових вредности је мања од неке
+унапред задате тачности <code class="docutils literal notranslate"><span class="pre">epsilon</span></code>) или када достигнемо неки коначан број итерација <code class="docutils literal notranslate"><span class="pre">max_broj_iteracija</span></code> (морамо да се осигурамо и у случајевима
+неподесних избора корака учења).</p>
+<p>Следи блок са кодом. Алгоритам смо започели постављањем почетне тачке. Како тачка у којој се померимо алгоритмом градијентног спуста представља
+почетну тачку наредног корака, за њихово обележавање у узастопним корацима користимо ознаке <code class="docutils literal notranslate"><span class="pre">x_staro</span></code> и <code class="docutils literal notranslate"><span class="pre">x_novo</span></code>. Извештај који креирамо на крају
+функције садржи информације о томе да ли се алгоритам зауставио, колико му је корака тј. итерација требало и коју вредност је пронашао.</p>
+<a class="reference internal image-reference" href="../_images/gs9.png"><img alt="../_images/gs9.png" class="align-center" src="../_images/gs9.png" style="width: 600px;" /></a>
+<p>Функцију коју смо разматрали и њен извод можемо дефинисати следећим Python блоковима:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+   <span class="k">return</span> <span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="k">def</span> <span class="nf">f_izvod</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+   <span class="k">return</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">-</span><span class="mi">2</span>
+</pre></div>
+</div>
+<p>Након покретања функције gradijentni_spust за вредности аргумената <code class="docutils literal notranslate"><span class="pre">x0</span> <span class="pre">=</span> <span class="pre">3</span></code>, <code class="docutils literal notranslate"><span class="pre">alfa</span> <span class="pre">=</span> <span class="pre">0.1</span></code>, <code class="docutils literal notranslate"><span class="pre">epsilon</span> <span class="pre">=</span> <span class="pre">0.001</span></code> и <code class="docutils literal notranslate"><span class="pre">max_broj_iteracija</span> <span class="pre">=</span> <span class="pre">100</span></code> добијамо
+да је минимум функције број 1.0048 што можемо и да потврдимо. Код можеш и сам да извршиш и увериш се да се добија баш овај резулат.
+Не пропусти да испиташ и како се резултати мењају уколико се одаберу друге вредности аргумената.</p>
+<p>Сада можемо да се вратимо и на проблем проналажења параметара ꞵ0 и ꞵ1 линеарне регресије за коју вредност средњеквадратне грешке треба да има
+најмању вредност. Функција средњеквадратне грешке је функција двеју променљивих - зависи и од вредности параметра ꞵ0 и од вредности параметра ꞵ1.
+Када радимо са функцијама више променљивих, у општем случају са n променљивих x1, x2, x3,…,xn , извод који смо користили у алгоритму градијентног
+спуста уопштавамо вектором извода - за сваку од променљивих израчунавамо појединачно изводе. Рецимо, за функцију <a class="reference internal" href="../_images/gsf0.png"><img alt="gsf0" src="../_images/gsf0.png" style="width: 180px;" /></a>, извод по променљивој x1 се
+добија тако што се променљива x2 прогласи константом па потом примене стандардна правила за рачунање извода којa нас доводе до ½*2*x1=x1.
+Са друге стране, извод по променљивој x2 се рачуна тако што се променљива x1 прогласи константом па примене стандардна правила за рачунање
+извода. Сада добијамо ½*10*2*x2=10x2. Сада добијамо да је вектор извода по појединачним променљивама (такве изводе зовемо парцијалним)
+вектор [x1, 10x2].  У математици, па и у машинском учењу, ови вектори се зову <strong>градијенти</strong> па отуда долази и име самог алгоритма.
+За обележавање градијената се користи симбол троуглић надоле ∇ који се зове набла. Тако би прецизан запис градијента полазне функције
+f био ∇f(x1,x2) = [x1, 10x2] и омогућавао би нам да пратимо дуж којих праваца извода појединачно треба да се крећемо приликом спуста.</p>
+<p><strong>TODO: сличица са правцима</strong></p>
+<p>Остали кораци алгоритма градијентног спуста не разлику пуно за случај функција више променљивих. Како је сада решење које тражимо тачка у
+дводимензионом простору, критеријум заустављања можемо да прилагодимо тако што ћемо узети у обзир еуклидско растојање између вредности
+функција уместо њихове апсолутне разлике.</p>
+<p>Сада када разумемо и како градијентни спуст функционише за функције више променљивих вратимо се на израчунавање параметара ꞵ0 и ꞵ1.
+Рекли смо да је једначина средњеквадратне грешке <a class="reference internal" href="../_images/gsf1.png"><img alt="gsf1" src="../_images/gsf1.png" style="width: 180px;" /></a>. Пошто је то функција за коју треба да пронађемо минимум, ако засучемо рукаве па проверимо,
+добићемо да је извод средњеквадратне функције по  ꞵ0 баш <a class="reference internal" href="../_images/gsf2.png"><img alt="gsf2" src="../_images/gsf2.png" style="width: 180px;" /></a> и извод по ꞵ1 баш <a class="reference internal" href="../_images/gsf3.png"><img alt="gsf3" src="../_images/gsf3.png" style="width: 180px;" /></a>. Ови изводи нам указују дуж којих правада треба да се крећемо и
+колико треба да коригујемо вредности за ꞵ0 и ꞵ1 у сваком кораку итерације градијентног спуста.</p>
+<p>У свесци можеш да видиш и како се ове вредности израчунавају кроз код, а потом и да прођеш кроз цео поступак прилагођеног градијентног спуста.
+За скуп о некретнинама који смо увели, добиће се вредности ꞵ0=2.056 и ꞵ1=1.198.</p>
+<p>Рекли смо да постоје одређени предуслови које функција треба да задовољи да би њен минимум могао да се пронађе техником градијентног спуста
+(ако баш желиш да чујеш, потребно је да функција буде непрекидна и диференцијабилна). Важно је да знаш да се у општем случају на овај начин
+достиже неки локални минимум. Рецимо, функција на доњој слици има неколико локалних минимума и само један глобални минимум. У неким случајевима,
+рецимо када је функција конвексна, локални и глобални минимум се поклапају па увек стижемо до жељеног решења, глобалног минимума. Функција
+средњеквадратне грешке је конвексна по поараметрима ꞵ0 и ꞵ1.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/gs10.png"><img alt="../_images/gs10.png" src="../_images/gs10.png" style="width: 450px;" /></a>
+</div>
+<p><em>Локални и глобални минимум</em></p>
+<p>(слика је преузета са <a class="reference external" href="https://vitalflux.com/local-global-maxima-minima-explained-examples/">https://vitalflux.com/local-global-maxima-minima-explained-examples/</a>, <strong>ТОДО: прилагодити обележја и натписе</strong>)</p>
+<hr class="docutils" />
+<p>Област математике која се бави проналажењем максималних и минималних вредности функција (једним именом их зовемо оптимумима) зове се <strong>математичка оптимизација</strong>.
+Градијентни спуст је само један алгоритам из палете ове области.</p>
+</div>
+
+
+    </div>
+    
+    <div>
+<div class="lecture-prev-next-toggle">
+  <a  href="061_Linearna%20regresija.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Previous chapter </span> </a>
+  
+  <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Next chapter</span>  <i class="fas fa-arrow-right fa"></i> </a>
+</div>
+
+<script type="text/javascript">
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+</script>
+</div>
+
+    
+  </div>
+</div>
+
+<div class="petljadoc-resources">
+  <span class="pull-left">(Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>) <br> © 2022 Petlja</span>
+</div>
+
+
+<div class="lectureToolbox">
+
+  <label class="font-size-toggle" id="fontSizeToggle">
+
+      <i class="fas fa-font"></i><label>Letters</label>
+  </label>
+  <div class="font-change d-none" id="fontChangeModal">
+      <span class="dec-letter-icon" id="decLetterIcon">A-</span>
+      <label id="currentFontSize">16</label>
+      <span class="inc-letter-icon" id="incLetterIcon">A+</span>
+  </div>
+</div>
+
+</div>
+
+  </body>
+</html>
