@@ -148,8 +148,8 @@ lessons:
         description: 
         guid: d286994e-d707-455d-bdbb-e7dbb10e3ac2
       - type: reading
-        title: Вишеструка линеарна регресија - ТоДо
-        file: 064_Visestruka linearna regresija ToDo.rst
+        title: Вишеструка линеарна регресија
+        file: 064_Visestruka linearna regresija.rst
         description: 
         guid: 24e99d10-18ae-4f52-8c74-8a8a8e3a7c2f
   - title: Класификација
