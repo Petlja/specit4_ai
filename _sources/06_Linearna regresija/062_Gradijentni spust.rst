@@ -136,35 +136,9 @@
 почетну тачку наредног корака, за њихово обележавање у узастопним корацима користимо ознаке ``x_staro`` и ``x_novo``. Извештај који креирамо на крају 
 функције садржи информације о томе да ли се алгоритам зауставио, колико му је корака тј. итерација требало и коју вредност је пронашао. 
 
-.. code-block:: Python
-    def gradijentni_spust(f, f_izvod, x, alfa, epsilon, max_broj_iteracija):
-
-    # postavljamo pocetnu vrednost za x
-    x_staro = x
-
-    # u svakoj iteraciji ...
-    for i in range(0, max_broj_iteracija):
-
-        # izracunavamo tekucu vrednost za x
-        x_novo = x_staro - alfa * f_izvod(x_staro)
-
-        # i potom proveravamo da li je ispunjen zaustavni kriterijum
-        if np.abs(f(x_novo) - f(x_staro)) < epsilon:
-            break
-
-        # ako kriterijum nije ispunjen, pripremamo x za narednu iteraciju
-        x_staro = x_novo
-
-    # na kraju celog postupka pripremamo izvestaj sa informacijama:
-    # da li se algoritam zaustavlja,
-    # koliko je iteracija trajao,
-    # i koja vrednost x je pronadjena
-    izvestaj = {}
-    izvestaj['zaustavlja_se'] = i != max_broj_iteracija
-    izvestaj['broj_iteracija'] = i
-    izvestaj['x_min'] = x_staro
-
-    return izvestaj
+.. image:: ../../_images/gs9.png
+    :width: 600
+    :align: center
 
 Функцију коју смо разматрали и њен извод можемо дефинисати следећим Python блоковима: 
 
