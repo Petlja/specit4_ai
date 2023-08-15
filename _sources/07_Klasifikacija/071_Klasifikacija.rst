@@ -55,14 +55,14 @@ ImageNet и такмичења класификације слика у које
 категоричким па о класификацији можемо да говоримо као о пресликавањима које карактерише категоричка циљна променљива.
 
 .. math::
-\begin{equation}
-F(x)=
-    \begin{cases}
-        0 & \text{ако је } x <0\\
-        \frac{1}{2} & \text{ако је } 0\le  x < 1 \\
-        1 & \text{ако је } x \ge 1
-    \end{cases}
-\end{equation}
+    \begin{equation}
+    F(x)=
+        \begin{cases}
+            0 & \text{ако је } x <0\\
+            \frac{1}{2} & \text{ако је } 0\le  x < 1 \\
+            1 & \text{ако је } x \ge 1
+        \end{cases}
+    \end{equation}
 
 *Пример једне дискретне функције*
 
