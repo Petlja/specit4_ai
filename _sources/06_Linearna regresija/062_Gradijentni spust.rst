@@ -137,6 +137,7 @@
 функције садржи информације о томе да ли се алгоритам зауставио, колико му је корака тј. итерација требало и коју вредност је пронашао. 
 
 .. code-block:: Python
+
     def gradijentni_spust(f, f_izvod, x, alfa, epsilon, max_broj_iteracija):
 
         # postavljamo pocetnu vrednost za x
@@ -166,7 +167,7 @@
 
         return izvestaj
 
-
+|
 
 Функцију коју смо разматрали и њен извод можемо дефинисати следећим Python блоковима: 
 
