@@ -105,17 +105,36 @@
 
 За мерење растојања између инстанци користићемо функцију ``euklidsko_rastojanje`` која је дефинисана следећим блоком кода: 
 
-.. image:: ../../_images/algks3.png
-   :width: 780
-   :align: center
+.. code-block:: Python
+
+   def euklidsko_rastojanje(instanca1, instanca2):
+      return np.sqrt((instanca1[0]-instanca2[0])**2 + (instanca1[1]-instanca2[1])**2)
 
 -------
 
 Сам алгоритам к-најближих суседа је представљен следећим блоком кода: 
 
-.. image:: ../../_images/algks4.png
-   :width: 780
-   :align: center
+.. code-block:: Python
+
+   def kNN(k, instance, nova_instanca, klase={0:'crvena', 1: 'plava'}):
+
+      # prvo izracunavamo rastojanja izmedju nove instance i svih instanci u skupu podataka
+      rastojanja = [euklidsko_rastojanje(instanca, nova_instanca) for instanca in instance]
+
+      # potom sortiramo rastojanja, izdvajamo k najmanjih i instance kojima odgovaraju
+      # proglasavamo susedima
+      susedi = np.argsort(rastojanja)[0:k]
+
+      # zatim ocitavamo obelezja suseda i prebrojavamo ih
+      obelezja_suseda = [instance[sused][2] for sused in susedi]
+      prebrojavanja_obelezja = np.bincount(obelezja_suseda)
+
+      # obelezje nove instance ce biti obelezje najbrojnijeg suseda
+      klasa = np.argmax(prebrojavanja_obelezja)
+
+      return klase[klasa]
+     
+
 
 -------
 
