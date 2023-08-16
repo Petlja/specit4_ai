@@ -31,8 +31,17 @@ description:
       href: https://github.com/Petlja/PetljaDoc/blob/master/README.md
     - text: Runestone Interactive
       href: https://github.com/RunestoneInteractive/overview
-  longDescription: |
-    This is an example of a long description...
+  longDescription: '
+  <div class="document">
+    <p> 
+      Oвај курс покрива једну наставну тему предмета Програмске парадигме и намењен је ученицима специјализованих ИТ одељења 4. разреда средње школе. 
+      Намењен је и свима онима који желе да науче нешто више о савременим системима вештачке интелигенције и разумеју како они функционишу. 
+      Овој интересантној и надасве сложеној теми, прићи ћемо из угла практичне примене, улоге података, дизајна алгоритама, оцене система и друштвено-битних аспеката. 
+      <br>
+      Поред рада у школи, курс може да се пролази и самостално.
+    </p>
+  </div>
+  '
   shortDescription: Савремена вештачка интелигенција
 
 
