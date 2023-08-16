@@ -303,10 +303,11 @@ LSTM (енгл. *Long Short Term Memory*) и GRU (енгл. *Gated Recurrent Uni
 
 |
 
-.. code-block:: Python
+.. code-block::
 
    !pip install transformers
    import transformers
+
 
 
 Следећи блок кода ће нам омогућити да креирамо функционалност ``analiziraj_sentiment`` која за нас обједињује кораке креирања репрезентације текста а потом и покретања већ обученог 
@@ -315,6 +316,7 @@ LSTM (енгл. *Long Short Term Memory*) и GRU (енгл. *Gated Recurrent Uni
 .. code-block:: Python
 
    analiziraj_sentiment = transformers.pipeline(task='sentiment-analysis')
+
 
 Учитаној функционалности можемо да задајемо улазе за које желимо да добијемо оцену сентимента. Као излаз ћемо добити име класе *POSITIVE* или *NEGATIVE*, као и вредност *score* 
 у интервалу од 0 до 1 која указује колико је модел класификације сигуран у своју одлуку. Следи неколико примера. Изврши их па промисли да ли би се и ти сложио са одлукама класификатора. 
