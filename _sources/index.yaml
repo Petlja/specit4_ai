@@ -3,11 +3,25 @@ lang: en
 title: Савремена вештачка интелигенција
 description:
   willLearn: 
-    - Preview of Petljadoc course
+    - Шта је заједничко за највећи број система савремене вештачке интелигенције
+    - Где сусрећемо системе вештачке интелигенције
+    - Које је улога података у развоју једног система вештачке интелигенције
+    - Како настају скупови података и на који начин се анализирају
+    - Шта је машинско учење
+    - Шта је задатак регресије и где се примењује
+    - Како функционише алгоритам линеарне регресије
+    - Шта је задатак класификације и где се примењује
+    - Како функционишу алгоритам логистичке регресије и алгоритам к-најближих суседа
+    - Шта је кластеровање и како функционише алгоритам к-средина
+    - Шта су неуронске мреже и зашто су нам важне
+    - Како се обучавају неуронске мреже
+    - Које врсте неуронских мрежа постоје и где се примењују
+    - Како се користе модели машинског учења за решавање практичних задатака
+    - О чему водимо рачуна док развијамо систем вештачке интелигенције
+    - Какав утицај ова област има на друштво    
   requirements:
-    - Petljadoc
-    - Runestone
-    - Sphinx
+    - Познавање програмског језика Python
+    - Налог на платформи Google Colab или локална машина подешена у складу са смерницама које су доступне у оквиру курса
   toc:
     - Intro to Petljadoc INDEX.yaml
   externalLinks:  
@@ -52,7 +66,7 @@ lessons:
     folder: 02_Programiranje vodjeno podacima
     activities:
       - type: reading
-        title: Програмирање вођено подацима
+        title: Пример програмирања вођеног подацима
         file: 021_Programiranje vodjeno podacima.rst
         description: 
         guid: 029e119d-dcae-4bc3-97a5-840d85f58d22
@@ -71,7 +85,7 @@ lessons:
         file: 024_Vrste masinskog ucenja.rst 
         description: 
         guid: 4b0950fa-9392-4dd2-98dd-a005fae236ff
-  - title: Python
+  - title: Hands-on зона
     guid: 8dbe8fd8-d99d-4efd-9575-9090e48fff62
     folder: 03_Python
     activities:
@@ -81,7 +95,7 @@ lessons:
         description: 
         guid: 6c6e735d-bad1-4a9f-901c-06935fabc23a
       - type: reading
-        title: Библиотеке NumPy, Matplotlib i Pandas
+        title: Библиотеке NumPy, Matplotlib и Pandas
         file: 032_ Biblioteke NumPy, Matplotlib i Pandas.rst
         description: 
         guid: dd587de5-64f9-4824-8ec1-b3fc6d45cc26
@@ -90,7 +104,7 @@ lessons:
     folder: 04_Uloga podataka
     activities:
       - type: reading
-        title: Улога података
+        title: Подаци
         file: 041_Uloga podataka.rst
         description: 
         guid: 183c6fdd-fcae-4f74-9d1e-75bc90093071
@@ -109,7 +123,7 @@ lessons:
         file: 044_Javni skupovi podataka.rst
         description: 
         guid: cdf65212-5955-4a65-8ef5-b5ab2844e5f9
-  - title: EDA
+  - title: Припрема података
     guid: 6967fb08-a479-4ca0-88a9-cbd9eb8a1d59
     folder: 05_EDA
     activities:
@@ -133,7 +147,7 @@ lessons:
     folder: 06_Linearna regresija
     activities:
       - type: reading
-        title: Линеарна регресија
+        title: Модел линеарне регресије
         file: 061_Linearna regresija.rst
         description: 
         guid: 4e41f942-88ca-47ac-8b65-1d66788bc261
@@ -157,12 +171,12 @@ lessons:
     folder: 07_Klasifikacija
     activities:
       - type: reading
-        title: Класификација
+        title: Задатак класификације
         file: 071_Klasifikacija.rst
         description: 
         guid: 47e1cf23-c154-49ab-a4a6-17d1790a54b4
       - type: reading
-        title: Како оцењујемо модел класификације
+        title: Како оцењујемо модел класификације?
         file: 072_Kako ocenjujemo model klasifikacije.rst
         description: 
         guid: d343c498-1c42-4eb2-b662-825457747c92
@@ -181,7 +195,7 @@ lessons:
         file: 075_Hiperparametri.rst
         description: 
         guid: 8442b7c0-debd-4790-af4d-4b07da6d5ac9
-  - title: Прилагођавање
+  - title: Преприлагођавање
     guid: 21eed1d8-c70e-4993-ac46-da60687e1aef
     folder: 08_Prilagodjavanje
     activities:
@@ -224,7 +238,7 @@ lessons:
     folder: 10_Neuronske mreze vrste i primena
     activities:
       - type: reading
-        title: Различите врсте неуронских мрежа
+        title: Учење репрезентације података
         file: 101_Razlicite vrste neuronskih mreza.rst
         description: 
         guid: c9ffce49-a50a-4105-9d49-d224f0fe0178
@@ -266,12 +280,12 @@ lessons:
         file: 131_Ucenje potkrepljivanjem.rst
         description: 
         guid: fcbebdb7-9709-4656-9e22-c30ad94a9e21
-  - title: Друштвено битни аспекти
+  - title: Друштвено битни аспекти развоја вештачке интелигенције
     guid: c0039611-a809-4319-9ec7-70d505418b99
     folder: 14_Drustveno bitni aspekti
     activities:
       - type: reading
-        title: Друштвено битни аспекти
+        title: Друштвено битни аспекти развоја вештачке интелигенције
         file: 141_Drustveno bitni aspekti.rst
         description: 
         guid: 0955b9bc-a8bd-4e83-a9fa-d177bd7ec570
