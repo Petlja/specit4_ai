@@ -101,6 +101,11 @@ lessons:
     folder: 03_Python
     activities:
       - type: reading
+        title: Упутства
+        file: 030_Uputstva.rst
+        description: 
+        guid: d716df0e-5111-4c2f-ac07-625296c3b4f6
+      - type: reading
         title: Платформа Google Colab
         file: 031_Platforma Google Colab.rst
         description: 
@@ -263,6 +268,11 @@ lessons:
         file: 103_Rekurentne neuronske mreze.rst
         description: 
         guid: fabd40de-ac21-4545-93e8-289afdead955
+      - type: reading
+        title: Механизам пажње и трансформери
+        file: 104_Mehanizam paznje i transformeri.rst
+        description: 
+        guid: d62acd28-b680-4216-b02c-b9030496adba
   - title: Кластеровање
     guid: cd1c523e-4c40-4d70-88e3-37765e2ae232
     folder: 12_Klasterovanje
