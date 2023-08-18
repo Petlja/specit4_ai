@@ -101,8 +101,8 @@ lessons:
     folder: 03_Python
     activities:
       - type: reading
-        title: Упутства
-        file: 030_Uputstva.rst
+        title: Jupyter свеске за вежбу
+        file: 030_Jypyter sveske za vezbu.rst
         description: 
         guid: d716df0e-5111-4c2f-ac07-625296c3b4f6
       - type: reading
