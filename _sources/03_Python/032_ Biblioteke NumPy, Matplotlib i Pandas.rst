@@ -63,10 +63,10 @@
 
 .. technicalnote::
     
-    Ова лекција је упарена са Jupyter свеском `03-biblioteka_matplotlib.ipynb <https://github.com/Petlja/specit4_ai_radni/blob/main/03-biblioteka_matplotlib.ipynb>`_. 
+    Ова секција је упарена са Jupyter свеском `03-biblioteka_numpy.ipynb <https://github.com/Petlja/specit4_ai_radni/blob/main/03-biblioteka_numpy.ipynb>`_. 
     Да би могао да пратиш садржај даље, кликни на линк, а потом и на дугме |open| да би се садржај отворио у окружењу Google Colab. 
     Уколико свеске прегледаш на локалној машини, међу садржајима пронађи свеску са истим именом и покрени је. За детаљније инструкције 
-    погледај секцију *Hands-on зона*.
+    погледај секцију *Hands-on зона* и лекцију *Jupyter свеске за вежбу*.
 
 
 На самом почетку свеске дочекаће те наредба ``import numpy as np`` коју морамо да извршимо како бисмо могли да користимо библиотеку NumPy. 
@@ -208,10 +208,10 @@
 
 .. technicalnote::
     
-    Ова лекција је упарена са Jupyter свеском `https://github.com/Petlja/specit4_ai_radni/blob/main/04-eksplorativna_analiza_podataka.ipynb <https://github.com/Petlja/specit4_ai_radni/blob/main/04-eksplorativna_analiza_podataka.ipynb>`_. 
+    Ова секција је упарена са Jupyter свеском `03-biblioteka_matplotlib.ipynb <https://github.com/Petlja/specit4_ai_radni/blob/main/03-biblioteka_matplotlib.ipynb>`_. 
     Да би могао да пратиш садржај даље, кликни на линк, а потом и на дугме |open| да би се садржај отворио у окружењу Google Colab. 
     Уколико свеске прегледаш на локалној машини, међу садржајима пронађи свеску са истим именом и покрени је. За детаљније инструкције 
-    погледај секцију *Hands-on зона*.
+    погледај секцију *Hands-on зона* и лекцију *Jupyter свеске за вежбу*.
 
 
 Matplotlib је библиотека језика Python која се користи за 2D и 3D графику. Графички прикази су нам јако корисни у раду са подацима јер нам 
