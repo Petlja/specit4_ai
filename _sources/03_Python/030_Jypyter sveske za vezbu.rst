@@ -1,5 +1,5 @@
 Jupyter свеске за вежбу
-========
+========================
 
 .. |open| image:: ../../_images/algk2.png
             :width: 100px
