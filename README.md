@@ -2,9 +2,9 @@
 
 Ovaj repozitorijum posvećen je kursu za Savremenu veštačku inteligenciju za četvrti razred specijalizovanih IT odeljenja. 
 
-Kurs je na Petljom portalu dotupan ovde: [https://petlja.org/kurs/11203/0](https://petlja.org/kurs/11203/0)
+Kurs je na Petljinom portalu dotupan ovde: [https://petlja.org/kurs/11203/0](https://petlja.org/kurs/11203/0)
 
-Kurs možete itegrisati u svoj LMS koristeći SCORM pakete koji se mogu preuzeti sa: https://github.com/Petlja/specit4_ai/releases
+Kurs možete integrisati u svoj LMS koristeći SCORM pakete koji se mogu preuzeti sa: https://github.com/Petlja/specit4_ai/releases
 
 ## Konverzija u *HTML*
 
