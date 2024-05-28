@@ -11,3 +11,4 @@ _tmp
 override.json
 package-conf.json
 export
+.venv
