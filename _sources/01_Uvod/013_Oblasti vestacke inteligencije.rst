@@ -227,7 +227,7 @@
 .. suggestionnote::
  
  Програм DALL-E компаније OpenAI, такође, генерише слике на основу смерница корисника. Програм dalle-mini је јавно доступна верзија овог 
- програма. Она је доступна на адреси `https://huggingface.co/spaces/dalle-mini/dalle-mini <https://huggingface.co/spaces/dalle-mini/dalle-mini>`_.
+ програма. Она је доступна на адреси `https://huggingface.co/dalle-mini/dalle-mini <https://huggingface.co/dalle-mini/dalle-mini>`_.
 
 Играње игара
 ~~~~~~~~~~~~
@@ -246,7 +246,6 @@
 
 *Комбинаторна експлозија у игри шах*
 
-(слика је преузета са https://www.umphyries.top/ProductDetail.aspx?iid=182002895&pr=42.88)
 
 -------
 
