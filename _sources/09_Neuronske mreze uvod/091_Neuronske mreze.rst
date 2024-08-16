@@ -14,11 +14,11 @@
 механизама фино прорачунава сигнал који даље шаље другим неуронима. Уобичајено је да се ово стање назива стање активације неурона. Оно траје тек 
 делић секунде, али омогућава да се изврше суптилне калкулације и генерише сигнал који се преноси кроз цео нервни систем. 
 
-.. figure:: ../../_images/nm1.png
-    :width: 500
+.. figure:: ../../_images/nm1.jpg
+    :width: 70%
     :align: center
 
-(слика је преузета са https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.researchgate.net%2Ffigure%2FSchematic-of-two-interconnected-neurons-Action-potentials-propagate-from-the-pre-neuron_fig6_316534311&psig=AOvVaw0rHwMLQBL7XDGzjvd9vSeK&ust=1691038820418000&source=images&cd=vfe&opi=89978449&ved=0CBMQjhxqGAoTCMjg99OYvYADFQAAAAAdAAAAABCJAQ)
+    Слика преузета са `freepik.com <https://www.freepik.com/>`_
 
 -------
 
